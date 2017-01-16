@@ -1,0 +1,14 @@
+﻿*.jpeg
+*.png
+*.gif
+.git
+.gitignore
+.rspec
+.*.yml
+.ruby-version
+.keep
+tmp
+_build
+deps
+node_modules
+*.min.js

@@ -1,0 +1,10 @@
+# main view
+set main-view = id date author commit-title:graph=yes,refs=yes
+
+# Add verbose option to git commit
+bind status C !git commit -v
+
+# Add keybind for git rebase
+# see http://sue445.hatenablog.com/entry/2014/08/07/015811
+bind main R !git rebase -i %(commit)
+bind diff R !git rebase -i %(commit)

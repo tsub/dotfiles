@@ -1,0 +1,116 @@
+## Visual
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'NLKNguyen/papercolor-theme'
+
+[[plugins]]
+repo = 'bling/vim-airline'
+depends = ['vim-airline-themes']
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
+## Editor
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo = 'tyru/caw.vim'
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+
+[[plugins]]
+repo = 'kana/vim-smartinput'
+
+[[plugins]]
+repo = 'fntlnz/atags.vim'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+## Launguages
+
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+
+[[plugins]]
+repo = 'yoppi/fluentd.vim'
+
+[[plugins]]
+repo = 'slashmili/alchemist.vim'
+
+[[plugins]]
+repo = 'elixir-lang/vim-elixir'
+
+[[plugins]]
+repo = 'thinca/vim-ref'
+
+[[plugins]]
+repo = 'awetzel/elixir.nvim'
+depends = ['vim-elixir', 'vim-ref']
+build = './install.sh'
+
+[[plugins]]
+repo = 'slim-template/vim-slim'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+
+[[plugins]]
+repo = 'zchee/deoplete-docker'
+
+[[plugins]]
+repo = 'fishbullet/deoplete-ruby'
+
+[[plugins]]
+repo = 'tsub/Brewfile.vim'
+
+[[plugins]]
+repo = 'zplug/vim-zplug'
+
+[[plugins]]
+repo = 'tmux-plugins/vim-tmux'
+
+## Others
+
+[[plugins]]
+repo = 'mattn/gist-vim'
+depends = ['webapi-vim']
+
+[[plugins]]
+repo = 'mattn/webapi-vim'
+
+[[plugins]]
+repo = 'kannokanno/previm'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+[[plugins]]
+repo = 'kassio/neoterm'

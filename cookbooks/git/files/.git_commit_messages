@@ -1,0 +1,20 @@
+
+
+# Use following sample emoji.
+#
+# 🐛 :bug: バグ修正
+# 🔧 :wrench: 設定の更新
+# 👍 :+1: 機能改善
+# ✨ :sparkles: 小さな機能追加
+# 🎉 :tada: 盛大に祝うべき大きな機能追加
+# 📝 :pencil: ドキュメントの修正・コメントの修正
+# ♻️ :recycle: リファクタリング
+# 🚮 :put_litter_in_its_place: 不要な機能・使われなくなった機能の削除
+# ✅ :white_check_mark: 落ちたテストの修正
+# 👕 :shirt: Lintエラーの修正
+# 📈 :chart_with_upwards_trend: パフォーマンス改善
+# ➕ :heavy_plus_sign: リソース・ライブラリの追加
+# ➖ :heavy_minus_sign: リソース・ライブラリの削除
+# 🆙 :up: リソース・ライブラリのアップデート
+# 🚧 :construction: WIP commits
+# ⚠ :warning: 非推奨な変更（ワークアラウンド等）

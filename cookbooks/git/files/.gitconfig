@@ -1,0 +1,21 @@
+[include]
+  path = ~/.gitconfig.local
+[core]
+  editor = nvim
+  excludesfile = ~/.gitignore_global
+[color]
+  ui = auto
+[push]
+  default = simple
+[commit]
+  template = ~/.git_commit_messages
+[pager]
+  log = diff-highlight | less
+  show = diff-highlight | less
+  diff = diff-highlight | less
+[diff]
+  compactionHeuristic = true
+[fetch]
+  prune = true
+[rebase]
+  autosquash = true
