@@ -1,5 +1,6 @@
 zplug "zimframework/utility"
 zplug "zimframework/completion"
+zplug "zimframework/history"
 zplug "Eriner/zim", use:"modules/git/init.zsh"
 
 zplug "zsh-users/zsh-history-substring-search", defer:3
