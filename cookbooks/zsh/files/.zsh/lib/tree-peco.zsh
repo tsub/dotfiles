@@ -1,7 +1,9 @@
 function tree-peco () {
   local SELECTED_FILE=$(tree --charset=o -f | peco | tr -d '\||`|-' | xargs echo)
-  BUFFER="$EDITOR $SELECTED_FILE"
-  zle accept-line
+  if [ "$SELECTED_FILE" != "" ]; then
+    BUFFER="$EDITOR $SELECTED_FILE"
+    zle accept-line
+  fi
 }
 
 zle -N tree-peco
