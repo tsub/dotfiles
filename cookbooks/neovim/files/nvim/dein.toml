@@ -97,6 +97,9 @@ repo = 'zplug/vim-zplug'
 [[plugins]]
 repo = 'tmux-plugins/vim-tmux'
 
+[[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
+
 ## Others
 
 [[plugins]]
