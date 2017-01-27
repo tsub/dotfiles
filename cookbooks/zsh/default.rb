@@ -1,11 +1,11 @@
 package 'zsh'
 package 'zplug'
 
-link "#{node[:home]}/.zshrc" do
+link File.expand_path('~/.zshrc') do
   to File.expand_path('../files/.zshrc', __FILE__)
 end
 
-link "#{node[:home]}/.zsh" do
+link File.expand_path('~/.zsh') do
   to File.expand_path('../files/.zsh', __FILE__)
 end
 

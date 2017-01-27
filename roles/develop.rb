@@ -1,5 +1,4 @@
 node.reverse_merge!({
-  home: ENV['HOME'],
   neovim: {
     home: ENV['XDG_CONFIG_HOME']
   }

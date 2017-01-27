@@ -2,12 +2,12 @@ package 'tmux'
 package 'reattach-to-user-namespace'
 package 'urlview'
 
-link "#{node[:home]}/.tmux.conf" do
+link File.expand_path('~/.tmux.conf') do
   to File.expand_path('../files/.tmux.conf', __FILE__)
 end
 
-directory "#{node[:home]}/.tpm/plugins"
+directory File.expand_path('~/.tpm/plugins')
 
-git "#{node[:home]}/.tpm/plugins/tpm" do
+git File.expand_path('~/.tpm/plugins/tpm') do
   repository 'https://github.com/tmux-plugins/tpm.git'
 end

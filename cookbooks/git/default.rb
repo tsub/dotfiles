@@ -5,33 +5,33 @@ package 'gnupg2'
 
 ## Git
 
-link "#{node[:home]}/.gitconfig" do
+link File.expand_path('~/.gitconfig') do
   to File.expand_path('../files/.gitconfig', __FILE__)
 end
 
-template "#{node[:home]}/.gitconfig.local" do
+template File.expand_path('~/.gitconfig.local') do
   source File.expand_path('../templates/.gitconfig.local.erb', __FILE__)
-  not_if "test -f #{node[:home]}/.gitconfig.local"
+  not_if "test -f ~/.gitconfig.local"
 end
 
-link "#{node[:home]}/.git_commit_messages" do
+link File.expand_path('~/.git_commit_messages') do
   to File.expand_path('../files/.git_commit_messages', __FILE__)
 end
 
-link "#{node[:home]}/.gitignore_global" do
+link File.expand_path('~/.gitignore_global') do
   to File.expand_path('../files/.gitignore_global', __FILE__)
 end
 
 ## tig
 
-link "#{node[:home]}/.tigrc" do
+link File.expand_path('~/.tigrc') do
   to File.expand_path('../files/.tigrc', __FILE__)
 end
 
 ## gnupg2
 
-directory "#{node[:home]}/.gnupg"
+directory File.expand_path('~/.gnupg')
 
-link "#{node[:home]}/.gnupg/gpg-agent.conf" do
+link File.expand_path('~/.gnupg/gpg-agent.conf') do
   to File.expand_path('../files/.gnupg/gpg-agent.conf', __FILE__)
 end
