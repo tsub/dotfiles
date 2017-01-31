@@ -172,6 +172,9 @@ let g:deoplete#enable_at_startup = 1
 " overwrite key bind
 inoremap <BS> <BS>
 
+"" vim-airline
+let g:airline_powerline_fonts = 1
+
 "*****************************************************************************
 "" After plugin loaded
 "*****************************************************************************
