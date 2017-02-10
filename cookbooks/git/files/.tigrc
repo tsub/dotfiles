@@ -8,3 +8,7 @@ bind status C !git commit -v
 # see http://sue445.hatenablog.com/entry/2014/08/07/015811
 bind main R !git rebase -i %(commit)
 bind diff R !git rebase -i %(commit)
+
+# Jump GitHub commit page
+# see http://hisaichi5518.hatenablog.jp/entry/2017/02/09/160007
+bind generic P @sh -c 'hub browse -- commit/%(commit)'
