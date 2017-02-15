@@ -175,6 +175,9 @@ inoremap <BS> <BS>
 "" vim-airline
 let g:airline_powerline_fonts = 1
 
+"" esa.vim
+let g:esa_team = 'tsub'
+
 "*****************************************************************************
 "" After plugin loaded
 "*****************************************************************************

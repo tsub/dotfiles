@@ -117,3 +117,6 @@ repo = 'tyru/open-browser.vim'
 
 [[plugins]]
 repo = 'kassio/neoterm'
+
+[[plugins]]
+repo = 'upamune/esa.vim'
