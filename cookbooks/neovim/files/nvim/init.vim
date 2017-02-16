@@ -65,6 +65,7 @@ noremap <C-b> <C-u>
 nnoremap ; :
 noremap <silent> <F5> :e!<CR>
 tnoremap <silent> <ESC> <C-\><C-n>
+tnoremap <silent> jj <C-\><C-n>
 nnoremap <C-w><C-h> :vertical resize -5<CR>
 nnoremap <C-w><C-j> :resize +5<CR>
 nnoremap <C-w><C-k> :resize -5<CR>
