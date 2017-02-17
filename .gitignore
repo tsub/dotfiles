@@ -1,2 +1,3 @@
 bin/mitamae*
 **/.bundle/cache
+local.vim

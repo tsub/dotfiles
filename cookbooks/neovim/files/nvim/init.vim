@@ -176,9 +176,6 @@ inoremap <BS> <BS>
 "" vim-airline
 let g:airline_powerline_fonts = 1
 
-"" esa.vim
-let g:esa_team = 'tsub'
-
 "" vim-markdown
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_toml_frontmatter = 1
@@ -189,3 +186,7 @@ let g:vim_markdown_toml_frontmatter = 1
 
 set expandtab
 hi Normal ctermbg=none
+
+if filereadable($XDG_CONFIG_HOME.'/nvim/local.vim')
+  source $XDG_CONFIG_HOME/nvim/local.vim
+endif
