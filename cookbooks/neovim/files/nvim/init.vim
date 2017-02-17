@@ -37,7 +37,7 @@ set noswapfile
 set fileformats=unix,dos,mac
 set nobomb
 set noundofile
-let mapleader=','
+let mapleader = ','
 set hidden
 set encoding=utf-8
 set fileencoding=utf-8
@@ -111,8 +111,8 @@ nmap <leader>p <Plug>AirlineSelectPrevTab
 nmap <leader>n <Plug>AirlineSelectNextTab
 
 "" NerdTree
-let g:NERDTreeChDirMode=0
-let NERDTreeShowHidden=1
+let g:NERDTreeChDirMode = 0
+let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 30
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
@@ -133,9 +133,9 @@ endif
 nnoremap [denite] <Nop>
 nmap <C-u> [denite]
 
-nnoremap <silent> [denite]b   :<C-u>Denite buffer<CR>
-nnoremap <silent> [denite]f   :<C-u>Denite file_rec<CR>
-nnoremap <silent> [denite]g   :<C-u>Denite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> [denite]b :<C-u>Denite buffer<CR>
+nnoremap <silent> [denite]f :<C-u>Denite file_rec<CR>
+nnoremap <silent> [denite]g :<C-u>Denite grep:. -buffer-name=search-buffer<CR>
 
 call denite#custom#map(
   \ 'insert',
@@ -151,12 +151,12 @@ call denite#custom#map(
   \)
 
 "" vim-indent-guide
-let g:indent_guides_auto_colors=0
+let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi SpecialKey       ctermfg=240
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermfg=240 ctermbg=237
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermfg=240 ctermbg=236
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_guide_size=1
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
 
 "" gist-vim
 let g:gist_show_privates = 1
@@ -187,6 +187,6 @@ let g:vim_markdown_toml_frontmatter = 1
 set expandtab
 hi Normal ctermbg=none
 
-if filereadable($XDG_CONFIG_HOME.'/nvim/local.vim')
+if filereadable($XDG_CONFIG_HOME . '/nvim/local.vim')
   source $XDG_CONFIG_HOME/nvim/local.vim
 endif
