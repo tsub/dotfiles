@@ -192,6 +192,7 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 
 set expandtab
 hi Normal ctermbg=none
+hi NonText ctermbg=none
 
 if filereadable($XDG_CONFIG_HOME . '/nvim/local.vim')
   source $XDG_CONFIG_HOME/nvim/local.vim
