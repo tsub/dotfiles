@@ -185,6 +185,12 @@ let g:vim_markdown_toml_frontmatter = 1
 autocmd! BufWritePost,BufEnter * Neomake
 let g:neomake_ruby_enabled_makers = ['rubocop']
 let g:neomake_javascript_enabled_makers = ['eslint']
+hi NeomakeErrorSign   ctermfg=red
+hi NeomakeWarningSign ctermfg=yellow
+hi NeomakeMessageSign ctermfg=green
+hi NoemakeInfoSign    ctermfg=blue
+hi link NeomakeError SpellBad
+hi link NeomakeWarning SpellCap
 
 "*****************************************************************************
 "" After plugin loaded
