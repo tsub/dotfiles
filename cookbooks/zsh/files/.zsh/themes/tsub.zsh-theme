@@ -16,6 +16,7 @@ function {
   GEAR="\u2699"
   ARROW="\u276f"
   RUBY="\ue791"
+  AWS="\ue7ad"
 }
 
 # Begin a segment
@@ -84,6 +85,10 @@ prompt_rbenv() {
   prompt_segment red default " ${RUBY} $(rbenv_version) "
 }
 
+prompt_aws_profile() {
+  prompt_segment yellow ${PRIMARY_FG} " ${AWS} $(aws-profile) "
+}
+
 # Dir: current working directory
 prompt_dir() {
   prompt_segment blue ${PRIMARY_FG} " $(short-pwd) "
@@ -112,6 +117,7 @@ prompt_tsub_main() {
   prompt_dir
   prompt_git
   prompt_rbenv
+  prompt_aws_profile
   prompt_end
 }
 
