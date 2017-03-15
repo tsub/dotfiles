@@ -57,6 +57,9 @@ repo = 'tpope/vim-surround'
 [[plugins]]
 repo = 'neomake/neomake'
 
+[[plugins]]
+repo = 'tyru/open-browser-github.vim'
+
 ## Launguages
 
 [[plugins]]
