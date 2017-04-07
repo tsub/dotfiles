@@ -181,6 +181,7 @@ let g:airline_powerline_fonts = 1
 "" vim-markdown
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_new_list_item_indent = 0
 
 "" neomake
 autocmd! BufWritePost,BufEnter * Neomake
