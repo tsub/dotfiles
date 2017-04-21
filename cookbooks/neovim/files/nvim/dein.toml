@@ -109,6 +109,9 @@ repo = 'isRuslan/vim-es6'
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
 
+[[plugins]]
+repo = 'cespare/vim-toml'
+
 ## Others
 
 [[plugins]]
