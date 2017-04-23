@@ -112,6 +112,9 @@ repo = 'plasticboy/vim-markdown'
 [[plugins]]
 repo = 'cespare/vim-toml'
 
+[[plugins]]
+repo = 'evanmiller/nginx-vim-syntax'
+
 ## Others
 
 [[plugins]]
