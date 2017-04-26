@@ -115,6 +115,9 @@ repo = 'cespare/vim-toml'
 [[plugins]]
 repo = 'evanmiller/nginx-vim-syntax'
 
+[[plugins]]
+repo = 'noprompt/vim-yardoc'
+
 ## Others
 
 [[plugins]]
