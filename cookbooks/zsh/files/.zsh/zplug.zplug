@@ -17,6 +17,9 @@ zplug "simonwhitaker/gibo", use:"gibo-completion.zsh"
 zplug "felixr/docker-zsh-completion"
 zplug "sdurrheimer/docker-compose-zsh-completion"
 
+# Commands
+zplug "b4b4r07/gist", from:gh-r, as:command, use:"*darwin*amd64*"
+
 # Local plugins
 zplug "~/.zsh/lib", from:local, use:"*.zsh"
 zplug "~/.zsh/themes", from:local, as:theme, use:"tsub.zsh-theme"
