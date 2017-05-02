@@ -29,9 +29,6 @@ export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 export GO15VENDOREXPERIMENT="1"
 
-## Load aws cli zsh completion
-source /usr/local/share/zsh/site-functions/_aws
-
 ## autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 if [ -x /usr/local/bin/brew ]; then
