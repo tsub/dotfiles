@@ -47,3 +47,6 @@ fi
 if [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ]; then
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 fi
+
+## fzf
+export FZF_DEFAULT_OPTS='--ansi --height 40% --reverse --border'
