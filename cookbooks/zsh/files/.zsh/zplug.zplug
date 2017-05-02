@@ -1,3 +1,4 @@
+# Zim framework
 zplug "zimframework/utility"
 zplug "zimframework/completion"
 zplug "zimframework/history"
@@ -5,15 +6,18 @@ zplug "zimframework/directory"
 zplug "zimframework/environment"
 zplug "Eriner/zim", use:"modules/git/init.zsh"
 
+# Plugins
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 
+# Completions
 zplug "tmuxinator/tmuxinator", use:"completion/tmuxinator.zsh"
 zplug "simonwhitaker/gibo", use:"gibo-completion.zsh"
 zplug "felixr/docker-zsh-completion"
 zplug "sdurrheimer/docker-compose-zsh-completion"
 
+# Local plugins
 zplug "~/.zsh/lib", from:local, use:"*.zsh"
 zplug "~/.zsh/themes", from:local, as:theme, use:"tsub.zsh-theme"
 zplug "~/.zsh/settings", from:local, use:"*.zsh"
