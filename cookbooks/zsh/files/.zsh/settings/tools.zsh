@@ -38,3 +38,15 @@ if [ -x /usr/local/bin/brew ]; then
   BREW_PREFIX=`brew --prefix`
   fpath=($BREW_PREFIX/share/zsh/functions(N) $BREW_PREFIX/share/zsh/site-functions(N) $fpath)
 fi
+
+## gcloud
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f ${HOME}/.google-cloud-sdk/path.zsh.inc ]; then
+  source "$HOME/.google-cloud-sdk/path.zsh.inc"
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f ${HOME}/.google-cloud-sdk/completion.zsh.inc ]; then
+  source "$HOME/.google-cloud-sdk/completion.zsh.inc"
+fi
