@@ -18,8 +18,8 @@ link File.expand_path('~/.git_commit_messages') do
   to File.expand_path('../files/.git_commit_messages', __FILE__)
 end
 
-link File.expand_path('~/.gitignore_global') do
-  to File.expand_path('../files/.gitignore_global', __FILE__)
+link File.expand_path('~/.config/git') do
+  to File.expand_path('../files/.config/git', __FILE__)
 end
 
 ## tig
