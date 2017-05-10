@@ -30,3 +30,4 @@ zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*amd
 zplug "~/.zsh/lib", from:local, use:"*.zsh"
 zplug "~/.zsh/themes", from:local, as:theme, use:"tsub.zsh-theme"
 zplug "~/.zsh/settings", from:local, use:"*.zsh"
+zplug "~/.zsh/completions", from:local, use:"_*"

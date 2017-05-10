@@ -50,3 +50,6 @@ fi
 
 ## fzf
 export FZF_DEFAULT_OPTS='--ansi --height 40% --reverse --border'
+
+## rust
+export RUST_SRC_PATH="$HOME/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"

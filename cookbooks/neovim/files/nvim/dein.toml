@@ -118,6 +118,12 @@ repo = 'evanmiller/nginx-vim-syntax'
 [[plugins]]
 repo = 'noprompt/vim-yardoc'
 
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+
+[[plugins]]
+repo = 'sebastianmarkow/deoplete-rust'
+
 ## Others
 
 [[plugins]]
