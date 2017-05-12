@@ -12,3 +12,8 @@ bind diff R !git rebase -i %(commit)
 # Jump GitHub commit page
 # see http://hisaichi5518.hatenablog.jp/entry/2017/02/09/160007
 bind generic P @sh -c 'hub browse -- commit/%(commit)'
+
+# Fixup commit
+# see http://qiita.com/yuku_t/items/04853c9aecb40edadbb2
+bind diff F ?!git commit -a --fixup %(commit)
+bind main F ?!git commit -a --fixup %(commit)
