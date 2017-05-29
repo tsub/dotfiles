@@ -21,7 +21,7 @@ export GPG_AGENT_INFO
 export GPG_TTY=`tty`
 
 ## diff-highlight
-export PATH="/usr/local/Cellar/git/2.11.0/share/git-core/contrib/diff-highlight:$PATH"
+export PATH="/usr/local/opt/git/share/git-core/contrib/diff-highlight:$PATH"
 
 ## go
 export GOPATH=$HOME/ghq
