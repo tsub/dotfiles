@@ -4,6 +4,7 @@ node.reverse_merge!({
   }
 })
 
+include_recipe '../cookbooks/homebrew/default.rb'
 include_recipe '../cookbooks/anyenv/default.rb'
 include_recipe '../cookbooks/git/default.rb'
 include_recipe '../cookbooks/neovim/default.rb'
