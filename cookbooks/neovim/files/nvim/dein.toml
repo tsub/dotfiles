@@ -124,6 +124,9 @@ repo = 'rust-lang/rust.vim'
 [[plugins]]
 repo = 'sebastianmarkow/deoplete-rust'
 
+[[plugins]]
+repo = 'mxw/vim-jsx'
+
 ## Others
 
 [[plugins]]
