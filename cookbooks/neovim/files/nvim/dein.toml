@@ -127,6 +127,9 @@ repo = 'sebastianmarkow/deoplete-rust'
 [[plugins]]
 repo = 'mxw/vim-jsx'
 
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+
 ## Others
 
 [[plugins]]
