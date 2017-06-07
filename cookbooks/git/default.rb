@@ -1,7 +1,7 @@
 package 'git'
 package 'tig'
 package 'gibo'
-package 'gnupg2'
+package 'gnupg'
 
 ## Git
 
