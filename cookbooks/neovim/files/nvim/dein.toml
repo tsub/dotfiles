@@ -75,7 +75,7 @@ repo = 'elixir-lang/vim-elixir'
 repo = 'thinca/vim-ref'
 
 [[plugins]]
-repo = 'awetzel/elixir.nvim'
+repo = 'kbrw/elixir.nvim'
 depends = ['vim-elixir', 'vim-ref']
 build = './install.sh'
 
