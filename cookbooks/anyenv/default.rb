@@ -8,6 +8,8 @@ git File.expand_path('~/.anyenv/plugins/anyenv-update') do
   repository 'https://github.com/znz/anyenv-update.git'
 end
 
+directory File.expand_path('~/.anyenv/envs')
+
 define :anyenv do
   anyenv_bin = '~/.anyenv/bin/anyenv'
 
