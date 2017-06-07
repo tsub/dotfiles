@@ -5,9 +5,9 @@ node.reverse_merge!({
 })
 
 include_recipe '../cookbooks/homebrew/default.rb'
+include_recipe '../cookbooks/zsh/default.rb'
 include_recipe '../cookbooks/anyenv/default.rb'
 include_recipe '../cookbooks/git/default.rb'
 include_recipe '../cookbooks/neovim/default.rb'
 include_recipe '../cookbooks/the_silver_searcher/default.rb'
 include_recipe '../cookbooks/tmux/default.rb'
-include_recipe '../cookbooks/zsh/default.rb'
