@@ -37,7 +37,7 @@ define :rbenv, binary: nil do
     not_if "test -d ~/.anyenv/envs/rbenv/versions/#{params[:name]}"
   end
 
-  execute "${rbenv_bin} global #{params[:name]}" do
+  execute "#{rbenv_bin} global #{params[:name]}" do
     not_if "test $(cat ~/.anyenv/envs/rbenv/version) = #{params[:name]}"
   end
 end
