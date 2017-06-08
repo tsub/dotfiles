@@ -1,6 +1,6 @@
 anyenv 'rbenv'
 
-rbenv '2.4.0' do
+rbenv '2.4.1' do
   binary File.expand_path('~/.anyenv/envs/rbenv/bin/rbenv')
 end
 
