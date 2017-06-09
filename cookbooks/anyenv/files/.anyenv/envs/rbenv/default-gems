@@ -2,3 +2,4 @@ bundler
 neovim
 pry
 tmuxinator
+rubocop
