@@ -1,19 +1,40 @@
+## Settings
+
 # main view
 set main-view = id date author commit-title:graph=yes,refs=yes
 
-# Add verbose option to git commit
-bind status C !git commit -v
+# Enable diff-highlight
+set diff-highlight = true
 
-# Add keybind for git rebase
-# see http://sue445.hatenablog.com/entry/2014/08/07/015811
+# Show line number
+set pager-view  = line-number:yes,interval=1 text
+set stage-view  = line-number:yes,interval=1 text
+set log-view    = line-number:yes,interval=1 text
+set blob-view   = line-number:yes,interval=1 text
+set diff-view   = line-number:yes,interval=1 text:yes,commit-title-overflow=no
+set blame-view  = date:default author:email-user id:yes,color line-number:yes,interval=1 text
+
+# Auto refresh
+set refresh-mode = periodic
+set refresh-interval = 1
+
+## Key bindings
+
+# commit
+# ref: http://qiita.com/yuku_t/items/04853c9aecb40edadbb2
+bind status C !git commit -v
+bind generic + !git commit --amend --allow-empty
+bind diff F ?!git commit -a --fixup %(commit)
+bind main F ?!git commit -a --fixup %(commit)
+
+# rebase
+# ref: http://sue445.hatenablog.com/entry/2014/08/07/015811
 bind main R !git rebase -i %(commit)
 bind diff R !git rebase -i %(commit)
 
-# Jump GitHub commit page
-# see http://hisaichi5518.hatenablog.jp/entry/2017/02/09/160007
-bind generic P @sh -c 'hub browse -- commit/%(commit)'
+# clean
+bind status D ?git clean -d -f -- %(file)
 
-# Fixup commit
-# see http://qiita.com/yuku_t/items/04853c9aecb40edadbb2
-bind diff F ?!git commit -a --fixup %(commit)
-bind main F ?!git commit -a --fixup %(commit)
+# hub
+# ref: http://hisaichi5518.hatenablog.jp/entry/2017/02/09/160007
+bind generic P @sh -c 'hub browse -- commit/%(commit)'
