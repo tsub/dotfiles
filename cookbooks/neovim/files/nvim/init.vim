@@ -196,6 +196,9 @@ hi NoemakeInfoSign    ctermfg=blue
 hi link NeomakeError SpellBad
 hi link NeomakeWarning SpellCap
 
+"" neoterm
+let g:neoterm_position = 'vertical'
+
 "*****************************************************************************
 "" After plugin loaded
 "*****************************************************************************
