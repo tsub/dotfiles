@@ -1,6 +1,5 @@
 define :tap do
   execute "brew tap #{params[:name]}" do
-    # not_if "brew tap | grep #{params[:name]}"
     user, repository = params[:name].split('/')
     not_if "test -d /usr/local/Homebrew/Library/Taps/#{user}/homebrew-#{repository}"
   end
