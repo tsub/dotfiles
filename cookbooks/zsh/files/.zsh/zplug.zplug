@@ -10,6 +10,7 @@ zplug "Eriner/zim", use:"modules/git/init.zsh"
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
+zplug "marzocchi/zsh-notify"
 zplug "tsub/4448666a276b088bce3f19005f512c15", from:gist # ghq-fzf.zsh
 zplug "tsub/f4036e067a59b242a161fc3c8a5f01dd", from:gist # history-fzf.zsh
 zplug "tsub/81ac9b881cf2475977c9cb619021ef3c", from:gist # ssh-fzf.zsh
