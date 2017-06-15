@@ -46,8 +46,3 @@ export FZF_DEFAULT_OPTS='--ansi --height 40% --reverse --border'
 
 ## rust
 export RUST_SRC_PATH="$HOME/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
-
-## zsh-notifier
-zstyle ':notify:*' command-complete-timeout 15
-zstyle ':notify:*' success-title 'Command succeeded'
-zstyle ':notify:*' error-title 'Command failed'
