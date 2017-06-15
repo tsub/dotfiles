@@ -1,5 +1,4 @@
 brew 'amazon-ecs-cli'
-brew 'autojump'
 brew 'awscli'
 brew 'colordiff'
 brew 'direnv'
