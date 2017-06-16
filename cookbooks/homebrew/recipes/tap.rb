@@ -1,4 +1,5 @@
 tap 'caskroom/fonts'
 tap 'code-hex/pget'
+tap 'fisherman/tap'
 tap 'go-swagger/go-swagger'
 tap 'neovim/neovim'

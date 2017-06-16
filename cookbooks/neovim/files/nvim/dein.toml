@@ -130,6 +130,9 @@ repo = 'mxw/vim-jsx'
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'
 
+[[plugins]]
+repo = 'vim-scripts/fish-syntax'
+
 ## Others
 
 [[plugins]]

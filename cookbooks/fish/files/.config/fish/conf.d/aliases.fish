@@ -1,4 +1,4 @@
-# Aliases
+## Aliases
 alias vi="nvim"
 alias vim="nvim"
 alias b="bundle"

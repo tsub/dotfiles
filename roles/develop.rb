@@ -1,11 +1,14 @@
 node.reverse_merge!({
+  fish: {
+    home: ENV['XDG_CONFIG_HOME']
+  },
   neovim: {
     home: ENV['XDG_CONFIG_HOME']
   }
 })
 
 include_recipe '../cookbooks/homebrew/default.rb'
-include_recipe '../cookbooks/zsh/default.rb'
+include_recipe '../cookbooks/fish/default.rb'
 include_recipe '../cookbooks/rbenv/default.rb'
 include_recipe '../cookbooks/nodenv/default.rb'
 include_recipe '../cookbooks/git/default.rb'
