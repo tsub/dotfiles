@@ -3,6 +3,7 @@ fisherman/docker-completion
 fisherman/done
 fisherman/fishkit
 fisherman/fzf
+tsub/fzf_ghq
 fisherman/get
 fisherman/getopts
 fisherman/humanize_duration
