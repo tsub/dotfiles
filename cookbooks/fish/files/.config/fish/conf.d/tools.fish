@@ -1,9 +1,6 @@
 ## ghq
 export GHQ_ROOT="$HOME/ghq/src"
 
-## direnv
-eval (direnv hook fish)
-
 ## gpg agent
 # pgrep -q gpg-agent or eval (gpg-agent --daemon --write-env-file $HOME/.gpg-agent-info)
 # [ -f $HOME/.gpg-agent-info ] and source $HOME/.gpg-agent-info

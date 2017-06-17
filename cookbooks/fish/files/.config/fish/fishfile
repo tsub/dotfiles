@@ -1,4 +1,5 @@
 fisherman/await
+oh-my-fish/plugin-direnv
 fisherman/docker-completion
 fisherman/done
 fisherman/fishkit
