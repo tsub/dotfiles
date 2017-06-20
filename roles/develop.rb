@@ -1,6 +1,6 @@
 node.reverse_merge!({
   fish: {
-    home: ENV['XDG_CONFIG_HOME']
+    home: ENV['XDG_CONFIG_HOME'] + '/fish'
   },
   neovim: {
     home: ENV['XDG_CONFIG_HOME']
