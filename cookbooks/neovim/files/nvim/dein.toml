@@ -133,6 +133,9 @@ repo = 'kchmck/vim-coffee-script'
 [[plugins]]
 repo = 'vim-scripts/fish-syntax'
 
+[[plugins]]
+repo = 'stephpy/vim-yaml'
+
 ## Others
 
 [[plugins]]
