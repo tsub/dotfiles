@@ -20,8 +20,8 @@ set blame-view  = date:default author:email-user id:yes,color line-number:yes,in
 # ref: http://qiita.com/yuku_t/items/04853c9aecb40edadbb2
 bind status C !git commit -v
 bind generic + !git commit --amend --allow-empty
-bind diff F ?!git commit -a --fixup %(commit)
-bind main F ?!git commit -a --fixup %(commit)
+bind diff F ?!git commit --fixup %(commit)
+bind main F ?!git commit --fixup %(commit)
 
 # rebase
 # ref: http://sue445.hatenablog.com/entry/2014/08/07/015811
