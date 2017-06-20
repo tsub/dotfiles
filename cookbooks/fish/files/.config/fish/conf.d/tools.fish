@@ -2,10 +2,15 @@
 export GHQ_ROOT="$HOME/ghq/src"
 
 ## gpg agent
-# pgrep -q gpg-agent or eval (gpg-agent --daemon --write-env-file $HOME/.gpg-agent-info)
-# [ -f $HOME/.gpg-agent-info ] and source $HOME/.gpg-agent-info
-# export GPG_AGENT_INFO
-# export GPG_TTY=`tty`
+export GPG_TTY=(tty)
+
+if not pgrep -q gpg-agent
+  eval (gpg-agent --daemon)
+end
+
+if [ -f $HOME/.gpg-agent-info ]
+  source $HOME/.gpg-agent-info
+end
 
 ## diff-highlight
 export PATH="/usr/local/opt/git/share/git-core/contrib/diff-highlight:$PATH"
