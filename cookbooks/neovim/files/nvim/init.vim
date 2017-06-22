@@ -45,7 +45,7 @@ set fileencodings=utf-8
 set backspace=indent,eol,start
 set showcmd
 set shell=/bin/sh
-set sh=zsh
+set sh=fish
 
 "" Visual
 syntax enable
