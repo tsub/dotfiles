@@ -27,6 +27,12 @@ end
   end
 end
 
+directory "#{node[:fish][:home]}/completions"
+
+link File.expand_path('~/.config/fish/completions/hub.fish') do
+  to File.expand_path('../files/.config/fish/completions/hub.fish', __FILE__)
+end
+
 ## fisherman
 
 link File.expand_path('~/.config/fish/fishfile') do
