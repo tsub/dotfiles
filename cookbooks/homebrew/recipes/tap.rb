@@ -1,3 +1,4 @@
+tap 'b4b4r07/gist'
 tap 'caskroom/fonts'
 tap 'code-hex/pget'
 tap 'fisherman/tap'
