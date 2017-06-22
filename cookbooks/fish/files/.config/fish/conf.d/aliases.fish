@@ -1,18 +1,18 @@
 ## Aliases
 alias vi="nvim"
 alias vim="nvim"
-alias b="bundle"
 alias git="hub"
-alias v="vagrant"
-alias d="docker"
-alias dc="docker-compose"
 alias sudo="sudo -E "
 alias diff="colordiff -u"
 alias ctags="/usr/local/bin/ctags"
-alias tf="terraform"
 alias deckset="open -a Deckset"
 
 ## Abbreviations
+abbr -a b "bundle"
+abbr -a v "vagrant"
+abbr -a d "docker"
+abbr -a dc "docker-compose"
+abbr -a tf "terraform"
 abbr -a be "bundle exec"
 abbr -a bb "brew bundle"
 abbr -a gcoo "git-branch-fzf"
