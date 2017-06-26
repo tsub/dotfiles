@@ -6,6 +6,7 @@ alias sudo="sudo -E "
 alias diff="colordiff -u"
 alias ctags="/usr/local/bin/ctags"
 alias deckset="open -a Deckset"
+alias rm="rm -i"
 
 ## Abbreviations
 abbr -a b "bundle"
