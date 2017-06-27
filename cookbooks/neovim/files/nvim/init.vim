@@ -199,6 +199,9 @@ hi link NeomakeWarning SpellCap
 "" neoterm
 let g:neoterm_position = 'vertical'
 
+"" vim-terraform
+let terrform_fmt_on_save = 1
+
 "*****************************************************************************
 "" After plugin loaded
 "*****************************************************************************
