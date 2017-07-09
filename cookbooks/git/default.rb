@@ -11,7 +11,7 @@ end
 
 template File.expand_path('~/.gitconfig.local') do
   source File.expand_path('../templates/.gitconfig.local.erb', __FILE__)
-  not_if "test -f ~/.gitconfig.local"
+  not_if 'test -f ~/.gitconfig.local'
 end
 
 link File.expand_path('~/.git_commit_messages') do

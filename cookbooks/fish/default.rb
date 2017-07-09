@@ -21,7 +21,7 @@ link File.expand_path('~/.config/fish/config.fish') do
   to File.expand_path('../files/.config/fish/config.fish', __FILE__)
 end
 
-%w(basic.fish tools.fish aliases.fish).each do |config_file|
+%w[basic.fish tools.fish aliases.fish].each do |config_file|
   link File.expand_path("~/.config/fish/conf.d/#{config_file}") do
     to File.expand_path("../files/.config/fish/conf.d/#{config_file}", __FILE__)
   end
