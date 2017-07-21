@@ -7,6 +7,7 @@ alias diff="colordiff -u"
 alias ctags="/usr/local/bin/ctags"
 alias deckset="open -a Deckset"
 alias rm="rm -i"
+alias zatsu="memo edit zatsu.md"
 
 ## Abbreviations
 abbr -a b "bundle"
