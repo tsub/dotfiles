@@ -139,6 +139,9 @@ repo = 'stephpy/vim-yaml'
 [[plugins]]
 repo = 'mhartington/nvim-typescript'
 
+[[plugins]]
+repo = 'dag/vim-fish'
+
 ## Others
 
 [[plugins]]
