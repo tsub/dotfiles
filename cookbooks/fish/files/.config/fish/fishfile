@@ -1,6 +1,6 @@
 fisherman/await
 oh-my-fish/plugin-aws
-oh-my-fish/theme-bobthefish
+tsub/theme-bobthefish
 fisherman/docker-completion
 brgmnn/fish-docker-compose
 fisherman/done
