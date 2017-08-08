@@ -7,6 +7,7 @@ fisherman/done
 fisherman/fishkit
 fisherman/fzf
 tsub/fish-fzf-ghq
+tsub/fish-fzf-git-recent-branch
 fisherman/get
 fisherman/getopts
 tsub/fish-git
