@@ -8,6 +8,7 @@ alias ctags="/usr/local/bin/ctags"
 alias deckset="open -a Deckset"
 alias rm="rm -i"
 alias zatsu="memo edit zatsu.md"
+alias ls="exa"
 
 ## Abbreviations
 abbr -a b "bundle"
