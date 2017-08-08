@@ -137,6 +137,9 @@ repo = 'vim-scripts/fish-syntax'
 repo = 'stephpy/vim-yaml'
 
 [[plugins]]
+repo = 'HerringtonDarkholme/yats.vim'
+
+[[plugins]]
 repo = 'mhartington/nvim-typescript'
 
 [[plugins]]
