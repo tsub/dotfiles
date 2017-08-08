@@ -11,7 +11,9 @@ tsub/fish-fzf-git-recent-branch
 fisherman/get
 fisherman/getopts
 tsub/fish-git
+Doctusoft/google-cloud-sdk-fish-completion
 fisherman/humanize_duration
+evanlucas/fish-kubectl-completions
 fisherman/last_job_id
 fisherman/menu
 fisherman/nodenv
