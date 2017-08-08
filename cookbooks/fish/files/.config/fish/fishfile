@@ -6,7 +6,7 @@ brgmnn/fish-docker-compose
 fisherman/done
 fisherman/fishkit
 fisherman/fzf
-tsub/fzf_ghq
+tsub/fish-fzf-ghq
 fisherman/get
 fisherman/getopts
 tsub/fish-git
