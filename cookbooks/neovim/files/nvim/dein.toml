@@ -55,7 +55,7 @@ repo = 'airblade/vim-gitgutter'
 repo = 'tpope/vim-surround'
 
 [[plugins]]
-repo = 'neomake/neomake'
+repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'tyru/open-browser-github.vim'

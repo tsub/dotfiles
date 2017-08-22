@@ -96,7 +96,8 @@ map <C-k> <Plug>(caw:hatpos:toggle)
 
 "" Airline
 let g:airline_theme = 'papercolor'
-let g:airline_extensions = ['tabline', 'branch', 'whitespace']
+let g:airline_extensions = ['tabline', 'branch', 'whitespace', 'ale']
+let g:airline_powerline_fonts = 1
 
 " for tabline
 let g:airline#extensions#tabline#buffer_idx_mode = 1
@@ -111,6 +112,11 @@ nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 nmap <leader>p <Plug>AirlineSelectPrevTab
 nmap <leader>n <Plug>AirlineSelectNextTab
+
+" for ALE
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#ale#error_symbol = '⨉ '
+let g:airline#extensions#ale#warning_symbol = '⚠ '
 
 "" NerdTree
 let g:NERDTreeChDirMode = 0
@@ -178,24 +184,20 @@ let g:deoplete#sources#rust#rust_source_path = '/src'
 " overwrite key bind
 inoremap <BS> <BS>
 
-"" vim-airline
-let g:airline_powerline_fonts = 1
-
 "" vim-markdown
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_toml_frontmatter = 1
 let g:vim_markdown_new_list_item_indent = 0
 
-"" neomake
-autocmd! BufWritePost,BufEnter * Neomake
-let g:neomake_ruby_enabled_makers = ['rubocop']
-let g:neomake_javascript_enabled_makers = ['eslint']
-hi NeomakeErrorSign   ctermfg=red
-hi NeomakeWarningSign ctermfg=yellow
-hi NeomakeMessageSign ctermfg=green
-hi NoemakeInfoSign    ctermfg=blue
-hi link NeomakeError SpellBad
-hi link NeomakeWarning SpellCap
+"" ale
+let g:ale_sign_column_always = 1
+let g:ale_rust_cargo_use_check = 1
+let g:ale_echo_msg_format = '[%linter%] %s'
+let g:ale_sign_error = 'x'
+let g:ale_sign_warning = '⚠'
+hi ALEWarningSign ctermfg=yellow
+hi ALEErrorSign ctermfg=red
+hi ALEInfoSign ctermfg=blue
 
 "" neoterm
 let g:neoterm_position = 'vertical'
