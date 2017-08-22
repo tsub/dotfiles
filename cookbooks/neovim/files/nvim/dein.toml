@@ -145,6 +145,9 @@ repo = 'mhartington/nvim-typescript'
 [[plugins]]
 repo = 'dag/vim-fish'
 
+[[plugins]]
+repo = 'zchee/nvim-go'
+
 ## Others
 
 [[plugins]]
