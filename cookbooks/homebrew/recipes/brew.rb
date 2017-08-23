@@ -6,6 +6,7 @@ end
 brew 'colordiff'
 brew 'ctop'
 brew 'direnv'
+brew 'dep'
 brew 'exa'
 brew 'fish'
 brew 'fisherman'
