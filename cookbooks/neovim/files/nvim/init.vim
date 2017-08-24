@@ -190,7 +190,10 @@ let g:vim_markdown_toml_frontmatter = 1
 let g:vim_markdown_new_list_item_indent = 0
 
 "" ale
-let g:ale_linters = { 'ruby': ['rubocop'] }
+let g:ale_linters = {
+      \ 'ruby': ['rubocop'],
+      \ 'go': ['gofmt', 'golint', 'go vet', 'go build']
+      \ }
 let g:ale_sign_column_always = 1
 let g:ale_rust_cargo_use_check = 1
 let g:ale_echo_msg_format = '[%linter%] %s'
