@@ -19,7 +19,9 @@ brew 'go'
 brew 'go-swagger'
 brew 'hub'
 brew 'kompose'
-brew 'kubectl'
+brew 'kubectl' do
+  directory_name 'kubernetes-cli'
+end
 brew 'kubernetes-helm'
 brew 'neovim'
 brew 'nodenv'
