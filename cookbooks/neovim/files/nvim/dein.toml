@@ -145,6 +145,10 @@ repo = 'mhartington/nvim-typescript'
 [[plugins]]
 repo = 'dag/vim-fish'
 
+[[plugins]]
+repo = 'zchee/deoplete-go'
+build = 'make'
+
 ## Others
 
 [[plugins]]

@@ -179,6 +179,7 @@ map <Leader>t :call atags#generate()<cr>
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#rust#racer_binary = expand('~/.cargo/bin/racer')
 let g:deoplete#sources#rust#rust_source_path = '/src'
+set completeopt-=preview " disable preview
 
 "" vim-smartinput
 " overwrite key bind
