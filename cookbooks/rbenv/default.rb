@@ -24,3 +24,9 @@ end
 link File.expand_path('~/.rbenv/default-gems') do
   to File.expand_path('../files/.rbenv/default-gems', __FILE__)
 end
+
+directory File.expand_path('~/.rbenv/plugins')
+
+git File.expand_path('~/.rbenv/plugins/rbenv-each') do
+  repository 'https://github.com/rbenv/rbenv-each.git'
+end
