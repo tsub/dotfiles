@@ -17,6 +17,7 @@ brew 'git'
 brew 'gnupg'
 brew 'go'
 brew 'go-swagger'
+brew 'heroku'
 brew 'hub'
 brew 'kompose'
 brew 'kubectl' do
