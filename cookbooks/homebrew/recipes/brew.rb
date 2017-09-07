@@ -5,8 +5,9 @@ brew 'b4b4r07/gist/gist' do
 end
 brew 'colordiff'
 brew 'ctop'
-brew 'direnv'
 brew 'dep'
+brew 'direnv'
+brew 'docker-machine-driver-xhyve'
 brew 'exa'
 brew 'fish'
 brew 'fisherman'
