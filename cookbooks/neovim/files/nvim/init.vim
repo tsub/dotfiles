@@ -47,6 +47,7 @@ set backspace=indent,eol,start
 set showcmd
 set shell=/bin/sh
 set sh=fish
+set clipboard+=unnamedplus
 
 "" Visual
 syntax enable
