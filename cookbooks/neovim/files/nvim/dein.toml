@@ -1,9 +1,6 @@
 ## Visual
 
 [[plugins]]
-repo = 'tomasr/molokai'
-
-[[plugins]]
 repo = 'NLKNguyen/papercolor-theme'
 
 [[plugins]]
