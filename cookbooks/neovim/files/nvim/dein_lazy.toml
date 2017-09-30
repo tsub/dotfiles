@@ -39,7 +39,7 @@ on_ft = 'tmux'
 
 [[plugins]]
 repo = 'ekalinin/Dockerfile.vim'
-on_ft = 'docker'
+on_ft = ['docker', 'docker-compose']
 
 [[plugins]]
 repo = 'isRuslan/vim-es6'
