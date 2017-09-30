@@ -57,7 +57,7 @@ colorscheme PaperColor
 set ruler
 set number
 set list
-set listchars=tab:>\ ,trail:_
+set listchars=tab:\ \ ,trail:_
 set mouse=
 hi LineNr ctermbg=none
 hi CursorLine ctermbg=31 ctermfg=255

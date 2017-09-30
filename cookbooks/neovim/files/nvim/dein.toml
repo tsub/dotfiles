@@ -15,18 +15,6 @@ hook_add = 'source ~/.config/nvim/plugins/vim-airline.vim'
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
-repo = 'nathanaelkane/vim-indent-guides'
-hook_add = '''
-  let g:indent_guides_auto_colors = 0
-  let g:indent_guides_enable_on_vim_startup = 1
-  let g:indent_guides_guide_size = 1
-
-  autocmd VimEnter,Colorscheme * :hi SpecialKey       ctermfg=240
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermfg=240 ctermbg=237
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermfg=240 ctermbg=236
-'''
-
-[[plugins]]
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
