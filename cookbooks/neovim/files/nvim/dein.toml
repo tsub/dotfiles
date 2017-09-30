@@ -9,160 +9,76 @@ repo = 'NLKNguyen/papercolor-theme'
 [[plugins]]
 repo = 'bling/vim-airline'
 depends = ['vim-airline-themes']
+hook_add = 'source ~/.config/nvim/plugins/vim-airline.vim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
+hook_add = '''
+  let g:indent_guides_auto_colors = 0
+  let g:indent_guides_enable_on_vim_startup = 1
+  let g:indent_guides_guide_size = 1
 
-## Editor
-
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-
-[[plugins]]
-repo = 'tyru/caw.vim'
-
-[[plugins]]
-repo = 'tpope/vim-endwise'
-
-[[plugins]]
-repo = 'kana/vim-smartinput'
-
-[[plugins]]
-repo = 'fntlnz/atags.vim'
+  autocmd VimEnter,Colorscheme * :hi SpecialKey       ctermfg=240
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermfg=240 ctermbg=237
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermfg=240 ctermbg=236
+'''
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-repo = 'scrooloose/nerdtree'
-
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
-[[plugins]]
-repo = 'Xuyuanp/nerdtree-git-plugin'
-
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-
-[[plugins]]
 repo = 'airblade/vim-gitgutter'
 
+## Editor
+
 [[plugins]]
-repo = 'tpope/vim-surround'
+repo = 'kana/vim-smartinput'
+hook_add = '''
+  " overwrite key bind
+  inoremap <BS> <BS>
+'''
+
+[[plugins]]
+repo = 'kassio/neoterm'
+hook_add = '''
+  let g:neoterm_position = 'vertical'
+'''
 
 [[plugins]]
 repo = 'w0rp/ale'
+hook_add = 'source ~/.config/nvim/plugins/ale.vim'
 
 [[plugins]]
-repo = 'tyru/open-browser-github.vim'
+repo = 'tpope/vim-endwise'
 
-## Launguages
-
-[[plugins]]
-repo = 'yoppi/fluentd.vim'
+## deoplete
 
 [[plugins]]
-repo = 'slashmili/alchemist.vim'
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#sources#rust#racer_binary = expand('~/.cargo/bin/racer')
+  let g:deoplete#sources#rust#rust_source_path = '/src'
 
-[[plugins]]
-repo = 'elixir-lang/vim-elixir'
-
-[[plugins]]
-repo = 'thinca/vim-ref'
-
-[[plugins]]
-repo = 'kbrw/elixir.nvim'
-depends = ['vim-elixir', 'vim-ref']
-build = './install.sh'
-
-[[plugins]]
-repo = 'slim-template/vim-slim'
-
-[[plugins]]
-repo = 'hashivim/vim-terraform'
-
-[[plugins]]
-repo = 'zchee/deoplete-docker'
-
-[[plugins]]
-repo = 'fishbullet/deoplete-ruby'
-
-[[plugins]]
-repo = 'tsub/Brewfile.vim'
-
-[[plugins]]
-repo = 'zplug/vim-zplug'
-
-[[plugins]]
-repo = 'tmux-plugins/vim-tmux'
-
-[[plugins]]
-repo = 'ekalinin/Dockerfile.vim'
-
-[[plugins]]
-repo = 'isRuslan/vim-es6'
-
-[[plugins]]
-repo = 'plasticboy/vim-markdown'
-
-[[plugins]]
-repo = 'cespare/vim-toml'
-
-[[plugins]]
-repo = 'evanmiller/nginx-vim-syntax'
-
-[[plugins]]
-repo = 'noprompt/vim-yardoc'
-
-[[plugins]]
-repo = 'rust-lang/rust.vim'
-
-[[plugins]]
-repo = 'sebastianmarkow/deoplete-rust'
-
-[[plugins]]
-repo = 'mxw/vim-jsx'
-
-[[plugins]]
-repo = 'kchmck/vim-coffee-script'
-
-[[plugins]]
-repo = 'vim-scripts/fish-syntax'
-
-[[plugins]]
-repo = 'stephpy/vim-yaml'
-
-[[plugins]]
-repo = 'HerringtonDarkholme/yats.vim'
-
-[[plugins]]
-repo = 'mhartington/nvim-typescript'
-
-[[plugins]]
-repo = 'dag/vim-fish'
+  set completeopt-=preview " disable preview
+'''
 
 [[plugins]]
 repo = 'zchee/deoplete-go'
 build = 'make'
-
-## Others
-
-[[plugins]]
-repo = 'mattn/gist-vim'
-depends = ['webapi-vim']
+on_ft = 'go'
 
 [[plugins]]
-repo = 'mattn/webapi-vim'
+repo = 'sebastianmarkow/deoplete-rust'
+on_ft = 'rust'
 
 [[plugins]]
-repo = 'kannokanno/previm'
+repo = 'fishbullet/deoplete-ruby'
+on_ft = 'ruby'
 
 [[plugins]]
-repo = 'tyru/open-browser.vim'
-
-[[plugins]]
-repo = 'kassio/neoterm'
+repo = 'zchee/deoplete-docker'
+on_ft = 'docker'

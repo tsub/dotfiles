@@ -1,0 +1,159 @@
+## Launguages
+
+[[plugins]]
+repo = 'yoppi/fluentd.vim'
+on_ft = 'fluentd'
+
+[[plugins]]
+repo = 'slashmili/alchemist.vim'
+on_ft = 'elixir'
+
+[[plugins]]
+repo = 'elixir-lang/vim-elixir'
+on_ft = 'elixir'
+
+[[plugins]]
+repo = 'thinca/vim-ref'
+on_ft = 'elixir'
+
+[[plugins]]
+repo = 'kbrw/elixir.nvim'
+depends = ['vim-elixir', 'vim-ref']
+build = './install.sh'
+on_ft = 'elixir'
+
+[[plugins]]
+repo = 'slim-template/vim-slim'
+on_ft = 'slim'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+on_ft = 'terraform'
+hook_source = '''
+  let g:terraform_fmt_on_save = 1
+'''
+
+[[plugins]]
+repo = 'tmux-plugins/vim-tmux'
+on_ft = 'tmux'
+
+[[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
+on_ft = 'docker'
+
+[[plugins]]
+repo = 'isRuslan/vim-es6'
+on_ft = 'javascript'
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = 'markdown'
+hook_source = '''
+  let g:vim_markdown_folding_disabled = 1
+  let g:vim_markdown_toml_frontmatter = 1
+  let g:vim_markdown_new_list_item_indent = 0
+'''
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'noprompt/vim-yardoc'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = 'jsx'
+
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+on_ft = 'coffee'
+
+[[plugins]]
+repo = 'vim-scripts/fish-syntax'
+on_ft = 'fish'
+
+[[plugins]]
+repo = 'dag/vim-fish'
+on_ft = 'fish'
+
+[[plugins]]
+repo = 'stephpy/vim-yaml'
+on_ft = 'yaml'
+
+[[plugins]]
+repo = 'HerringtonDarkholme/yats.vim'
+on_ft = 'typescript'
+
+[[plugins]]
+repo = 'mhartington/nvim-typescript'
+on_ft = 'typescript'
+
+## Editor
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+on_cmd = 'Denite'
+hook_add = '''
+  nnoremap [denite] <Nop>
+  nmap <C-u> [denite]
+
+  nnoremap <silent> [denite]b :<C-u>Denite buffer<CR>
+  nnoremap <silent> [denite]f :<C-u>Denite file_rec<CR>
+  nnoremap <silent> [denite]g :<C-u>Denite grep:. -buffer-name=search-buffer<CR>
+'''
+hook_post_source = 'source ~/.config/nvim/plugins/denite.vim'
+
+[[plugins]]
+repo = 'tyru/caw.vim'
+on_map = {nx = '<Plug>'}
+hook_add = '''
+  map <C-k> <Plug>(caw:hatpos:toggle)
+'''
+
+[[plugins]]
+repo = 'fntlnz/atags.vim'
+hook_add = '''
+  map <Leader>t :call atags#generate()<cr>
+'''
+hook_source = '''
+  let g:atags_build_commands_list = ["ctags -R --sort=yes --exclude='*.js' -f .tags"]
+'''
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  nnoremap <silent> <F2> :NERDTreeFind<CR>
+  nnoremap <F3> :NERDTreeToggle<CR>
+'''
+hook_source = '''
+  let g:NERDTreeChDirMode = 0
+  let NERDTreeShowHidden = 1
+  let g:NERDTreeWinSize = 30
+'''
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+## Others
+
+[[plugins]]
+repo = 'kannokanno/previm'
+on_cmd = 'PrevimOpen'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+[[plugins]]
+repo = 'tyru/open-browser-github.vim'
