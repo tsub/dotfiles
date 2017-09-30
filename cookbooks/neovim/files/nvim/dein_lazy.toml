@@ -127,6 +127,7 @@ hook_source = '''
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+on_cmd = ['NERDTreeFind', 'NERDTreeToggle']
 hook_add = '''
   nnoremap <silent> <F2> :NERDTreeFind<CR>
   nnoremap <F3> :NERDTreeToggle<CR>
@@ -138,18 +139,13 @@ hook_source = '''
 '''
 
 [[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
-[[plugins]]
-repo = 'Xuyuanp/nerdtree-git-plugin'
-
-[[plugins]]
 repo = 'tpope/vim-surround'
 
 ## Others
 
 [[plugins]]
 repo = 'kannokanno/previm'
+depends = 'open-browser.vim'
 on_cmd = 'PrevimOpen'
 
 [[plugins]]
@@ -157,3 +153,5 @@ repo = 'tyru/open-browser.vim'
 
 [[plugins]]
 repo = 'tyru/open-browser-github.vim'
+depends = 'open-browser.vim'
+on_cmd = ['OpenGithubFile', 'OpenGithubIssue', 'OpenGithubPullReq']

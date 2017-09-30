@@ -17,6 +17,12 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
 ## Editor
 
 [[plugins]]
