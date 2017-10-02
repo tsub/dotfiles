@@ -4,6 +4,12 @@ node.reverse_merge!(
   },
   neovim: {
     home: ENV['XDG_CONFIG_HOME']
+  },
+  rbenv: {
+    ruby_version: '2.4.1'
+  },
+  nodenv: {
+    node_version: '8.1.2'
   }
 )
 

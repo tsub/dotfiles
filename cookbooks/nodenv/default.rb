@@ -10,4 +10,4 @@ define :nodenv do
   end
 end
 
-nodenv '8.1.2'
+nodenv node[:nodenv][:node_version]

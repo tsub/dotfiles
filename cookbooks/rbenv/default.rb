@@ -11,7 +11,7 @@ define :rbenv do
   end
 end
 
-rbenv '2.4.1'
+rbenv node[:rbenv][:ruby_version]
 
 link File.expand_path('~/.gemrc') do
   to File.expand_path('../files/.gemrc', __FILE__)
