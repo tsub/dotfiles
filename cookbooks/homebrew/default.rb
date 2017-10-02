@@ -15,7 +15,7 @@ end
 
 define :cask do
   execute "brew cask install #{params[:name]}" do
-    not_if "test -d /usr/local/Caskroom/#{params[:name]} -o /usr/local/bin/#{params[:name]}"
+    not_if "test -d /usr/local/Caskroom/#{params[:name]} -o -x /usr/local/bin/#{params[:name]}"
   end
 end
 
