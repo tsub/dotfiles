@@ -6,7 +6,7 @@ node.reverse_merge!(
     home: ENV['XDG_CONFIG_HOME']
   },
   rbenv: {
-    ruby_version: '2.4.1'
+    ruby_version: '2.4.2'
   },
   nodenv: {
     node_version: '8.1.2'
