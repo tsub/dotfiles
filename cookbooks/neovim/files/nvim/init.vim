@@ -66,6 +66,7 @@ hi NonText ctermbg=none guibg=none
 
 if has("gui_vimr")
   set cursorline
+  set termguicolors
 endif
 
 "" Mapping
