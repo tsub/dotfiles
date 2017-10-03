@@ -60,7 +60,6 @@ set list
 set listchars=tab:\ \ ,trail:_
 set mouse=
 hi LineNr ctermbg=none guibg=none
-hi CursorLine ctermbg=31 ctermfg=255 guibg=#3885AC guifg=#FFFFFF
 hi Visual ctermbg=239 guibg=#4E4E4E
 hi Normal ctermbg=none
 hi NonText ctermbg=none guibg=none
