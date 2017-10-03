@@ -53,7 +53,7 @@ set clipboard+=unnamedplus
 "" Visual
 syntax enable
 set background=dark
-colorscheme PaperColor
+colorscheme tender
 set ruler
 set number
 set list
@@ -61,6 +61,7 @@ set listchars=tab:\ \ ,trail:_
 set mouse=
 hi LineNr ctermbg=none
 hi CursorLine ctermbg=31 ctermfg=255
+hi Visual ctermbg=239 guibg=#4E4E4E
 hi Normal ctermbg=none
 hi NonText ctermbg=none
 

@@ -1,4 +1,4 @@
-let g:airline_theme = 'papercolor'
+let g:airline_theme = 'tender'
 let g:airline_extensions = ['tabline', 'branch', 'whitespace', 'ale']
 let g:airline_powerline_fonts = 1
 
