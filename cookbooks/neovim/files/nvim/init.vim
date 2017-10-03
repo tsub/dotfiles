@@ -59,11 +59,15 @@ set number
 set list
 set listchars=tab:\ \ ,trail:_
 set mouse=
-hi LineNr ctermbg=none
-hi CursorLine ctermbg=31 ctermfg=255
+hi LineNr ctermbg=none guibg=none
+hi CursorLine ctermbg=31 ctermfg=255 guibg=#3885AC guifg=#FFFFFF
 hi Visual ctermbg=239 guibg=#4E4E4E
 hi Normal ctermbg=none
-hi NonText ctermbg=none
+hi NonText ctermbg=none guibg=none
+
+if has("gui_vimr")
+  set cursorline
+endif
 
 "" Mapping
 inoremap <silent> jj <ESC>
@@ -98,10 +102,10 @@ set ttimeoutlen=100
 "*****************************************************************************
 
 "" ALE
-hi ALEWarningSign ctermfg=yellow
-hi ALEErrorSign ctermfg=red
-hi ALEInfoSign ctermfg=blue
-hi SignColumn ctermbg=none
+hi ALEWarningSign ctermfg=yellow guifg=yellow
+hi ALEErrorSign ctermfg=red guifg=red
+hi ALEInfoSign ctermfg=blue guifg=blue
+hi SignColumn ctermbg=none guibg=none
 
 "*****************************************************************************
 "" Local settings
