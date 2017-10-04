@@ -5,10 +5,11 @@ define :tap do
   end
 end
 
-define :brew, directory_name: nil do
+define :brew, directory_name: nil, head: false do
   directory_name = params[:directory_name] || params[:name]
+  head_option = '--HEAD' if params[:head]
 
-  execute "brew install #{params[:name]}" do
+  execute "brew install #{head_option} #{params[:name]}" do
     not_if "test -d /usr/local/Cellar/#{directory_name}"
   end
 end

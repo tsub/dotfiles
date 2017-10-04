@@ -42,5 +42,8 @@ brew 'the_silver_searcher'
 brew 'tig'
 brew 'tmux'
 brew 'tree'
+brew 'universal-ctags' do
+  head true
+end
 brew 'urlview'
 brew 'yarn'
