@@ -141,6 +141,9 @@ hook_source = '''
 [[plugins]]
 repo = 'tpope/vim-surround'
 
+[[plugins]]
+repo = 'Shougo/deol.nvim'
+
 ## Others
 
 [[plugins]]
