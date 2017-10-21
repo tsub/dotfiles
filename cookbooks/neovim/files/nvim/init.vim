@@ -63,9 +63,9 @@ hi LineNr ctermbg=none guibg=none
 hi Visual ctermbg=239 guibg=#4E4E4E
 hi Normal ctermbg=none
 hi NonText ctermbg=none guibg=none
+hi CursorLine ctermbg=38 ctermfg=0 guibg=#00AFD7 guifg=#000000
 
 if has("gui_vimr")
-  set cursorline
   set termguicolors
 endif
 
