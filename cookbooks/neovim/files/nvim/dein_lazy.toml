@@ -94,10 +94,6 @@ on_ft = 'typescript'
 repo = 'mhartington/nvim-typescript'
 on_ft = 'typescript'
 
-[[plugins]]
-repo = 'udalov/kotlin-vim'
-on_ft = 'kotlin'
-
 ## Editor
 
 [[plugins]]
