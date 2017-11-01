@@ -94,6 +94,10 @@ on_ft = 'typescript'
 repo = 'mhartington/nvim-typescript'
 on_ft = 'typescript'
 
+[[plugins]]
+repo = 'ElmCast/elm-vim'
+on_ft = 'elm'
+
 ## Editor
 
 [[plugins]]

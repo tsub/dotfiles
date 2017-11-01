@@ -77,3 +77,7 @@ on_ft = 'docker'
 [[plugins]]
 repo = 'ponko2/deoplete-fish'
 on_ft = 'fish'
+
+[[plugins]]
+repo = 'pbogut/deoplete-elm'
+on_ft = 'elm'
