@@ -22,6 +22,7 @@ brew 'go-swagger'
 brew 'goenv'
 brew 'heroku'
 brew 'hub'
+brew 'jq'
 brew 'kompose'
 brew 'kubectl' do
   directory_name 'kubernetes-cli'
