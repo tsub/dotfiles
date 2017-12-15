@@ -1,15 +1,11 @@
 ## Visual
 
 [[plugins]]
-repo = 'jacoborus/tender.vim'
+repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
 repo = 'bling/vim-airline'
-depends = ['vim-airline-themes']
 hook_add = 'source ~/.config/nvim/plugins/vim-airline.vim'
-
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'

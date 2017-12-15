@@ -52,22 +52,17 @@ set clipboard+=unnamedplus
 
 "" Visual
 syntax enable
+set termguicolors
 set background=dark
-colorscheme tender
+colorscheme iceberg
 set ruler
 set number
 set list
 set listchars=tab:\ \ ,trail:_
 set mouse=
 hi LineNr ctermbg=none guibg=none
-hi Visual ctermbg=239 guibg=#4E4E4E
 hi Normal ctermbg=none
 hi NonText ctermbg=none guibg=none
-hi CursorLine ctermbg=38 ctermfg=0 guibg=#00AFD7 guifg=#000000
-
-if has("gui_vimr")
-  set termguicolors
-endif
 
 "" Mapping
 inoremap <silent> jj <ESC>
@@ -105,6 +100,12 @@ hi ALEWarningSign ctermfg=yellow guifg=yellow
 hi ALEErrorSign ctermfg=red guifg=red
 hi ALEInfoSign ctermfg=blue guifg=blue
 hi SignColumn ctermbg=none guibg=none
+
+"" GitGutter
+hi GitGutterAdd guibg=none
+hi GitGutterChange guibg=none
+hi GitGutterChangeDelete guibg=none
+hi GitGutterDelete guibg=none
 
 "*****************************************************************************
 "" Local settings
