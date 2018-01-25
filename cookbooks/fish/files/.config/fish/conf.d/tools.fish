@@ -1,6 +1,9 @@
 ## ghq
 export GHQ_ROOT="$HOME/ghq/src"
 
+## ghg
+export PATH="$PATH:$HOME/.ghg/bin"
+
 ## gpg agent
 export GPG_TTY=(tty)
 

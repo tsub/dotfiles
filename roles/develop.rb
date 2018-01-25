@@ -10,6 +10,9 @@ node.reverse_merge!(
   },
   nodenv: {
     node_version: '9.4.0'
+  },
+  ghg: {
+    version: '0.1.2'
   }
 )
 
@@ -21,3 +24,4 @@ include_recipe '../cookbooks/git/default.rb'
 include_recipe '../cookbooks/neovim/default.rb'
 include_recipe '../cookbooks/the_silver_searcher/default.rb'
 include_recipe '../cookbooks/tmux/default.rb'
+include_recipe '../cookbooks/ghg/default.rb'
