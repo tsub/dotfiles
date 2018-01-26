@@ -19,9 +19,6 @@ case "$(uname)" in
     ;;
 esac
 
-mitamae_gz="${mitamae_bin}.tar.gz"
-
-curl -fL "https://github.com/itamae-kitchen/mitamae/releases/download/v${version}/${mitamae_bin}.tar.gz" | tar xvz
-mv "${mitamae_bin}" "${binary_dir}/${mitamae_bin}"
+curl -fL -o "${binary_dir}/${mitamae_bin}" "https://github.com/itamae-kitchen/mitamae/releases/download/v${version}/${mitamae_bin}"
 chmod +x "${binary_dir}/${mitamae_bin}"
 ln -sf "${binary_dir}/${mitamae_bin}" "${binary_dir}/mitamae"
