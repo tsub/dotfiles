@@ -13,9 +13,11 @@ execute "mv /tmp/ghg_v#{node[:ghg][:version]}_darwin_amd64/ghg /usr/local/bin" d
   not_if 'test -x /usr/local/bin/ghg'
 end
 
-define :ghg do
-  execute "ghg get #{params[:name]}" do
-    tool_name = params[:name].split('/').last
+define :ghg, version: nil, cli_name: nil do
+  version = "@v#{params[:version]}" if params[:version]
+
+  execute "ghg get #{params[:name]}#{version}" do
+    tool_name = params[:cli_name] || params[:name].split('/').last
     not_if "test -x ~/.ghg/bin/#{tool_name}"
   end
 end
