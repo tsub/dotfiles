@@ -22,7 +22,6 @@ export PATH="/usr/local/opt/git/share/git-core/contrib/diff-highlight:$PATH"
 export GOPATH="$HOME/ghq"
 export GOROOT="/usr/local/opt/go/libexec"
 export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
-export GO15VENDOREXPERIMENT="1"
 
 ## gcloud
 
