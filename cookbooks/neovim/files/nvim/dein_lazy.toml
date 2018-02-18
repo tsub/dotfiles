@@ -94,6 +94,10 @@ on_ft = 'typescript'
 repo = 'ElmCast/elm-vim'
 on_ft = 'elm'
 
+[[plugins]]
+repo = 'chr4/nginx.vim'
+on_ft = 'nginx'
+
 ## Editor
 
 [[plugins]]
