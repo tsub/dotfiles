@@ -47,3 +47,6 @@ eval (direnv hook fish)
 
 ## vg
 command -v vg >/dev/null 2>&1; and vg eval --shell fish | source
+
+## Python2 of Homebrew
+export PATH="$PATH:/usr/local/opt/python@2/bin/"
