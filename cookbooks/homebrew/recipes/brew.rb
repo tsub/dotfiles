@@ -27,6 +27,7 @@ brew 'kompose'
 brew 'kubectl' do
   directory_name 'kubernetes-cli'
 end
+brew 'kubectx'
 brew 'kubernetes-helm'
 brew 'neovim'
 brew 'nodenv'
