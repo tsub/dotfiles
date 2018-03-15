@@ -29,8 +29,10 @@ end
 
 directory "#{node[:fish][:home]}/completions"
 
-link File.expand_path('~/.config/fish/completions/hub.fish') do
-  to File.expand_path('../files/.config/fish/completions/hub.fish', __FILE__)
+%w[hub.fish kubectx.fish kubens.fish].each do |completion_file|
+  link File.expand_path("~/.config/fish/completions/#{completion_file}") do
+    to File.expand_path("../files/.config/fish/completions/#{completion_file}", __FILE__)
+  end
 end
 
 ## fisherman
