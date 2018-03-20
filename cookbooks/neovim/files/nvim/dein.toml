@@ -29,12 +29,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'kassio/neoterm'
-hook_add = '''
-  let g:neoterm_position = 'vertical'
-'''
-
-[[plugins]]
 repo = 'w0rp/ale'
 hook_add = 'source ~/.config/nvim/plugins/ale.vim'
 
