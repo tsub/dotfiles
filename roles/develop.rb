@@ -1,4 +1,7 @@
 node.reverse_merge!(
+  alacritty: {
+    home: ENV['XDG_CONFIG_HOME'] + '/alacritty'
+  },
   fish: {
     home: ENV['XDG_CONFIG_HOME'] + '/fish'
   },
@@ -25,3 +28,4 @@ include_recipe '../cookbooks/neovim/default.rb'
 include_recipe '../cookbooks/the_silver_searcher/default.rb'
 include_recipe '../cookbooks/tmux/default.rb'
 include_recipe '../cookbooks/ghg/default.rb'
+include_recipe '../cookbooks/alacritty/default.rb'
