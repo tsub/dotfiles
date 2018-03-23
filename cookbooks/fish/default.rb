@@ -29,7 +29,7 @@ end
 
 directory "#{node[:fish][:home]}/completions"
 
-%w[hub.fish kubectx.fish kubens.fish].each do |completion_file|
+%w[hub.fish kubectx.fish kubens.fish alacritty.fish].each do |completion_file|
   link File.expand_path("~/.config/fish/completions/#{completion_file}") do
     to File.expand_path("../files/.config/fish/completions/#{completion_file}", __FILE__)
   end
