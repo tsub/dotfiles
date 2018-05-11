@@ -29,7 +29,7 @@ bind main R !git rebase -i %(commit)
 bind diff R !git rebase -i %(commit)
 
 # clean
-bind status D ?git clean -d -f -- %(file)
+bind status D ?@git clean -d -f -- %(file)
 
 # hub
 # ref: http://hisaichi5518.hatenablog.jp/entry/2017/02/09/160007
