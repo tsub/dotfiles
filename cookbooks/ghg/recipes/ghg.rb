@@ -1,4 +1,5 @@
 ghg 'GetStream/vg'
+ghg 'hyperhq/pi'
 ghg 'jpignata/fargate'
 ghg 'mattn/memo'
 ghg 'wantedly/dockertags'
