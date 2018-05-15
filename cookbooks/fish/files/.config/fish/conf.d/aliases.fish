@@ -9,6 +9,7 @@ alias deckset="open -a Deckset"
 alias rm="rm -i"
 alias zatsu="memo edit zatsu.md"
 alias ls="exa"
+alias cat="bat"
 
 ## Abbreviations
 abbr -a b "bundle"
