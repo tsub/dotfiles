@@ -25,6 +25,7 @@ brew 'heroku'
 brew 'hub'
 brew 'jq'
 brew 'kompose'
+brew 'kube-aws'
 brew 'kubectl' do
   directory_name 'kubernetes-cli'
 end
