@@ -1,4 +1,5 @@
 ghg 'GetStream/vg'
+ghg 'heptio/authenticator'
 ghg 'hyperhq/pi'
 ghg 'jpignata/fargate'
 ghg 'mattn/memo'
