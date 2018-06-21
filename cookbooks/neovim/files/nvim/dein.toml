@@ -35,6 +35,9 @@ hook_add = 'source ~/.config/nvim/plugins/ale.vim'
 [[plugins]]
 repo = 'tpope/vim-endwise'
 
+[[plugins]]
+repo = 'tpope/vim-surround'
+
 ## deoplete
 
 [[plugins]]
