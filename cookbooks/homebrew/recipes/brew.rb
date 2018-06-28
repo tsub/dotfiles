@@ -3,7 +3,6 @@ brew 'awscli'
 brew 'b4b4r07/gist/gist' do
   directory_name 'gist'
 end
-brew 'bat'
 brew 'colordiff'
 brew 'ctop'
 brew 'dep'
