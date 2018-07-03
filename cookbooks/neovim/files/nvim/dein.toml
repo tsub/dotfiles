@@ -77,4 +77,5 @@ on_ft = 'elm'
 
 [[plugins]]
 repo = 'mhartington/nvim-typescript'
+build = './install.sh'
 on_ft = 'typescript'
