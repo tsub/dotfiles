@@ -1,6 +1,6 @@
 ghg 'GetStream/vg'
 ghg 'heptio/authenticator'
 ghg 'hyperhq/pi'
-ghg 'jpignata/fargate'
+ghg 'turnerlabs/fargate'
 ghg 'mattn/memo'
 ghg 'wantedly/dockertags'
