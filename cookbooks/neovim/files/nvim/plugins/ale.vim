@@ -2,7 +2,7 @@ let g:ale_lint_on_text_changed = 0
 
 let g:ale_linters = {
       \ 'ruby': ['rubocop'],
-      \ 'go': ['gofmt', 'golint', 'go vet', 'go build']
+      \ 'go': ['gofmt', 'goimports', 'golint', 'go vet', 'go build']
       \ }
 let g:ale_rust_cargo_use_check = 1
 
