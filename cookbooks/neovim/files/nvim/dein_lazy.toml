@@ -105,11 +105,11 @@ repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
 hook_add = '''
   nnoremap [denite] <Nop>
-  nmap <C-u> [denite]
+  nmap <Space> [denite]
 
-  nnoremap <silent> [denite]b :<C-u>Denite buffer<CR>
-  nnoremap <silent> [denite]f :<C-u>Denite file_rec<CR>
-  nnoremap <silent> [denite]g :<C-u>Denite grep:. -buffer-name=search-buffer<CR>
+  nnoremap <silent> [denite]b :<Space>Denite buffer<CR>
+  nnoremap <silent> [denite]f :<Space>Denite file_rec<CR>
+  nnoremap <silent> [denite]g :<Space>Denite grep:. -buffer-name=search-buffer<CR>
 '''
 hook_post_source = 'source ~/.config/nvim/plugins/denite.vim'
 
