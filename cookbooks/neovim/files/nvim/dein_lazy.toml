@@ -79,10 +79,6 @@ repo = 'vim-scripts/fish-syntax'
 on_ft = 'fish'
 
 [[plugins]]
-repo = 'dag/vim-fish'
-on_ft = 'fish'
-
-[[plugins]]
 repo = 'stephpy/vim-yaml'
 on_ft = 'yaml'
 
