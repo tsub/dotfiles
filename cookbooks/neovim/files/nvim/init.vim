@@ -91,10 +91,6 @@ filetype plugin indent on
 set tags=.tags
 autocmd InsertLeave * set nopaste
 
-"" Fix for japanese input bug
-set ttimeout
-set ttimeoutlen=100
-
 "*****************************************************************************
 "" Plugins
 "*****************************************************************************
