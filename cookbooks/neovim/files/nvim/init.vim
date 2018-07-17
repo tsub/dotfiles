@@ -74,6 +74,10 @@ noremap <C-b> <C-u>
 nnoremap ; :
 noremap <silent> <F5> :e!<CR>
 tnoremap <silent> <C-j><C-j> <C-\><C-n>
+tnoremap <silent> <C-w>h <C-\><C-n><CR>:wincmd h<CR>
+tnoremap <silent> <C-w>k <C-\><C-n><CR>:wincmd k<CR>
+tnoremap <silent> <C-w>j <C-\><C-n><CR>:wincmd j<CR>
+tnoremap <silent> <C-w>l <C-\><C-n><CR>:wincmd l<CR>
 nnoremap <C-w><C-h> :vertical resize -5<CR>
 nnoremap <C-w><C-j> :resize +5<CR>
 nnoremap <C-w><C-k> :resize -5<CR>
