@@ -17,7 +17,10 @@ repo = 'airblade/vim-gitgutter'
 repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
-repo = 'Xuyuanp/nerdtree-git-plugin'
+repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
+hook_add = '''
+  let g:NERDTreeLimitedSyntax = 1
+'''
 
 ## Editor
 
