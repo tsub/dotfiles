@@ -5,6 +5,7 @@ fisherman/docker-completion
 brgmnn/fish-docker-compose
 fisherman/done
 fisherman/fishkit
+tsub/fkill
 fisherman/fzf
 tsub/fish-fzf-ghq
 tsub/fish-fzf-git-recent-branch
