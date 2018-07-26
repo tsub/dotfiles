@@ -94,6 +94,10 @@ on_ft = 'elm'
 repo = 'chr4/nginx.vim'
 on_ft = 'nginx'
 
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = 'vue'
+
 ## Editor
 
 [[plugins]]
