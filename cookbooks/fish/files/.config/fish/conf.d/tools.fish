@@ -39,8 +39,8 @@ end
 export FZF_DEFAULT_OPTS='--ansi --height 40% --reverse --border'
 
 ## rust
-export RUST_SRC_PATH="$HOME/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
-export PATH="$PATH:$HOME/.cargo/bin"
+export CARGO_HOME="$HOME/.cargo"
+export PATH="$PATH:$CARGO_HOME/bin"
 
 ## direnv
 eval (direnv hook fish)
