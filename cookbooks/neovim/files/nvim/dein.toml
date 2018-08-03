@@ -13,15 +13,6 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
-[[plugins]]
-repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
-hook_add = '''
-  let g:NERDTreeLimitedSyntax = 1
-'''
-
 ## Editor
 
 [[plugins]]
