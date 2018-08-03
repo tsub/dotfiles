@@ -75,7 +75,7 @@ repo = 'kchmck/vim-coffee-script'
 on_ft = 'coffee'
 
 [[plugins]]
-repo = 'vim-scripts/fish-syntax'
+repo = 'RobertAudi/fish.vim'
 on_ft = 'fish'
 
 [[plugins]]
