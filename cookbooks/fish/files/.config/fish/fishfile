@@ -1,7 +1,6 @@
 fisherman/await
 oh-my-fish/plugin-aws
 edc/bass
-tsub/theme-bobthefish
 fisherman/docker-completion
 brgmnn/fish-docker-compose
 fisherman/done
@@ -23,4 +22,5 @@ fisherman/menu
 fisherman/nodenv
 fisherman/rbenv
 abaez/fish-rustup
+tsub/fish-theme
 fisherman/z

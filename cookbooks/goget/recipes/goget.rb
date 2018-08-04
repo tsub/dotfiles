@@ -1,3 +1,4 @@
+goget 'github.com/Ladicle/git-prompt'
 goget 'github.com/ariarijp/crontoc'
 goget 'github.com/nsf/gocode'
 goget 'golang.org/x/lint/golint'
