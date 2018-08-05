@@ -145,6 +145,13 @@ hook_source = '''
 [[plugins]]
 repo = 'Shougo/deol.nvim'
 
+[[plugins]]
+repo = 'alvan/vim-closetag'
+on_ft = ['html', 'vue', 'jsx', 'erb', 'fluentd']
+hook_add = '''
+  let g:closetag_filetypes = 'html,vue'
+'''
+
 ## Others
 
 [[plugins]]
