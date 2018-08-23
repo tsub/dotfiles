@@ -5,7 +5,6 @@ brew 'b4b4r07/gist/gist' do
 end
 brew 'colordiff'
 brew 'ctop'
-brew 'dep'
 brew 'direnv'
 brew 'elm'
 brew 'exa'

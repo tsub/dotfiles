@@ -1,3 +1,4 @@
+ghg 'golang/dep'
 ghg 'hyperhq/pi'
 ghg 'kubernetes-sigs/aws-iam-authenticator' do
   cli_name 'i-authenticator'
