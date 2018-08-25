@@ -164,7 +164,7 @@ hook_add = '''
 '''
 hook_source = '''
   let g:NERDTreeChDirMode = 0
-  let NERDTreeShowHidden = 1
+  let g:NERDTreeShowHidden = 1
   let g:NERDTreeWinSize = 30
 '''
 
