@@ -42,6 +42,10 @@ repo = 'ekalinin/Dockerfile.vim'
 on_ft = ['docker', 'docker-compose']
 
 [[plugins]]
+repo = 'zchee/deoplete-docker'
+on_ft = 'docker'
+
+[[plugins]]
 repo = 'isRuslan/vim-es6'
 on_ft = 'javascript'
 
@@ -63,7 +67,15 @@ repo = 'noprompt/vim-yardoc'
 on_ft = 'ruby'
 
 [[plugins]]
+repo = 'fishbullet/deoplete-ruby'
+on_ft = 'ruby'
+
+[[plugins]]
 repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+
+[[plugins]]
+repo = 'sebastianmarkow/deoplete-rust'
 on_ft = 'rust'
 
 [[plugins]]
@@ -83,11 +95,20 @@ repo = 'stephpy/vim-yaml'
 on_ft = 'yaml'
 
 [[plugins]]
+repo = 'mhartington/nvim-typescript'
+build = './install.sh'
+on_ft = 'typescript'
+
+[[plugins]]
 repo = 'HerringtonDarkholme/yats.vim'
 on_ft = 'typescript'
 
 [[plugins]]
 repo = 'ElmCast/elm-vim'
+on_ft = 'elm'
+
+[[plugins]]
+repo = 'pbogut/deoplete-elm'
 on_ft = 'elm'
 
 [[plugins]]
@@ -97,6 +118,11 @@ on_ft = 'nginx'
 [[plugins]]
 repo = 'posva/vim-vue'
 on_ft = 'vue'
+
+[[plugins]]
+repo = 'zchee/deoplete-go'
+build = 'make'
+on_ft = 'go'
 
 ## Editor
 

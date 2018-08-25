@@ -43,29 +43,3 @@ hook_add = '''
 
   set completeopt-=preview " disable preview
 '''
-
-[[plugins]]
-repo = 'zchee/deoplete-go'
-build = 'make'
-on_ft = 'go'
-
-[[plugins]]
-repo = 'sebastianmarkow/deoplete-rust'
-on_ft = 'rust'
-
-[[plugins]]
-repo = 'fishbullet/deoplete-ruby'
-on_ft = 'ruby'
-
-[[plugins]]
-repo = 'zchee/deoplete-docker'
-on_ft = 'docker'
-
-[[plugins]]
-repo = 'pbogut/deoplete-elm'
-on_ft = 'elm'
-
-[[plugins]]
-repo = 'mhartington/nvim-typescript'
-build = './install.sh'
-on_ft = 'typescript'
