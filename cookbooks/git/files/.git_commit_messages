@@ -1,6 +1,17 @@
 
 
-# Use following sample emoji.
+# Semantic Commit Messages
+# https://seesparkbox.com/foundry/semantic_commit_messages
+#
+# chore: add Oyster build script
+# docs: explain hat wobble
+# feat: add beta sequence
+# fix: remove broken confirmation message
+# refactor: share logic between 4d3d3d3 and flarhgunnstow
+# style: convert tabs to spaces
+# test: ensure Tayne retains clothing
+
+# Emoji Commit
 #
 # 🐛 :bug: バグ修正
 # 🔧 :wrench: 設定の更新
