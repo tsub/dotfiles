@@ -124,6 +124,10 @@ repo = 'zchee/deoplete-go'
 build = 'make'
 on_ft = 'go'
 
+[[plugins]]
+repo = 'udalov/kotlin-vim'
+on_ft = 'kotlin'
+
 ## Editor
 
 [[plugins]]
