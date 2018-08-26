@@ -50,10 +50,6 @@ set shell=/bin/sh
 set sh=fish
 set clipboard+=unnamedplus
 
-" for airblade/vim-gitgutter
-" ref: https://github.com/airblade/vim-gitgutter/tree/37bdd03d176c5e182c7e8dbdc79c3f71d2a04898#getting-started
-set updatetime=100
-
 "" Visual
 syntax enable
 set termguicolors
