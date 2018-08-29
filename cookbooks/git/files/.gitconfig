@@ -8,6 +8,7 @@
   default = simple
 [commit]
   template = ~/.git_commit_messages
+  verbose = true
 [pager]
   log = diff-highlight | less
   show = diff-highlight | less
