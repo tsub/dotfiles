@@ -1,3 +1,4 @@
+ghg 'CircleCI-Public/circleci-cli'
 ghg 'golang/dep'
 ghg 'hyperhq/pi'
 ghg 'kubernetes-sigs/aws-iam-authenticator' do
