@@ -1,4 +1,6 @@
-ghg 'CircleCI-Public/circleci-cli'
+ghg 'CircleCI-Public/circleci-cli' do
+  cli_name 'circleci'
+end
 ghg 'golang/dep'
 ghg 'hyperhq/pi'
 ghg 'kubernetes-sigs/aws-iam-authenticator' do
