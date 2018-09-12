@@ -20,8 +20,7 @@ export PATH="/usr/local/opt/git/share/git-core/contrib/diff-highlight:$PATH"
 
 ## go
 export GOPATH="$HOME/ghq"
-export GOROOT="/usr/local/opt/go/libexec"
-export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
+export PATH="$PATH:$GOPATH/bin"
 
 ## gcloud
 
