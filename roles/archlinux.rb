@@ -19,7 +19,8 @@ node.reverse_merge!(
   }
 )
 
-
+include_recipe '../cookbooks/pacman/default.rb'
+include_recipe '../cookbooks/aur/default.rb'
 include_recipe '../cookbooks/fish/default.rb'
 include_recipe '../cookbooks/rbenv/default.rb'
 include_recipe '../cookbooks/nodenv/default.rb'
