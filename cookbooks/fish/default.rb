@@ -1,15 +1,17 @@
 ## fish
 
+fish_path = node[:platform] == 'darwin' ? '/usr/local/bin/fish' : '/usr/bin/fish'
+
 directory node[:fish][:home]
 
 if node[:platform] == 'darwin'
-  execute 'echo /usr/local/bin/fish | sudo tee -a /etc/shells' do
+  execute "echo #{fish_path} | sudo tee -a /etc/shells" do
     not_if 'echo $SHELL | grep fish'
   end
+end
 
-  execute 'chsh -s /usr/local/bin/fish' do
-    not_if 'echo $SHELL | grep fish'
-  end
+execute "chsh -s #{fish_path}" do
+  not_if 'echo $SHELL | grep fish'
 end
 
 directory "#{node[:fish][:home]}/conf.d"
