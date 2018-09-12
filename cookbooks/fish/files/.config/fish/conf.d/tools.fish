@@ -7,7 +7,7 @@ export PATH="$PATH:$HOME/.ghg/bin"
 ## gpg agent
 export GPG_TTY=(tty)
 
-if not pgrep -q gpg-agent
+if not pgrep gpg-agent > /dev/null
   eval (gpg-agent --daemon)
 end
 
