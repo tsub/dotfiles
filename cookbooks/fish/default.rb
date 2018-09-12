@@ -10,7 +10,7 @@ if node[:platform] == 'darwin'
   end
 end
 
-execute "chsh -s #{fish_path}" do
+execute "chsh -s #{fish_path} #{ENV['SUDO_USER'] || ENV['USER']}" do
   not_if 'echo $SHELL | grep fish'
 end
 
