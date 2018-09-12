@@ -1,8 +1,3 @@
-package 'git'
-package 'tig'
-package 'gibo'
-package 'gnupg'
-
 ## Git
 
 link File.expand_path('~/.gitconfig') do

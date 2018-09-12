@@ -1,5 +1,3 @@
-package 'nodenv'
-
 define :nodenv do
   execute "nodenv install #{params[:name]}" do
     not_if "test -d ~/.nodenv/versions/#{params[:name]}"

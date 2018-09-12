@@ -1,6 +1,3 @@
-package 'rbenv'
-package 'rbenv-default-gems'
-
 define :rbenv do
   execute "rbenv install #{params[:name]}" do
     not_if "test -d ~/.rbenv/versions/#{params[:name]}"

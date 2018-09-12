@@ -1,5 +1,3 @@
-package 'neovim/neovim/neovim'
-
 directory node[:neovim][:home]
 
 link "#{node[:neovim][:home]}/nvim" do

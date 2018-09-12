@@ -1,6 +1,3 @@
-package 'fish'
-package 'fisherman/tap/fisherman'
-
 ## fish
 
 directory node[:fish][:home]

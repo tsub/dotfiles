@@ -1,5 +1,3 @@
-package 'go'
-
 define :goget do
   execute "go get #{params[:name]}" do
     not_if "test -d $GOPATH/src/#{params[:name]}"
