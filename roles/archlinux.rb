@@ -1,12 +1,14 @@
+config_home = ENV['XDG_CONFIG_HOME'] || "#{ENV['HOME']}/.config"
+
 node.reverse_merge!(
   alacritty: {
-    home: ENV['XDG_CONFIG_HOME'] + '/alacritty'
+    home: config_home + '/alacritty'
   },
   fish: {
-    home: ENV['XDG_CONFIG_HOME'] + '/fish'
+    home: config_home + '/fish'
   },
   neovim: {
-    home: ENV['XDG_CONFIG_HOME']
+    home: config_home
   },
   rbenv: {
     ruby_version: '2.5.1'
