@@ -1,8 +1,8 @@
 fisherman/await
 oh-my-fish/plugin-aws
 edc/bass
-fisherman/docker-completion
 brgmnn/fish-docker-compose
+barnybug/docker-fish-completion
 fisherman/done
 fisherman/fishkit
 tsub/fkill
