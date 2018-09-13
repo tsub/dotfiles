@@ -18,7 +18,12 @@ if [ -f $HOME/.gpg-agent-info ]
 end
 
 ## diff-highlight
-export PATH="/usr/local/opt/git/share/git-core/contrib/diff-highlight:$PATH"
+if [ -d "/usr/local/opt/git/share/git-core/contrib/diff-highlight" ]
+  export PATH="/usr/local/opt/git/share/git-core/contrib/diff-highlight:$PATH"
+end
+if [ -d "/usr/share/git/diff-highlight" ]
+  export PATH="/usr/share/git/diff-highlight:$PATH"
+end
 
 ## go
 export GOPATH="$HOME/ghq"
