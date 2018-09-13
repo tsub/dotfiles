@@ -19,7 +19,6 @@ fisherman/humanize_duration
 evanlucas/fish-kubectl-completions
 fisherman/last_job_id
 fisherman/menu
-fisherman/nodenv
 fisherman/rbenv
 abaez/fish-rustup
 tsub/fish-theme
