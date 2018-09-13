@@ -12,7 +12,6 @@ tsub/fish-fzf-git-recent-branch
 fisherman/get
 fisherman/getopts
 tsub/fish-git
-yamadayuki/goenv
 Doctusoft/google-cloud-sdk-fish-completion
 tsub/hatebu-watch
 fisherman/humanize_duration
