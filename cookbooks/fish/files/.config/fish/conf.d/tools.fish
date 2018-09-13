@@ -2,7 +2,9 @@
 export GHQ_ROOT="$HOME/ghq/src"
 
 ## ghg
-export PATH="$PATH:$HOME/.ghg/bin"
+if [ -d "$HOME/.ghg/bin" ]
+  export PATH="$PATH:$HOME/.ghg/bin"
+end
 
 ## gpg agent
 export GPG_TTY=(tty)
@@ -20,7 +22,9 @@ export PATH="/usr/local/opt/git/share/git-core/contrib/diff-highlight:$PATH"
 
 ## go
 export GOPATH="$HOME/ghq"
-export PATH="$PATH:$GOPATH/bin"
+if [ -d "$GOPATH/bin" ]
+  export PATH="$PATH:$GOPATH/bin"
+end
 
 ## gcloud
 
@@ -39,7 +43,9 @@ export FZF_DEFAULT_OPTS='--ansi --height 40% --reverse --border'
 
 ## rust
 export CARGO_HOME="$HOME/.cargo"
-export PATH="$PATH:$CARGO_HOME/bin"
+if [ -d "$CARGO_HOME/bin" ]
+  export PATH="$PATH:$CARGO_HOME/bin"
+end
 
 ## direnv
 eval (direnv hook fish)
