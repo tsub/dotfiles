@@ -4,13 +4,17 @@ let g:ale_fix_on_save = 1
 let g:ale_linters = {
       \ 'ruby': ['rubocop'],
       \ 'go': ['goimports', 'gofmt', 'golint', 'go vet', 'go build'],
-      \ 'rust': ['cargo', 'rustc', 'rustfmt']
+      \ 'rust': ['cargo', 'rustc', 'rustfmt'],
+      \ 'javascript': ['prettier-eslint', 'eslint', 'flow'],
+      \ 'typescript': ['prettier', 'tslint', 'tsserver']
       \ }
 
 let g:ale_fixers = {
       \ 'ruby': ['rubocop'],
       \ 'go': ['goimports'],
-      \ 'rust': ['rustfmt']
+      \ 'rust': ['rustfmt'],
+      \ 'javascript': ['prettier-eslint', 'eslint'],
+      \ 'typescript': ['prettier', 'tslint']
       \ }
 
 let g:ale_echo_msg_format = '[%linter%] %s'
