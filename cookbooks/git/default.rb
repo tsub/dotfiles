@@ -34,10 +34,11 @@ link File.expand_path('~/.tigrc') do
   user node[:user]
 end
 
-## gnupg2
+## gnupg
 
 directory File.expand_path('~/.gnupg') do
   user node[:user]
+  mode '0700'
 end
 
 link File.expand_path('~/.gnupg/gpg-agent.conf') do
