@@ -1,6 +1,7 @@
 define :goget do
-  execute "go get #{params[:name]}" do
-    not_if "test -d $GOPATH/src/#{params[:name]}"
+  execute "GOPATH=#{node[:gopath]} go get #{params[:name]}" do
+    user node[:user]
+    not_if "test -d #{node[:gopath]}/src/#{params[:name]}"
   end
 end
 

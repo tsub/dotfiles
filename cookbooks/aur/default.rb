@@ -1,16 +1,19 @@
 define :yay do
   execute "yay -S --noconfirm #{params[:name]}" do
+    user node[:user]
     not_if "yay -Q #{params[:name]}"
   end
 end
 
-git File.expand_path('/tmp/yay') do
+git File.expand_path('/var/tmp/yay') do
   repository 'https://aur.archlinux.org/yay.git'
+  user node[:user]
   not_if 'which yay'
 end
 
 execute 'makepkg -si' do
-  cwd '/tmp/yay'
+  cwd '/var/tmp/yay'
+  user node[:user]
   not_if 'which yay'
 end
 

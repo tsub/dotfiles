@@ -18,7 +18,8 @@ node.reverse_merge!(
   },
   ghg: {
     version: '0.1.2'
-  }
+  },
+  gopath: ENV['GOPATH'] || "#{ENV['HOME']}/ghq"
 )
 
 include_recipe '../cookbooks/homebrew/default.rb'
