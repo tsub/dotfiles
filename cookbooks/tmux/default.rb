@@ -1,5 +1,7 @@
+arch = node[:platform] == 'darwin' ? 'macos' : 'linux'
+
 link File.expand_path('~/.tmux.conf') do
-  to File.expand_path('../files/.tmux.conf', __FILE__)
+  to File.expand_path("../files/.tmux.#{arch}.conf", __FILE__)
   user node[:user]
 end
 
