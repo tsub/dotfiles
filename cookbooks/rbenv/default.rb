@@ -22,16 +22,21 @@ link File.expand_path('~/.bundle') do
   user node[:user]
 end
 
-link File.expand_path('~/.rbenv/default-gems') do
-  to File.expand_path('../files/.rbenv/default-gems', __FILE__)
-  user node[:user]
-end
-
 directory File.expand_path('~/.rbenv/plugins') do
   user node[:user]
 end
 
 git File.expand_path('~/.rbenv/plugins/rbenv-each') do
   repository 'https://github.com/rbenv/rbenv-each.git'
+  user node[:user]
+end
+
+git File.expand_path('~/.rbenv/plugins/rbenv-default-gems') do
+  repository 'https://github.com/rbenv/rbenv-default-gems.git'
+  user node[:user]
+end
+
+link File.expand_path('~/.rbenv/default-gems') do
+  to File.expand_path('../files/.rbenv/default-gems', __FILE__)
   user node[:user]
 end
