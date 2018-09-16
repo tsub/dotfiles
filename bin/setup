@@ -6,6 +6,10 @@ version='1.5.2'
 
 binary_dir=$(cd $(dirname $0) && pwd)
 
+if [ "$($binary_dir/mitamae version)" = "MItamae v$version" ]; then
+  exit
+fi
+
 case "$(uname)" in
   "Darwin")
     mitamae_bin="mitamae-x86_64-darwin"
