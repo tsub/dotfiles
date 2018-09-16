@@ -1,0 +1,13 @@
+[Unit]
+Description=Remap keyboard for X
+
+[Service]
+Type=simple
+Restart=always
+KillMode=process
+ExecStart=/usr/bin/xkeysnail /home/<%= @user %>/.config/xkeysnail/config.py
+ExecStartPre=/usr/bin/xhost +SI:localuser:<%= @user %>
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=multi-user.target
