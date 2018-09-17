@@ -1,9 +1,38 @@
 # -*- coding: utf-8 -*-
 
+import re
 from xkeysnail.transform import *
 
 # [Global modemap] Change modifier keys as in xmodmap
 define_modmap({
     Key.CAPSLOCK: Key.LEFT_CTRL,
-    Key.LEFT_CTRL: Key.CAPSLOCK
+    Key.LEFT_CTRL: Key.CAPSLOCK,
+    Key.LEFT_ALT: Key.LEFT_META,
+    Key.RIGHT_ALT: Key.RIGHT_META,
+    Key.LEFT_META: Key.LEFT_ALT,
+    Key.KEY_FN_F1: Key.MUTE,
+    Key.KEY_FN_F2: Key.VOLUMEDOWN,
+    Key.KEY_FN_F3: Key.VOLUMEUP,
 })
+
+# Keybindings for Chrome
+define_keymap(re.compile("Google-chrome"), {
+    K("Shift-Super-x"): K("C-Shift-x"), # for 1Password X
+    K("Super-t"): K("C-t"),
+    K("Super-w"): K("C-w"),
+    K("Super-n"): K("C-n"),
+    K("Super-Shift-n"): K("C-Shift-n"),
+    K("Super-Shift-t"): K("C-Shift-t"),
+    K("Super-Shift-LEFT_BRACE"): K("C-Shift-TAB"),
+    K("Super-Shift-RIGHT_BRACE"): K("C-TAB"),
+    K("Super-a"): K("C-a"),
+    K("Super-r"): K("C-r"),
+    K("Super-z"): K("C-z"),
+    K("Super-x"): K("C-x"),
+    K("Super-c"): K("C-c"),
+    K("Super-v"): K("C-v"),
+    K("Super-f"): K("C-f"),
+    K("Super-minus"): K("C-minus"),
+    K("Super-equal"): K("C-equal"),
+    K("Super-KEY_0"): K("C-KEY_0"),
+}, "Chrome")
