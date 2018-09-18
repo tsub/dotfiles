@@ -1,7 +1,12 @@
-define :goget do
+define :goget, binary_name: nil do
   execute "GOPATH=#{node[:gopath]} go get #{params[:name]}" do
     user node[:user]
-    not_if "test -d #{node[:gopath]}/src/#{params[:name]}"
+
+    if params[:binary_name]
+      not_if "test -x #{node[:gopath]}/bin/#{params[:binary_name]}"
+    else
+      not_if "test -d #{node[:gopath]}/src/#{params[:name]}"
+    end
   end
 end
 
