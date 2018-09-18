@@ -36,3 +36,20 @@ define_keymap(re.compile("Google-chrome"), {
     K("Super-equal"): K("C-equal"),
     K("Super-KEY_0"): K("C-KEY_0"),
 }, "Chrome")
+
+# Keybindings for Slack
+define_keymap(re.compile("Slack"), {
+    K("Super-k"): K("C-k"),
+    K("Super-t"): K("C-t"),
+    K("Super-w"): K("C-w"),
+    K("Super-a"): K("C-a"),
+    K("Super-r"): K("C-r"),
+    K("Super-z"): K("C-z"),
+    K("Super-x"): K("C-x"),
+    K("Super-c"): K("C-c"),
+    K("Super-v"): K("C-v"),
+    K("Super-f"): K("C-f"),
+    K("Super-minus"): K("C-minus"),
+    K("Super-equal"): K("C-equal"),
+    K("Super-KEY_0"): K("C-KEY_0"),
+}, "Slack")
