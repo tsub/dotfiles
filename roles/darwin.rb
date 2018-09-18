@@ -14,7 +14,7 @@ node.reverse_merge!(
     ruby_version: '2.5.1'
   },
   nodenv: {
-    node_version: '8.11.3'
+    node_version: '8.11.4'
   },
   ghg: {
     version: '0.1.2'
