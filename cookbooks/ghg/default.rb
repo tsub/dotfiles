@@ -23,7 +23,6 @@ end
 
 execute "mv /tmp/ghg_v#{node[:ghg][:version]}_#{arch}_amd64/ghg /usr/local/bin" do
   not_if { `/usr/local/bin/ghg version`.include?(node[:ghg][:version]) }
-  user node[:user]
 end
 
 define :ghg, version: nil, cli_name: nil, alias_name: nil do
