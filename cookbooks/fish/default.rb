@@ -6,14 +6,18 @@ directory node[:fish][:home] do
   user node[:user]
 end
 
-if node[:platform] == 'darwin'
-  execute "echo #{fish_path} | sudo tee -a /etc/shells" do
-    not_if 'echo $SHELL | grep fish'
-  end
+execute "echo #{fish_path} | sudo tee -a /etc/shells" do
+  not_if "grep #{fish_path} /etc/shells"
 end
 
-execute "chsh -s #{fish_path} #{ENV['SUDO_USER'] || ENV['USER']}" do
-  not_if 'echo $SHELL | grep fish'
+if node[:platform] == 'darwin'
+  execute "chsh -s #{fish_path} #{node[:user]}" do
+    not_if { `dscl localhost -read Local/Default/Users/#{node[:user]} UserShell`.include?(fish_path) }
+  end
+else
+  execute "chsh -s #{fish_path} #{node[:user]}" do
+    not_if { `grep #{node[:user]} /etc/passwd`.include?(fish_path) }
+  end
 end
 
 directory "#{node[:fish][:home]}/conf.d" do
