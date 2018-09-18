@@ -5,24 +5,24 @@ ghg_archived_name = "ghg_v#{node[:ghg][:version]}_#{arch}_amd64.#{ext}"
 ghg_url = "https://github.com/Songmu/ghg/releases/download/v#{node[:ghg][:version]}/#{ghg_archived_name}"
 
 execute "curl -fSL -o /tmp/#{ghg_archived_name} #{ghg_url}" do
-  not_if 'test -x /usr/local/bin/ghg'
+  not_if { `/usr/local/bin/ghg version`.include?(node[:ghg][:version]) }
   user node[:user]
 end
 
 if ext == 'zip'
   execute "unzip -d /tmp/ /tmp/#{ghg_archived_name}" do
-    not_if 'test -x /usr/local/bin/ghg'
+    not_if { `/usr/local/bin/ghg version`.include?(node[:ghg][:version]) }
     user node[:user]
   end
 elsif ext == 'tar.gz'
   execute "tar -zxf /tmp/#{ghg_archived_name} -C /tmp/" do
-    not_if 'test -x /usr/local/bin/ghg'
+    not_if { `/usr/local/bin/ghg version`.include?(node[:ghg][:version]) }
     user node[:user]
   end
 end
 
 execute "mv /tmp/ghg_v#{node[:ghg][:version]}_#{arch}_amd64/ghg /usr/local/bin" do
-  not_if 'test -x /usr/local/bin/ghg'
+  not_if { `/usr/local/bin/ghg version`.include?(node[:ghg][:version]) }
   user node[:user]
 end
 

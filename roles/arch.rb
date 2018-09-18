@@ -17,7 +17,7 @@ node.reverse_merge!(
     node_version: '8.11.4'
   },
   ghg: {
-    version: '0.1.2'
+    version: '0.1.4'
   },
   gopath: ENV['GOPATH'] || "#{ENV['HOME']}/ghq"
 )
