@@ -52,4 +52,13 @@ define_keymap(re.compile("Slack"), {
     K("Super-minus"): K("C-minus"),
     K("Super-equal"): K("C-equal"),
     K("Super-KEY_0"): K("C-KEY_0"),
+    K("Super-KEY_1"): K("C-KEY_1"),
+    K("Super-KEY_2"): K("C-KEY_2"),
+    K("Super-KEY_3"): K("C-KEY_3"),
+    K("Super-KEY_4"): K("C-KEY_4"),
+    K("Super-KEY_5"): K("C-KEY_5"),
+    K("Super-KEY_6"): K("C-KEY_6"),
+    K("Super-KEY_7"): K("C-KEY_7"),
+    K("Super-KEY_8"): K("C-KEY_8"),
+    K("Super-KEY_9"): K("C-KEY_9"),
 }, "Slack")
