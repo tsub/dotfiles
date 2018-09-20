@@ -1,9 +1,18 @@
 # -*- coding: utf-8 -*-
 
+import os
 import re
+from datetime import datetime
 from xkeysnail.transform import *
 
-# [Global modemap] Change modifier keys as in xmodmap
+# see https://github.com/mooz/xkeysnail/blob/148e1e1e354334d391d40923812ebe85d8a5a876/xkeysnail/transform.py#L94
+def launch_with_pipe(command):
+    def launcher_with_pipe():
+        from subprocess import Popen, PIPE
+        Popen(command, shell = True, stdout = PIPE)
+    return launcher_with_pipe
+
+# [Global modmap] Change modifier keys as in xmodmap
 define_modmap({
     Key.CAPSLOCK: Key.LEFT_CTRL,
     Key.LEFT_CTRL: Key.CAPSLOCK,
@@ -13,6 +22,13 @@ define_modmap({
     Key.KEY_FN_F1: Key.MUTE,
     Key.KEY_FN_F2: Key.VOLUMEDOWN,
     Key.KEY_FN_F3: Key.VOLUMEUP,
+})
+
+# [Global keymap] Change keybindings
+timestamp = datetime.now().strftime("%Y-%m-%d-%H%M%S%3s")
+define_keymap(lambda wm_class: wm_class, {
+    K("Shift-Super-KEY_4"): launch(["maim", "-s", "%s/screenshot-%s.png" % (os.environ["HOME"], timestamp)]),
+    K("C-Super-Shift-KEY_4"): launch_with_pipe("maim -s | xclip -selection clipboard -t image/png"),
 })
 
 # Keybindings for Chrome
