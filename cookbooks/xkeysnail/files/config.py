@@ -30,6 +30,7 @@ define_keymap(lambda wm_class: wm_class, {
     K("Shift-Super-KEY_4"): launch(["maim", "-s", "%s/screenshot-%s.png" % (os.environ["HOME"], timestamp)]),
     K("C-Super-Shift-KEY_4"): launch_with_pipe("maim -s | xclip -selection clipboard -t image/png"),
     K("Super-Space"): launch(["rofi", "-show"]),
+    K("Shift-Super-v"): launch(["rofi", "-show", "clipboard", "-modi", "clipboard:greenclip print", "-run-command", "{cmd}"]),
 })
 
 # [Global keymap] Change keybindings except Alacritty
