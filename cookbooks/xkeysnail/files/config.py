@@ -29,45 +29,38 @@ timestamp = datetime.now().strftime("%Y-%m-%d-%H%M%S%3s")
 define_keymap(lambda wm_class: wm_class, {
     K("Shift-Super-KEY_4"): launch(["maim", "-s", "%s/screenshot-%s.png" % (os.environ["HOME"], timestamp)]),
     K("C-Super-Shift-KEY_4"): launch_with_pipe("maim -s | xclip -selection clipboard -t image/png"),
+    K("Super-Space"): launch(["rofi", "-show"]),
+})
+
+# [Global keymap] Change keybindings except Alacritty
+define_keymap(lambda wm_class: wm_class not in ("Alacritty", "Rofi"), {
+    K("Super-w"): K("C-w"),
+    K("Super-a"): K("C-a"),
+    K("Super-r"): K("C-r"),
+    K("Super-z"): K("C-z"),
+    K("Super-x"): K("C-x"),
+    K("Super-c"): K("C-c"),
+    K("Super-v"): K("C-v"),
+    K("Super-f"): K("C-f"),
+    K("Super-minus"): K("C-minus"),
+    K("Super-equal"): K("C-equal"),
+    K("Super-KEY_0"): K("C-KEY_0"),
 })
 
 # Keybindings for Chrome
 define_keymap(re.compile("Google-chrome"), {
     K("Shift-Super-x"): K("C-Shift-x"), # for 1Password X
     K("Super-t"): K("C-t"),
-    K("Super-w"): K("C-w"),
     K("Super-n"): K("C-n"),
     K("Super-Shift-n"): K("C-Shift-n"),
     K("Super-Shift-t"): K("C-Shift-t"),
     K("Super-Shift-LEFT_BRACE"): K("C-Shift-TAB"),
     K("Super-Shift-RIGHT_BRACE"): K("C-TAB"),
-    K("Super-a"): K("C-a"),
-    K("Super-r"): K("C-r"),
-    K("Super-z"): K("C-z"),
-    K("Super-x"): K("C-x"),
-    K("Super-c"): K("C-c"),
-    K("Super-v"): K("C-v"),
-    K("Super-f"): K("C-f"),
-    K("Super-minus"): K("C-minus"),
-    K("Super-equal"): K("C-equal"),
-    K("Super-KEY_0"): K("C-KEY_0"),
 }, "Chrome")
 
 # Keybindings for Slack
 define_keymap(re.compile("Slack"), {
     K("Super-k"): K("C-k"),
-    K("Super-t"): K("C-t"),
-    K("Super-w"): K("C-w"),
-    K("Super-a"): K("C-a"),
-    K("Super-r"): K("C-r"),
-    K("Super-z"): K("C-z"),
-    K("Super-x"): K("C-x"),
-    K("Super-c"): K("C-c"),
-    K("Super-v"): K("C-v"),
-    K("Super-f"): K("C-f"),
-    K("Super-minus"): K("C-minus"),
-    K("Super-equal"): K("C-equal"),
-    K("Super-KEY_0"): K("C-KEY_0"),
     K("Super-KEY_1"): K("C-KEY_1"),
     K("Super-KEY_2"): K("C-KEY_2"),
     K("Super-KEY_3"): K("C-KEY_3"),
