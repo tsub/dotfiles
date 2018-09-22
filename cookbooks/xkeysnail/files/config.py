@@ -51,6 +51,7 @@ define_keymap(lambda wm_class: wm_class not in ("Alacritty", "Rofi"), {
 # Keybindings for Chrome
 define_keymap(re.compile("Google-chrome"), {
     K("Shift-Super-x"): K("C-Shift-x"), # for 1Password X
+    K("Super-q"): K("C-Shift-w"),
     K("Super-t"): K("C-t"),
     K("Super-n"): K("C-n"),
     K("Super-Shift-n"): K("C-Shift-n"),
