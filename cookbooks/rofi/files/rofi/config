@@ -6,3 +6,4 @@ rofi.kb-accept-entry: Control+m,Return,KP_Enter
 rofi.kb-row-up: Control+k,Control+p
 rofi.kb-row-down: Control+j,Control+n
 rofi.show-icons: true
+rofi.font: Noto Sans CJK JP 15
