@@ -1,3 +1,4 @@
+yay 'adapta-gtk-theme-bin'
 yay 'alacritty-git'
 yay 'aws-ecs-cli'
 yay 'ctop-bin'
