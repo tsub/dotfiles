@@ -5,13 +5,6 @@ import re
 from datetime import datetime
 from xkeysnail.transform import *
 
-# see https://github.com/mooz/xkeysnail/blob/148e1e1e354334d391d40923812ebe85d8a5a876/xkeysnail/transform.py#L94
-def launch_with_pipe(command):
-    def launcher_with_pipe():
-        from subprocess import Popen, PIPE
-        Popen(command, shell = True, stdout = PIPE)
-    return launcher_with_pipe
-
 # [Global modmap] Change modifier keys as in xmodmap
 define_modmap({
     Key.CAPSLOCK: Key.LEFT_CTRL,
@@ -25,12 +18,10 @@ define_modmap({
 })
 
 # [Global keymap] Change keybindings
-timestamp = datetime.now().strftime("%Y-%m-%d-%H%M%S%3s")
-define_keymap(lambda wm_class: wm_class, {
-    K("Shift-Super-KEY_4"): launch(["maim", "-s", "%s/screenshot-%s.png" % (os.environ["HOME"], timestamp)]),
-    K("C-Super-Shift-KEY_4"): launch_with_pipe("maim -s | xclip -selection clipboard -t image/png"),
-    K("Super-Space"): launch(["rofi", "-show"]),
-    K("Shift-Super-v"): launch(["rofi", "-show", "clipboard", "-modi", "clipboard:greenclip print", "-run-command", "{cmd}"]),
+define_keymap(lambda wm_class: True, {
+    K("Shift-Super-KEY_4"): launch(["gnome-screenshot", "-a"]),
+    K("C-Super-Shift-KEY_4"): launch(["gnome-screenshot", "-ac"]),
+    K("Shift-Super-v"): launch(["albert", "show", "cq "]),
 })
 
 # [Global keymap] Change keybindings except Alacritty
