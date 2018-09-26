@@ -1,13 +1,13 @@
 ## ghq
-export GHQ_ROOT="$HOME/ghq/src"
+set -x GHQ_ROOT $HOME/ghq/src
 
 ## ghg
 if [ -d "$HOME/.ghg/bin" ]
-  export PATH="$PATH:$HOME/.ghg/bin"
+  set -x PATH $PATH $HOME/.ghg/bin
 end
 
 ## gpg agent
-export GPG_TTY=(tty)
+set -x GPG_TTY (tty)
 
 if not pgrep gpg-agent > /dev/null
   eval (gpg-agent --daemon)
@@ -19,16 +19,16 @@ end
 
 ## diff-highlight
 if [ -d "/usr/local/opt/git/share/git-core/contrib/diff-highlight" ]
-  export PATH="/usr/local/opt/git/share/git-core/contrib/diff-highlight:$PATH"
+  set -x PATH /usr/local/opt/git/share/git-core/contrib/diff-highlight $PATH
 end
 if [ -d "/usr/share/git/diff-highlight" ]
-  export PATH="/usr/share/git/diff-highlight:$PATH"
+  set -x PATH /usr/share/git/diff-highlight $PATH
 end
 
 ## go
-export GOPATH="$HOME/ghq"
+set -x GOPATH $HOME/ghq
 if [ -d "$GOPATH/bin" ]
-  export PATH="$PATH:$GOPATH/bin"
+  set -x PATH $PATH $GOPATH/bin
 end
 
 ## gcloud
@@ -44,12 +44,12 @@ if [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 end
 
 ## fzf
-export FZF_DEFAULT_OPTS='--ansi --height 40% --reverse --border'
+set -x FZF_DEFAULT_OPTS '--ansi --height 40% --reverse --border'
 
 ## rust
-export CARGO_HOME="$HOME/.cargo"
+set -x CARGO_HOME $HOME/.cargo
 if [ -d "$CARGO_HOME/bin" ]
-  export PATH="$PATH:$CARGO_HOME/bin"
+  set -x PATH $PATH $CARGO_HOME/bin
 end
 
 ## direnv
@@ -57,4 +57,4 @@ eval (direnv hook fish)
 
 ## python
 set USER_BASE_PATH (python -m site --user-base)
-export PATH="$PATH:$USER_BASE_PATH/bin"
+set -x PATH $PATH $USER_BASE_PATH/bin
