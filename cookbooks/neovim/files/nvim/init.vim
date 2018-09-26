@@ -60,9 +60,14 @@ set number
 set list
 set listchars=tab:\ \ ,trail:_
 set mouse=
-hi LineNr ctermbg=none guibg=none
-hi Normal ctermbg=none
-hi NonText ctermbg=none guibg=none
+hi LineNr      ctermbg=none guibg=none
+hi Normal      ctermbg=none guibg=none
+hi NonText     ctermbg=none guibg=none
+hi Folded      ctermbg=none guibg=none
+hi EndOfBuffer ctermbg=none guibg=none
+hi WarningMsg  ctermbg=none guibg=none
+hi ErrorMsg    ctermbg=none guibg=none
+hi Error       ctermbg=none guibg=none
 
 "" Mapping
 inoremap <silent> jj <ESC>
@@ -96,16 +101,16 @@ autocmd InsertLeave * set nopaste
 "*****************************************************************************
 
 "" ALE
-hi ALEWarningSign ctermfg=yellow guifg=yellow
-hi ALEErrorSign ctermfg=red guifg=red
-hi ALEInfoSign ctermfg=blue guifg=blue
-hi SignColumn ctermbg=none guibg=none
+hi ALEWarningSign ctermfg=yellow guifg=yellow ctermbg=none guibg=none
+hi ALEErrorSign   ctermfg=red    guifg=red    ctermbg=none guibg=none
+hi ALEInfoSign    ctermfg=blue   guifg=blue   ctermbg=none guibg=none
+hi SignColumn                                 ctermbg=none guibg=none
 
 "" GitGutter
-hi GitGutterAdd guibg=none
-hi GitGutterChange guibg=none
+hi GitGutterAdd          guibg=none
+hi GitGutterChange       guibg=none
 hi GitGutterChangeDelete guibg=none
-hi GitGutterDelete guibg=none
+hi GitGutterDelete       guibg=none
 
 "*****************************************************************************
 "" Local settings
