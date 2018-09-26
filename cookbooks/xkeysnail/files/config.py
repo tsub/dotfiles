@@ -64,3 +64,11 @@ define_keymap(re.compile("Slack"), {
     K("Super-KEY_8"): K("C-KEY_8"),
     K("Super-KEY_9"): K("C-KEY_9"),
 }, "Slack")
+
+# Keybindings for Albert
+define_keymap(re.compile("albert"), {
+    K("C-h"): K("left"),
+    K("C-j"): K("down"),
+    K("C-k"): K("up"),
+    K("C-l"): K("right"),
+}, "Albert")
