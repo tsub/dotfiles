@@ -54,3 +54,7 @@ end
 
 ## direnv
 eval (direnv hook fish)
+
+## python
+set USER_BASE_PATH (python -m site --user-base)
+export PATH="$PATH:$USER_BASE_PATH/bin"
