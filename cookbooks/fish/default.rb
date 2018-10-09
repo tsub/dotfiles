@@ -49,6 +49,10 @@ end
 
 ## fisherman
 
+execute 'curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish' do
+  not_if 'which fisher'
+end
+
 link File.expand_path('~/.config/fish/fishfile') do
   to File.expand_path('../files/.config/fish/fishfile', __FILE__)
   user node[:user]

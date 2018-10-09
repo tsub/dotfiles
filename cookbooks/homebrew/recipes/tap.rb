@@ -1,6 +1,5 @@
 tap 'b4b4r07/gist'
 tap 'code-hex/pget'
-tap 'fisherman/tap'
 tap 'go-swagger/go-swagger'
 tap 'homebrew/cask-fonts'
 tap 'itchyny/fillin'
