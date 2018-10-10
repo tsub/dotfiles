@@ -57,4 +57,6 @@ eval (direnv hook fish)
 
 ## python
 set USER_BASE_PATH (python -m site --user-base)
-set -x PATH $PATH $USER_BASE_PATH/bin
+if [ -d "$USER_BASE_PATH/bin" ]
+  set -x PATH $PATH $USER_BASE_PATH/bin
+end
