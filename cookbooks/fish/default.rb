@@ -50,7 +50,7 @@ end
 ## fisherman
 
 execute 'curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish' do
-  not_if 'which fisher'
+  not_if { 'test -f ~/.config/fish/functions/fisher.fish' }
 end
 
 link File.expand_path('~/.config/fish/fishfile') do
