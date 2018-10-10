@@ -9,7 +9,6 @@ template File.expand_path('~/.gitconfig.local') do
   source File.expand_path('../templates/.gitconfig.local.erb', __FILE__)
   owner node[:user]
   group node[:group]
-  variables user: node[:user]
   not_if 'test -f ~/.gitconfig.local'
 end
 
