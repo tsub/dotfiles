@@ -10,8 +10,6 @@ define :rbenv do
   end
 end
 
-rbenv node[:rbenv][:ruby_version]
-
 link File.expand_path('~/.gemrc') do
   to File.expand_path('../files/.gemrc', __FILE__)
   user node[:user]
@@ -40,3 +38,6 @@ link File.expand_path('~/.rbenv/default-gems') do
   to File.expand_path('../files/.rbenv/default-gems', __FILE__)
   user node[:user]
 end
+
+# Install Ruby after installing rbenv-default-gems
+rbenv node[:rbenv][:ruby_version]

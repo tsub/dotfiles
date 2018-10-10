@@ -10,8 +10,6 @@ define :nodenv do
   end
 end
 
-nodenv node[:nodenv][:node_version]
-
 directory File.expand_path('~/.nodenv/plugins') do
   user node[:user]
 end
@@ -25,3 +23,6 @@ link File.expand_path('~/.nodenv/default-packages') do
   to File.expand_path('../files/.nodenv/default-packages', __FILE__)
   user node[:user]
 end
+
+# Install Node.js after installing nodenv-default-packages
+nodenv node[:nodenv][:node_version]
