@@ -40,7 +40,9 @@ directory File.expand_path('~/.gnupg') do
   mode '0700'
 end
 
+arch = node[:platform] == 'darwin' ? 'macos' : 'linux'
+
 link File.expand_path('~/.gnupg/gpg-agent.conf') do
-  to File.expand_path('../files/.gnupg/gpg-agent.conf', __FILE__)
+  to File.expand_path("../files/.gnupg/gpg-agent.#{arch}.conf", __FILE__)
   user node[:user]
 end
