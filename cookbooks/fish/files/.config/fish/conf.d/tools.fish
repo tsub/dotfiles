@@ -60,3 +60,8 @@ set USER_BASE_PATH (python -m site --user-base)
 if [ -d "$USER_BASE_PATH/bin" ]
   set -x PATH $PATH $USER_BASE_PATH/bin
 end
+
+## nodenv
+if [ -d "$HOME/.nodenv" ]
+  set -x PATH $HOME/.nodenv/shims $PATH
+end
