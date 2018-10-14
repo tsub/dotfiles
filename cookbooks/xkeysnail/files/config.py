@@ -37,6 +37,7 @@ define_keymap(lambda wm_class: wm_class not in ("Alacritty", "Rofi"), {
     K("Super-minus"): K("C-minus"),
     K("Super-equal"): K("C-equal"),
     K("Super-KEY_0"): K("C-KEY_0"),
+    K("Super-Shift-z"): K("C-Shift-z"),
 })
 
 # Keybindings for Chrome
@@ -45,6 +46,7 @@ define_keymap(re.compile("Google-chrome"), {
     K("Super-q"): K("C-Shift-w"),
     K("Super-t"): K("C-t"),
     K("Super-n"): K("C-n"),
+    K("Super-Shift-r"): K("C-Shift-r"),
     K("Super-Shift-n"): K("C-Shift-n"),
     K("Super-Shift-t"): K("C-Shift-t"),
     K("Super-Shift-LEFT_BRACE"): K("C-Shift-TAB"),
