@@ -51,6 +51,7 @@ define_keymap(re.compile("Google-chrome"), {
     K("Super-Shift-t"): K("C-Shift-t"),
     K("Super-Shift-LEFT_BRACE"): K("C-Shift-TAB"),
     K("Super-Shift-RIGHT_BRACE"): K("C-TAB"),
+    K("Super-M-i"): K("C-Shift-i"),
 }, "Chrome")
 
 # Keybindings for Slack
