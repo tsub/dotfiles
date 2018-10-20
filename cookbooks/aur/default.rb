@@ -11,8 +11,8 @@ git File.expand_path('/var/tmp/yay') do
   not_if 'which yay'
 end
 
-execute 'makepkg -si' do
-  cwd '/var/tmp/yay'
+execute 'cd yay && makepkg -si' do
+  cwd '/var/tmp'
   user node[:user]
   not_if 'which yay'
 end
