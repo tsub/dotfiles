@@ -6,7 +6,8 @@ let g:ale_linters = {
       \ 'go': ['goimports', 'gofmt', 'golint', 'go vet', 'go build'],
       \ 'rust': ['cargo', 'rustc', 'rustfmt'],
       \ 'javascript': ['prettier-eslint', 'eslint', 'flow'],
-      \ 'typescript': ['prettier', 'tslint', 'tsserver']
+      \ 'typescript': ['prettier', 'tslint', 'tsserver'],
+      \ 'python': ['flake8']
       \ }
 
 let g:ale_fixers = {
@@ -14,7 +15,8 @@ let g:ale_fixers = {
       \ 'go': ['goimports'],
       \ 'rust': ['rustfmt'],
       \ 'javascript': ['prettier-eslint', 'eslint'],
-      \ 'typescript': ['prettier', 'tslint']
+      \ 'typescript': ['prettier', 'tslint'],
+      \ 'python': ['autopep8']
       \ }
 
 let g:ale_echo_msg_format = '[%linter%] %s'
