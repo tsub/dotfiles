@@ -68,6 +68,7 @@ hi EndOfBuffer ctermbg=none guibg=none
 hi WarningMsg  ctermbg=none guibg=none
 hi ErrorMsg    ctermbg=none guibg=none
 hi Error       ctermbg=none guibg=none
+hi VertSplit   ctermbg=none guibg=none
 
 "" Mapping
 inoremap <silent> jj <ESC>
