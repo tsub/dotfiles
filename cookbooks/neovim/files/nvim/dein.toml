@@ -38,8 +38,6 @@ repo = 'tpope/vim-surround'
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
   let g:deoplete#enable_at_startup = 1
-  let g:deoplete#sources#rust#racer_binary = expand('~/.cargo/bin/racer')
-  let g:deoplete#sources#rust#rust_source_path = '/src'
 
   set completeopt-=preview " disable preview
 '''
@@ -56,6 +54,10 @@ hook_add = '''
 [[plugins]]
 repo = 'sebastianmarkow/deoplete-rust'
 on_ft = 'rust'
+hook_add = '''
+  let g:deoplete#sources#rust#racer_binary = expand('~/.cargo/bin/racer')
+  let g:deoplete#sources#rust#rust_source_path = expand('~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src')
+'''
 
 [[plugins]]
 repo = 'fishbullet/deoplete-ruby'
