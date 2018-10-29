@@ -4,7 +4,7 @@ let g:ale_fix_on_save = 1
 let g:ale_linters = {
       \ 'ruby': ['rubocop'],
       \ 'go': ['goimports', 'gofmt', 'golint', 'go vet', 'go build'],
-      \ 'rust': ['cargo', 'rustc', 'rustfmt'],
+      \ 'rust': ['cargo', 'rustfmt'],
       \ 'javascript': ['prettier-eslint', 'eslint', 'flow'],
       \ 'typescript': ['prettier', 'tslint', 'tsserver'],
       \ 'python': ['flake8']
