@@ -1,10 +1,11 @@
 let g:ale_lint_on_text_changed = 0
+let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
 
 let g:ale_linters = {
-      \ 'ruby': ['rubocop'],
-      \ 'go': ['goimports', 'gofmt', 'golint', 'go vet', 'go build'],
-      \ 'rust': ['cargo', 'rustfmt'],
+      \ 'ruby': ['solargraph', 'rubocop'],
+      \ 'go': ['golangserver', 'gofmt', 'golint', 'go vet', 'go build'],
+      \ 'rust': ['rls', 'cargo', 'rustfmt'],
       \ 'javascript': ['prettier-eslint', 'eslint', 'flow'],
       \ 'typescript': ['prettier', 'tslint', 'tsserver'],
       \ 'python': ['flake8']
