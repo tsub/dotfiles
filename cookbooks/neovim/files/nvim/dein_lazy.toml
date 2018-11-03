@@ -5,21 +5,7 @@ repo = 'yoppi/fluentd.vim'
 on_ft = 'fluentd'
 
 [[plugins]]
-repo = 'slashmili/alchemist.vim'
-on_ft = 'elixir'
-
-[[plugins]]
 repo = 'elixir-lang/vim-elixir'
-on_ft = 'elixir'
-
-[[plugins]]
-repo = 'thinca/vim-ref'
-on_ft = 'elixir'
-
-[[plugins]]
-repo = 'kbrw/elixir.nvim'
-depends = ['vim-elixir', 'vim-ref']
-build = './install.sh'
 on_ft = 'elixir'
 
 [[plugins]]
