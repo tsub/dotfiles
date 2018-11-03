@@ -15,9 +15,6 @@ on_ft = 'slim'
 [[plugins]]
 repo = 'hashivim/vim-terraform'
 on_ft = 'terraform'
-hook_source = '''
-  let g:terraform_fmt_on_save = 1
-'''
 
 [[plugins]]
 repo = 'tmux-plugins/vim-tmux'

@@ -18,7 +18,8 @@ let g:ale_fixers = {
       \   'rust': ['rustfmt'],
       \   'javascript': ['prettier-eslint', 'eslint'],
       \   'typescript': ['prettier', 'tslint'],
-      \   'python': ['autopep8']
+      \   'python': ['autopep8'],
+      \   'terraform': ['terraform']
       \ }
 
 let g:ale_echo_msg_format = '[%linter%] %s'
