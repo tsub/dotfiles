@@ -1,3 +1,4 @@
+tap 'aws/tap'
 tap 'b4b4r07/gist'
 tap 'code-hex/pget'
 tap 'go-swagger/go-swagger'

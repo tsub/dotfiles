@@ -1,4 +1,5 @@
 brew 'amazon-ecs-cli'
+brew 'aws-sam-cli'
 brew 'awscli'
 brew 'b4b4r07/gist/gist' do
   directory_name 'gist'
