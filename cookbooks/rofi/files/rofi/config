@@ -1,7 +1,12 @@
 rofi.theme: /usr/share/rofi/themes/glue_pro_blue.rasi
-rofi.modi: combi
-rofi.combi-modi: drun
+rofi.modi: drun,emoji,calc
 rofi.kb-remove-to-eol:
 rofi.kb-accept-entry: Control+m,Return,KP_Enter
 rofi.kb-row-up: Control+k,Control+p
 rofi.kb-row-down: Control+j,Control+n
+rofi.kb-mode-next: Control+l
+rofi.kb-mode-previous: Control+h
+rofi.kb-remove-char-back: BackSpace
+rofi.font: Noto Sans CJK 20
+rofi.show-icons: true
+rofi.sidebar-mode: true
