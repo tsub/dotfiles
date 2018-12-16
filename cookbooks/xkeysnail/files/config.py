@@ -21,6 +21,8 @@ define_modmap({
 define_keymap(lambda wm_class: True, {
     K("Shift-Super-KEY_4"): launch(["gnome-screenshot", "-a"]),
     K("C-Super-Shift-KEY_4"): launch(["gnome-screenshot", "-ac"]),
+    K("Super-Space"): launch(["rofi", "-show"]),
+    K("Shift-Super-v"): launch(["rofi", "-show", "clipboard", "-modi", "clipboard:greenclip print", "-run-command", "{cmd}"]),
 })
 
 # [Global keymap] Change keybindings except Alacritty
