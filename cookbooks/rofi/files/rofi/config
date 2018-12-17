@@ -1,5 +1,5 @@
 rofi.theme: /usr/share/rofi/themes/glue_pro_blue.rasi
-rofi.modi: drun,emoji,calc
+rofi.modi: drun,emoji,calc,github:~/.config/rofi/rofi-github.py
 rofi.kb-remove-to-eol:
 rofi.kb-accept-entry: Control+m,Return,KP_Enter
 rofi.kb-row-up: Control+k,Control+p
