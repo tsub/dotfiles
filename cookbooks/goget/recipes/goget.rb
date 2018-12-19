@@ -10,4 +10,9 @@ end
 goget 'github.com/ikgo/gocode'
 goget 'github.com/sourcegraph/go-langserver'
 goget 'golang.org/x/lint/golint'
-goget 'golang.org/x/tools/cmd/goimports'
+goget 'golang.org/x/tools/cmd/goimports' do
+  binary_name 'goimports'
+end
+goget 'golang.org/x/tools/cmd/golsp' do
+  binary_name 'golsp'
+end
