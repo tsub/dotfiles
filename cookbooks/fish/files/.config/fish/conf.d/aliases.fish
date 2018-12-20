@@ -9,6 +9,7 @@ alias deckset="open -a Deckset"
 alias rm="rm -i"
 alias zatsu="memo edit zatsu.md"
 alias ls="exa"
+alias ghqg="$GOPATH/bin/get -shallow -unshallow ghq"
 
 ## Abbreviations
 abbr -a b "bundle"
