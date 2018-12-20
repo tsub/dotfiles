@@ -85,6 +85,10 @@ on_ft = 'vue'
 repo = 'udalov/kotlin-vim'
 on_ft = 'kotlin'
 
+[[plugins]]
+repo = 'lumiliet/vim-twig'
+on_ft = 'twig'
+
 ## Editor
 
 [[plugins]]
