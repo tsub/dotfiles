@@ -10,6 +10,7 @@ end
 goget 'github.com/ikgo/gocode'
 goget 'github.com/pocke/get'
 goget 'github.com/sourcegraph/go-langserver'
+goget 'github.com/vektra/mockery/cmd/mockery'
 goget 'golang.org/x/lint/golint'
 goget 'golang.org/x/tools/cmd/goimports' do
   binary_name 'goimports'
