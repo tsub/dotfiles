@@ -65,3 +65,8 @@ end
 if [ -d "$HOME/.nodenv" ]
   set -x PATH $HOME/.nodenv/shims $PATH
 end
+
+## krew
+if [ -d "$HOME/.krew/bin" ]
+  set -x PATH $PATH $HOME/.krew/bin
+end
