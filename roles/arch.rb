@@ -11,7 +11,7 @@ node.reverse_merge!(
     home: config_home
   },
   rbenv: {
-    ruby_version: '2.5.3'
+    ruby_version: '2.6.0'
   },
   nodenv: {
     node_version: '8.11.3'
