@@ -15,6 +15,8 @@ define_modmap({
     Key.KEY_FN_F1: Key.MUTE,
     Key.KEY_FN_F2: Key.VOLUMEDOWN,
     Key.KEY_FN_F3: Key.VOLUMEUP,
+    Key.PAGE_UP: Key.LEFT,  # for Dell XPS
+    Key.PAGE_DOWN: Key.RIGHT,  # for Dell XPS
 })
 
 # [Global keymap] Change keybindings
@@ -43,7 +45,7 @@ define_keymap(lambda wm_class: wm_class not in ("Alacritty", "Rofi"), {
 
 # Keybindings for Chrome
 define_keymap(re.compile("Google-chrome"), {
-    K("Shift-Super-x"): K("C-Shift-x"), # for 1Password X
+    K("Shift-Super-x"): K("C-Shift-x"),  # for 1Password X
     K("Super-q"): K("C-Shift-w"),
     K("Super-t"): K("C-t"),
     K("Super-n"): K("C-n"),
