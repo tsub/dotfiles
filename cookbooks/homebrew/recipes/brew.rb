@@ -33,6 +33,7 @@ brew 'kubectl' do
 end
 brew 'kubectx'
 brew 'kubernetes-helm'
+brew 'kustomize'
 brew 'neovim'
 brew 'nodenv'
 brew 'openssl'
