@@ -2,7 +2,6 @@
 alias vi="nvim"
 alias vim="nvim"
 alias git="hub"
-alias sudo="sudo -E "
 alias diff="colordiff -u"
 alias ctags="/usr/local/bin/ctags"
 alias deckset="open -a Deckset"
