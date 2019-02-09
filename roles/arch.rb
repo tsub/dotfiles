@@ -19,7 +19,7 @@ node.reverse_merge!(
   ghg: {
     version: '0.1.4'
   },
-  gopath: ENV['GOPATH'] || "#{ENV['HOME']}/ghq"
+  gopath: ENV['GOPATH'] || "#{ENV['HOME']}/go"
 )
 
 include_recipe '../cookbooks/pacman/default.rb'

@@ -26,7 +26,7 @@ if [ -d "/usr/share/git/diff-highlight" ]
 end
 
 ## go
-set -x GOPATH $HOME/ghq
+set -x GOPATH $HOME/go
 if [ -d "$GOPATH/bin" ]
   set -x PATH $PATH $GOPATH/bin
 end
