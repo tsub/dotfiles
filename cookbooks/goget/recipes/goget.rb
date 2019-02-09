@@ -6,10 +6,7 @@ end
 goget 'github.com/atotto/clipboard/cmd/gopaste' do
   binary_name 'gopaste'
 end
-# Workarond: github.com/mdempsky/gocode is not support Go 1.11 modules
-goget 'github.com/ikgo/gocode'
 goget 'github.com/pocke/get'
-goget 'github.com/sourcegraph/go-langserver'
 goget 'github.com/vektra/mockery/cmd/mockery'
 goget 'golang.org/x/lint/golint'
 goget 'golang.org/x/tools/cmd/goimports' do
