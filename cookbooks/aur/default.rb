@@ -5,14 +5,14 @@ define :yay do
   end
 end
 
-git File.expand_path('/var/tmp/yay') do
+git File.expand_path("#{Dir.tmpdir}/yay") do
   repository 'https://aur.archlinux.org/yay.git'
   user node[:user]
   not_if 'which yay'
 end
 
 execute 'cd yay && makepkg -si' do
-  cwd '/var/tmp'
+  cwd Dir.tmpdir
   user node[:user]
   not_if 'which yay'
 end
