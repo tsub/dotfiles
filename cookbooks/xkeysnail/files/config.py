@@ -60,6 +60,7 @@ define_keymap(re.compile("Google-chrome"), {
 # Keybindings for Slack
 define_keymap(re.compile("Slack"), {
     K("Super-k"): K("C-k"),
+    K("Super-q"): K("C-q"),
     K("Super-KEY_1"): K("C-KEY_1"),
     K("Super-KEY_2"): K("C-KEY_2"),
     K("Super-KEY_3"): K("C-KEY_3"),
