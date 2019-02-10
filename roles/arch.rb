@@ -4,6 +4,9 @@ node.reverse_merge!(
   alacritty: {
     home: config_home + '/alacritty'
   },
+  kitty: {
+    home: config_home + '/kitty'
+  },
   fish: {
     home: config_home + '/fish'
   },
@@ -41,3 +44,4 @@ include_recipe '../cookbooks/albert/default.rb'
 include_recipe '../cookbooks/rofi/default.rb'
 include_recipe '../cookbooks/greenclip/default.rb'
 include_recipe '../cookbooks/bingo/default.rb'
+include_recipe '../cookbooks/kitty/default.rb'

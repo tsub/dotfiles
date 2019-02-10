@@ -28,7 +28,7 @@ define_keymap(lambda wm_class: True, {
 })
 
 # [Global keymap] Change keybindings except Alacritty
-define_keymap(lambda wm_class: wm_class not in ("Alacritty", "Rofi"), {
+define_keymap(lambda wm_class: wm_class not in ("Alacritty", "Rofi", "kitty"), {
     K("Super-w"): K("C-w"),
     K("Super-a"): K("C-a"),
     K("Super-r"): K("C-r"),
