@@ -41,6 +41,7 @@ define_keymap(lambda wm_class: wm_class not in ("Alacritty", "Rofi"), {
     K("Super-equal"): K("C-equal"),
     K("Super-KEY_0"): K("C-KEY_0"),
     K("Super-Shift-z"): K("C-Shift-z"),
+    K("Super-BACKSPACE"): K("C-BACKSPACE"),
 })
 
 # Keybindings for Chrome
