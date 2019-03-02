@@ -12,6 +12,6 @@ goget 'golang.org/x/lint/golint'
 goget 'golang.org/x/tools/cmd/goimports' do
   binary_name 'goimports'
 end
-goget 'golang.org/x/tools/cmd/golsp' do
-  binary_name 'golsp'
+goget 'golang.org/x/tools/cmd/gopls' do
+  binary_name 'gopls'
 end
