@@ -4,7 +4,6 @@ let g:ale_fix_on_save = 1
 
 let g:ale_linters = {
       \   'ruby': ['rubocop'],
-      \   'rust': ['rls', 'cargo', 'rustfmt'],
       \   'javascript': ['prettier-eslint', 'eslint', 'flow'],
       \   'typescript': ['prettier', 'tslint', 'tsserver'],
       \   'python': ['flake8']
@@ -13,7 +12,6 @@ let g:ale_linters = {
 let g:ale_fixers = {
       \   '*': ['remove_trailing_lines', 'trim_whitespace'],
       \   'ruby': ['rubocop'],
-      \   'rust': ['rustfmt'],
       \   'javascript': ['prettier-eslint', 'eslint'],
       \   'typescript': ['prettier', 'tslint'],
       \   'python': ['autopep8'],
