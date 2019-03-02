@@ -1,0 +1,15 @@
+{
+  "yaml": {
+    "format": {
+      "enable": true
+    },
+    "schemas": {
+      "kubernetes": "kubernetes/**/*"
+    },
+    "completion": true,
+    "validate": true
+  },
+  "http": {
+    "proxyStrictSSL": true
+  }
+}

@@ -3,8 +3,7 @@ let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
 
 let g:ale_linters = {
-      \   'ruby': ['solargraph', 'rubocop'],
-      \   'go': ['bingo', 'gofmt', 'golint', 'go vet', 'go build'],
+      \   'ruby': ['rubocop'],
       \   'rust': ['rls', 'cargo', 'rustfmt'],
       \   'javascript': ['prettier-eslint', 'eslint', 'flow'],
       \   'typescript': ['prettier', 'tslint', 'tsserver'],
@@ -14,7 +13,6 @@ let g:ale_linters = {
 let g:ale_fixers = {
       \   '*': ['remove_trailing_lines', 'trim_whitespace'],
       \   'ruby': ['rubocop'],
-      \   'go': ['goimports'],
       \   'rust': ['rustfmt'],
       \   'javascript': ['prettier-eslint', 'eslint'],
       \   'typescript': ['prettier', 'tslint'],
