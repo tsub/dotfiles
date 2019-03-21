@@ -72,7 +72,6 @@ hi VertSplit   ctermbg=none guibg=none
 
 "" Mapping
 inoremap <silent> jj <ESC>
-noremap <C-b> <C-u>
 nnoremap ; :
 noremap <silent> <F5> :e!<CR>
 tnoremap <silent> <C-j><C-j> <C-\><C-n>
