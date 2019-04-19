@@ -7,6 +7,7 @@ end
 brew 'colordiff'
 brew 'ctop'
 brew 'direnv'
+brew 'dive'
 brew 'eksctl'
 brew 'elm'
 brew 'exa'
