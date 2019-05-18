@@ -99,7 +99,7 @@ hook_add = '''
   nmap <Space> [denite]
 
   nnoremap <silent> [denite]b :<Space>Denite buffer<CR>
-  nnoremap <silent> [denite]f :<Space>Denite file_rec<CR>
+  nnoremap <silent> [denite]f :<Space>Denite file/rec<CR>
   nnoremap <silent> [denite]g :<Space>Denite grep:. -buffer-name=search-buffer<CR>
 '''
 hook_post_source = 'source ~/.config/nvim/plugins/denite.vim'

@@ -1,5 +1,5 @@
 if executable('ag')
-  call denite#custom#var('file_rec', 'command',
+  call denite#custom#var('file/rec', 'command',
         \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 
   call denite#custom#var('grep', 'command', ['ag'])
