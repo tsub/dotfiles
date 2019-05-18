@@ -1,8 +1,8 @@
 if executable('ag')
   call denite#custom#var('file/rec', 'command',
-        \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+        \ ['rg', '--follow', '--color=never', '--no-heading', '-l', ''])
 
-  call denite#custom#var('grep', 'command', ['ag'])
+  call denite#custom#var('grep', 'command', ['rg'])
   call denite#custom#var('grep', 'default_opts',
         \ ['-i', '--vimgrep'])
   call denite#custom#var('grep', 'recursive_opts', [])
