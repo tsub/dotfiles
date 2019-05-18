@@ -8,7 +8,7 @@ let g:LanguageClient_settingsPath = '~/.config/nvim/plugins/language-client-sett
 
 augroup LanguageClient_config
   autocmd!
-  autocmd BufWritePre *.yaml,*.yml,*.go,*.rs :call LanguageClient#textDocument_formatting_sync()
+  autocmd BufWritePre *.yaml,*.yml,*.go,*.rs :call LanguageClient#textDocument_formatting()
 augroup END
 
 noremap <silent> <C-]> :call LanguageClient#textDocument_definition()<CR>
