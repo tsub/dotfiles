@@ -50,6 +50,9 @@ set shell=/bin/sh
 set sh=fish
 set clipboard+=unnamedplus
 
+" workaround: https://github.com/neovim/neovim/issues/8631
+let g:clipboard = {'copy': {'+': 'pbcopy', '*': 'pbcopy'}, 'paste': {'+': 'pbpaste', '*': 'pbpaste'}, 'name': 'pbcopy', 'cache_enabled': 0}
+
 "" Visual
 syntax enable
 set termguicolors
