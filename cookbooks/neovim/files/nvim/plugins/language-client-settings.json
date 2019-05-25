@@ -1,7 +1,7 @@
 {
   "yaml": {
     "format": {
-      "enable": true
+      "enable": false
     },
     "schemas": {
       "kubernetes": "kubernetes/*"
