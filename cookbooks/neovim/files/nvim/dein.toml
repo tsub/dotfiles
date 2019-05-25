@@ -7,6 +7,14 @@ repo = 'cocopon/iceberg.vim'
 repo = 'bling/vim-airline'
 hook_add = 'source ~/.config/nvim/plugins/vim-airline.vim'
 
+# [[plugins]]
+# repo = 'itchyny/lightline.vim'
+# hook_add = '''
+# let g:lightline = {
+#       \ 'colorscheme': 'iceberg',
+#       \ }
+# '''
+
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
@@ -43,3 +51,14 @@ repo = 'Shougo/deoplete.nvim'
 hook_add = '''
   let g:deoplete#enable_at_startup = 1
 '''
+
+# [[plugins]]
+# repo = 'cocopon/vaffle.vim'
+# hook_add = '''
+#   nnoremap <silent> <F2> :Vaffle<CR>
+#   nnoremap <silent> <F3> :Vaffle<CR>
+# '''
+#
+# [[plugins]]
+# repo = 'Shougo/defx.nvim'
+# hook_add = 'source ~/.config/nvim/plugins/defx.vim'
