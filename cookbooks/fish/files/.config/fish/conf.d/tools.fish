@@ -24,6 +24,9 @@ end
 if [ -d "/usr/share/git/diff-highlight" ]
   set -x PATH /usr/share/git/diff-highlight $PATH
 end
+if [ -d "/home/linuxbrew/.linuxbrew/opt/git/share/git-core/contrib/diff-highlight" ]
+  set -x PATH /home/linuxbrew/.linuxbrew/opt/git/share/git-core/contrib/diff-highlight $PATH
+end
 
 ## go
 set -x GOPATH $HOME/go
@@ -69,4 +72,9 @@ end
 ## krew
 if [ -d "$HOME/.krew/bin" ]
   set -x PATH $PATH $HOME/.krew/bin
+end
+
+## Linuxbrew
+if [ -d "/home/linuxbrew/.linuxbrew/bin" ]
+  set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
 end
