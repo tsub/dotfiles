@@ -25,7 +25,7 @@ node.reverse_merge!(
   gopath: ENV['GOPATH'] || "#{ENV['HOME']}/go"
 )
 
-include_recipe '../cookbooks/apt/default.rb'
+include_recipe '../cookbooks/linuxbrew/default.rb'
 include_recipe '../cookbooks/fish/default.rb'
 # include_recipe '../cookbooks/rbenv/default.rb'
 # include_recipe '../cookbooks/nodenv/default.rb'
