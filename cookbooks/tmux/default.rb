@@ -1,6 +1,7 @@
 link File.expand_path('~/.tmux.conf') do
   to File.expand_path("../files/.tmux.#{node[:platform]}.conf", __FILE__)
   user node[:user]
+  force true
 end
 
 directory File.expand_path('~/.tmux/plugins') do

@@ -40,6 +40,7 @@ define :ghg, version: nil, cli_name: nil, alias_name: nil do
     link File.expand_path("~/.ghg/bin/#{params[:alias_name]}") do
       to File.expand_path("~/.ghg/bin/#{params[:cli_name]}")
       user node[:user]
+      force true
     end
   end
 end

@@ -22,6 +22,7 @@ end
 link File.expand_path('~/.nodenv/default-packages') do
   to File.expand_path('../files/.nodenv/default-packages', __FILE__)
   user node[:user]
+  force true
 end
 
 # Install Node.js after installing nodenv-default-packages

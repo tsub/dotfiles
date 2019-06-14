@@ -3,6 +3,7 @@
 link File.expand_path('~/.gitconfig') do
   to File.expand_path('../files/.gitconfig', __FILE__)
   user node[:user]
+  force true
 end
 
 template File.expand_path('~/.gitconfig.local') do
@@ -15,6 +16,7 @@ end
 link File.expand_path('~/.git_commit_messages') do
   to File.expand_path('../files/.git_commit_messages', __FILE__)
   user node[:user]
+  force true
 end
 
 directory File.expand_path('~/.config') do
@@ -24,6 +26,7 @@ end
 link File.expand_path('~/.config/git') do
   to File.expand_path('../files/.config/git', __FILE__)
   user node[:user]
+  force true
 end
 
 ## tig
@@ -31,6 +34,7 @@ end
 link File.expand_path('~/.tigrc') do
   to File.expand_path('../files/.tigrc', __FILE__)
   user node[:user]
+  force true
 end
 
 ## gnupg
@@ -43,4 +47,5 @@ end
 link File.expand_path('~/.gnupg/gpg-agent.conf') do
   to File.expand_path("../files/.gnupg/gpg-agent.#{node[:platform]}.conf", __FILE__)
   user node[:user]
+  force true
 end
