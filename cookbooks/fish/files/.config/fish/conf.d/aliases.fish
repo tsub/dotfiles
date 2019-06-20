@@ -9,6 +9,7 @@ alias rm="rm -i"
 alias zatsu="memo edit zatsu.md"
 alias ls="exa"
 alias ghqg="$GOPATH/bin/get -shallow -unshallow ghq"
+alias tig="env TERM=xterm-256color tig"
 
 ## Abbreviations
 abbr -a b "bundle"
