@@ -36,7 +36,7 @@ end
 brew 'kubectx'
 brew 'kubernetes-helm'
 brew 'kustomize'
-brew 'neovim'
+# brew 'neovim'
 brew 'nodenv'
 brew 'packer'
 brew 'pet'
