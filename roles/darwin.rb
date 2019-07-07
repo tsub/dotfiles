@@ -13,11 +13,11 @@ node.reverse_merge!(
   neovim: {
     home: config_home
   },
-  rbenv: {
-    ruby_version: '2.6.3'
-  },
-  nodenv: {
-    node_version: '10.16.0'
+  asdf_global_version: {
+    ruby: '2.6.3',
+    nodejs: '10.16.0',
+    terraform: '0.12.3',
+    golang: '1.12.6'
   },
   ghg: {
     version: '0.1.4'
@@ -27,8 +27,7 @@ node.reverse_merge!(
 
 include_recipe '../cookbooks/homebrew/default.rb'
 include_recipe '../cookbooks/fish/default.rb'
-include_recipe '../cookbooks/rbenv/default.rb'
-include_recipe '../cookbooks/nodenv/default.rb'
+include_recipe '../cookbooks/asdf/default.rb'
 include_recipe '../cookbooks/git/default.rb'
 include_recipe '../cookbooks/neovim/default.rb'
 include_recipe '../cookbooks/the_silver_searcher/default.rb'

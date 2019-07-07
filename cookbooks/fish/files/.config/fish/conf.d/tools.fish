@@ -78,3 +78,8 @@ end
 if [ -d "/home/linuxbrew/.linuxbrew/bin" ]
   set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
 end
+
+## asdf
+if [ -f "/usr/local/opt/asdf/asdf.fish" ]
+  source /usr/local/opt/asdf/asdf.fish
+end
