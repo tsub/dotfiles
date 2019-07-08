@@ -21,7 +21,7 @@ define :asdf, version: nil do
 
   execute "asdf global #{params[:name]} #{params[:version]}" do
     user node[:user]
-    not_if "test -d ~/.asdf/installs/#{params[:name]}/#{params[:version]}"
+    not_if "asdf current #{params[:name]} | grep #{params[:version]}"
   end
 end
 
