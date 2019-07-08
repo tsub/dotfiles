@@ -36,22 +36,6 @@ asdf_plugin 'ruby'
 asdf_plugin 'terraform'
 asdf_plugin 'golang'
 
-asdf 'nodejs' do
-  version node[:asdf_global_version][:nodejs]
-end
-
-asdf 'ruby' do
-  version node[:asdf_global_version][:ruby]
-end
-
-asdf 'terraform' do
-  version node[:asdf_global_version][:terraform]
-end
-
-asdf 'golang' do
-  version node[:asdf_global_version][:golang]
-end
-
 link File.expand_path('~/.default-gems') do
   to File.expand_path('../files/.default-gems', __FILE__)
   user node[:user]
@@ -74,4 +58,20 @@ link File.expand_path('~/.default-npm-packages') do
   to File.expand_path('../files/.default-npm-packages', __FILE__)
   user node[:user]
   force true
+end
+
+asdf 'nodejs' do
+  version node[:asdf_global_version][:nodejs]
+end
+
+asdf 'ruby' do
+  version node[:asdf_global_version][:ruby]
+end
+
+asdf 'terraform' do
+  version node[:asdf_global_version][:terraform]
+end
+
+asdf 'golang' do
+  version node[:asdf_global_version][:golang]
 end
