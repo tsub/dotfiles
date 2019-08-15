@@ -1,7 +1,7 @@
 set -x EDITOR nvim
 set -x XDG_CONFIG_HOME $HOME/.config
 set -x PAGER less
-set -x LESS "-g -i -M -R -S -W -z-4 -x4"
+set -x LESS "-g -i -M -R -S -W -z-4 -x4 -X"
 if [ -d "$HOME/.bin" ]
   set -x PATH $HOME/.bin $PATH
 end
