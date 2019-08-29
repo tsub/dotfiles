@@ -22,7 +22,6 @@ brew 'git-secrets'
 brew 'github-nippou'
 brew 'gnupg'
 brew 'go'
-brew 'go-swagger'
 brew 'goenv'
 # brew 'heroku' # macOS only
 brew 'hub'
