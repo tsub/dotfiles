@@ -20,6 +20,7 @@ define :brew, directory_name: nil, head: false do
 end
 
 execute 'curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh | sh' do
+  user node[:user]
   not_if 'test -d /home/linuxbrew/.linuxbrew'
 end
 
