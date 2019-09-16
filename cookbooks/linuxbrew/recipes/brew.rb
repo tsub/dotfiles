@@ -45,7 +45,6 @@ brew 'pstree'
 brew 'python'
 brew 'python@2'
 brew 'rbenv'
-# brew 'reattach-to-user-namespace' # macOS only
 brew 'ripgrep'
 # brew 'rustup-init' # failed to build
 brew 's3-edit'
