@@ -53,5 +53,6 @@ brew 'universal-ctags' do
   head true
 end
 brew 'urlview'
+brew 'utern'
 brew 'whalebrew'
 brew 'yarn'
