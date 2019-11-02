@@ -31,7 +31,9 @@ brew 'kubectl' do
 end
 brew 'kubectx'
 brew 'kubernetes-helm'
-# brew 'neovim'
+brew 'neovim' do
+  head true
+end
 brew 'packer'
 brew 'pet'
 brew 'pget'
