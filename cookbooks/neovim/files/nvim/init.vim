@@ -99,6 +99,10 @@ filetype plugin indent on
 set tags=.tags
 autocmd InsertLeave * set nopaste
 
+" Workaround
+" See https://github.com/vim-ruby/vim-ruby/issues/248
+let g:ruby_path = system('which ruby')
+
 "*****************************************************************************
 "" Plugins
 "*****************************************************************************
