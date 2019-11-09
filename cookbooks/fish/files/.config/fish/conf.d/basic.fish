@@ -5,6 +5,9 @@ set -x LESS "-g -i -M -R -S -W -z-4 -x4 -X"
 if [ -d "$HOME/.bin" ]
   set -x PATH $HOME/.bin $PATH
 end
+if [ -d "/usr/local/sbin" ]
+  set -x PATH $PATH /usr/local/sbin
+end
 
 ## Set Locale
 set -x LC_ALL en_US.UTF-8
