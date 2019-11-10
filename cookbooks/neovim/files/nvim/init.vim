@@ -101,7 +101,11 @@ autocmd InsertLeave * set nopaste
 
 " Workaround
 " See https://github.com/vim-ruby/vim-ruby/issues/248
-let g:ruby_path = system('which ruby')
+if executable(expand('~/.asdf/shims/ruby'))
+  let g:ruby_path = expand('~/.asdf/shims/ruby')
+else
+  let g:ruby_path = system('which ruby')
+endif
 
 "*****************************************************************************
 "" Plugins
