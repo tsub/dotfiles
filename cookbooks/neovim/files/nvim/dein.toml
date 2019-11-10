@@ -4,8 +4,8 @@
 repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
-repo = 'bling/vim-airline'
-hook_add = 'source ~/.config/nvim/plugins/vim-airline.vim'
+repo = 'itchyny/lightline.vim'
+hook_add = 'source ~/.config/nvim/plugins/lightline.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
