@@ -6,7 +6,8 @@ let g:ale_linters = {
       \   'ruby': ['rubocop'],
       \   'javascript': ['prettier-eslint', 'eslint', 'flow'],
       \   'typescript': ['prettier', 'tslint', 'tsserver'],
-      \   'python': ['flake8']
+      \   'python': ['flake8'],
+      \   'terraform': ['tflint']
       \ }
 
 let g:ale_fixers = {
