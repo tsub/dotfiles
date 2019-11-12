@@ -189,3 +189,6 @@ xcuserdata
 
 ## dotenv
 .env
+
+## asdf
+.tool-versions
