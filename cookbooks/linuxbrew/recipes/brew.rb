@@ -33,7 +33,7 @@ brew 'kubectl' do
   directory_name 'kubernetes-cli'
 end
 brew 'kubectx'
-brew 'kubernetes-helm'
+brew 'helm'
 brew 'kustomize'
 brew 'neovim'
 brew 'nodenv'
@@ -42,8 +42,7 @@ brew 'pet'
 brew 'pget'
 # brew 'pinentry-mac' # macOS only
 brew 'pstree'
-brew 'python'
-brew 'python@2'
+brew 'python@3.8'
 brew 'rbenv'
 brew 'ripgrep'
 # brew 'rustup-init' # failed to build
