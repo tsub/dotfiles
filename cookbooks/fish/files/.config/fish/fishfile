@@ -2,7 +2,6 @@ oh-my-fish/plugin-aws
 edc/bass
 brgmnn/fish-docker-compose
 barnybug/docker-fish-completion
-fisherman/done
 tsub/fkill
 fisherman/fzf
 tsub/fish-fzf-ghq
@@ -16,3 +15,4 @@ tsub/fish-theme
 fisherman/z
 danhper/fish-kubectl
 tsub/git-cd
+danhper/fish-ssh-agent

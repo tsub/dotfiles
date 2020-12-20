@@ -1,5 +1,5 @@
 define :goget, binary_name: nil do
-  execute "GOPATH=#{node[:gopath]} go get #{params[:name]}" do
+  execute "GOPATH=#{node[:gopath]} /home/linuxbrew/.linuxbrew/bin/go get #{params[:name]}" do
     user node[:user]
 
     if params[:binary_name]

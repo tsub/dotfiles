@@ -1,3 +1,8 @@
+## Linuxbrew
+if [ -d "/home/linuxbrew/.linuxbrew/bin" ]
+  set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
+end
+
 ## ghq
 set -x GHQ_ROOT $HOME/ghq/src
 
@@ -59,7 +64,7 @@ end
 eval (direnv hook fish)
 
 ## python
-set USER_BASE_PATH (python -m site --user-base)
+set USER_BASE_PATH (python3 -m site --user-base)
 if [ -d "$USER_BASE_PATH/bin" ]
   set -x PATH $PATH $USER_BASE_PATH/bin
 end
@@ -74,12 +79,12 @@ if [ -d "$HOME/.krew/bin" ]
   set -x PATH $PATH $HOME/.krew/bin
 end
 
-## Linuxbrew
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ]
-  set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
-end
-
 ## asdf
 if [ -f "/usr/local/opt/asdf/asdf.fish" ]
   source /usr/local/opt/asdf/asdf.fish
+end
+
+## Docker Desktop for Windows
+if [ -d "/mnt/c/Program Files/Docker" ]
+  set -x PATH $PATH "/mnt/c/Program Files/Docker/Docker/resources/bin"
 end

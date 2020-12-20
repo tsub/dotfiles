@@ -6,7 +6,7 @@ git File.expand_path("#{Dir.tmpdir}/bingo") do
   not_if 'which bingo'
 end
 
-execute "cd bingo && GO111MODULE=on GOPATH=#{node[:gopath]} go install" do
+execute "cd bingo && GO111MODULE=on GOPATH=#{node[:gopath]} /home/linuxbrew/.linuxbrew/bin/go install" do
   cwd Dir.tmpdir
   user node[:user]
   not_if 'which bingo'

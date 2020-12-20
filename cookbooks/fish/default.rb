@@ -1,6 +1,11 @@
 ## fish
 
-fish_path = node[:platform] == 'darwin' ? '/usr/local/bin/fish' : '/usr/bin/fish'
+fish_path =
+  case node[:platform]
+    when 'darwin' then '/usr/local/bin/fish'
+    when 'ubuntu' then '/home/linuxbrew/.linuxbrew/bin/fish'
+    else '/usr/bin/fish'
+  end
 
 directory node[:fish][:home] do
   user node[:user]
