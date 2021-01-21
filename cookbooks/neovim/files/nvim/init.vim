@@ -39,7 +39,8 @@ set noswapfile
 set fileformats=unix,dos,mac
 set nobomb
 set noundofile
-let mapleader = ','
+let g:mapleader = "\<Space>"
+let g:maplocalleader = ','
 set hidden
 set encoding=utf-8
 set fileencoding=utf-8
@@ -122,6 +123,10 @@ hi GitGutterAdd          guibg=none
 hi GitGutterChange       guibg=none
 hi GitGutterChangeDelete guibg=none
 hi GitGutterDelete       guibg=none
+
+"" vim-which-key
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey ','<CR>
 
 "*****************************************************************************
 "" Local settings

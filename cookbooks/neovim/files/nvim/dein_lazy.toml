@@ -94,14 +94,6 @@ on_ft = 'twig'
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
-hook_add = '''
-  nnoremap [denite] <Nop>
-  nmap <Space> [denite]
-
-  nnoremap <silent> [denite]b :Denite buffer<CR>
-  nnoremap <silent> [denite]f :Denite file/rec<CR>
-  nnoremap <silent> [denite]g :Denite grep:. -buffer-name=search-buffer<CR>
-'''
 hook_post_source = 'source ~/.config/nvim/plugins/denite.vim'
 
 [[plugins]]
@@ -143,6 +135,29 @@ hook_add = '''
   let g:closetag_filetypes = 'html,vue'
 '''
 
+[[plugins]]
+repo = 'liuchengxu/vim-which-key'
+on_cmd = ['WhichKey', 'WhichKey!']
+hook_post_source = '''
+  call which_key#register('<Space>', "g:which_key_map")
+  let g:which_key_map = {}
+
+  let g:which_key_map.g = {
+    \ 'name' : '+github',
+    \ 'o'    : [':OpenGithubFile', 'open-github-file'],
+    \ 'i'    : [':OpenGithubIssue', 'open-github-issues'],
+    \ 'p'    : [':OpenGithubPullReq', 'open-github-pr'],
+    \ 'c'    : [':OpenGithubCommit', 'open-github-commit'],
+    \ }
+
+  let g:which_key_map.d = {
+    \ 'name' : '+denite',
+    \ 'b'    : [':Denite buffer', 'buffer'],
+    \ 'f'    : [':Denite file/rec', 'file/rec'],
+    \ 'g'    : [':Denite grep:. -buffer-name=search-buffer', 'grep'],
+    \ }
+'''
+
 ## Others
 
 [[plugins]]
@@ -156,4 +171,4 @@ repo = 'tyru/open-browser.vim'
 [[plugins]]
 repo = 'tyru/open-browser-github.vim'
 depends = 'open-browser.vim'
-on_cmd = ['OpenGithubFile', 'OpenGithubIssue', 'OpenGithubPullReq']
+on_cmd = ['OpenGithubFile', 'OpenGithubIssue', 'OpenGithubPullReq', 'OpenGithubProject', 'OpenGithubCommit']
