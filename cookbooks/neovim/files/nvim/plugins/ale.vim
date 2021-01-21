@@ -7,7 +7,6 @@ let g:ale_linters = {
       \   'javascript': ['prettier-eslint', 'eslint', 'flow'],
       \   'typescript': ['prettier', 'tslint', 'tsserver'],
       \   'python': ['flake8'],
-      \   'terraform': ['tflint']
       \ }
 
 let g:ale_fixers = {
@@ -16,7 +15,6 @@ let g:ale_fixers = {
       \   'javascript': ['prettier-eslint', 'eslint'],
       \   'typescript': ['prettier', 'tslint'],
       \   'python': ['autopep8'],
-      \   'terraform': ['terraform']
       \ }
 
 let g:ale_echo_msg_format = '[%linter%] %s'

@@ -51,6 +51,7 @@ brew 'shellcheck'
 brew 'skaffold'
 brew 'stern'
 # brew 'terminal-notifier' # macOS only
+brew 'terraform-ls'
 brew 'tfenv'
 brew 'tfschema'
 brew 'the_silver_searcher'
