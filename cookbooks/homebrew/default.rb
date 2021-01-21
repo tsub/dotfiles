@@ -15,7 +15,7 @@ define :brew, directory_name: nil, head: false do
 end
 
 define :cask do
-  execute "brew cask install #{params[:name]}" do
+  execute "brew install --cask #{params[:name]}" do
     not_if "test -d /usr/local/Caskroom/#{params[:name]} -o -x /usr/local/bin/#{params[:name]}"
   end
 end
