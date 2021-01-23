@@ -1,5 +1,5 @@
 define :asdf_plugin do
-  execute "asdf plugin-add #{params[:name]}" do
+  execute "/home/linuxbrew/.linuxbrew/bin/asdf plugin-add #{params[:name]}" do
     user node[:user]
     not_if "test -d ~/.asdf/plugins/#{params[:name]}"
     notifies :run, 'execute[import-release-team-keyring]'
@@ -14,14 +14,14 @@ define :asdf_plugin do
 end
 
 define :asdf, version: nil do
-  execute "asdf install #{params[:name]} #{params[:version]}" do
+  execute "/home/linuxbrew/.linuxbrew/bin/asdf install #{params[:name]} #{params[:version]}" do
     user node[:user]
     not_if "test -d ~/.asdf/installs/#{params[:name]}/#{params[:version]}"
   end
 
-  execute "asdf global #{params[:name]} #{params[:version]}" do
+  execute "/home/linuxbrew/.linuxbrew/bin/asdf global #{params[:name]} #{params[:version]}" do
     user node[:user]
-    not_if "asdf current #{params[:name]} | grep #{params[:version]}"
+    not_if "/home/linuxbrew/.linuxbrew/bin/asdf current #{params[:name]} | grep #{params[:version]}"
   end
 end
 

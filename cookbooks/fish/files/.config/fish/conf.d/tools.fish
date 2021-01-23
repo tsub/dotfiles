@@ -83,6 +83,9 @@ end
 if [ -f "/usr/local/opt/asdf/asdf.fish" ]
   source /usr/local/opt/asdf/asdf.fish
 end
+if [ -f "/home/linuxbrew/.linuxbrew/opt/asdf/asdf.fish" ]
+  source /home/linuxbrew/.linuxbrew/opt/asdf/asdf.fish
+end
 
 ## Docker Desktop for Windows
 if [ -d "/mnt/c/Program Files/Docker" ]
