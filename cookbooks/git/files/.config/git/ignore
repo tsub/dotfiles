@@ -192,3 +192,6 @@ xcuserdata
 
 ## asdf
 .tool-versions
+
+## terraform-ls
+tf-lsp.log
