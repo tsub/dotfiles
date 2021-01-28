@@ -172,3 +172,6 @@ repo = 'tyru/open-browser.vim'
 repo = 'tyru/open-browser-github.vim'
 depends = 'open-browser.vim'
 on_cmd = ['OpenGithubFile', 'OpenGithubIssue', 'OpenGithubPullReq', 'OpenGithubProject', 'OpenGithubCommit']
+hook_add = '''
+  let g:openbrowser_github_url_exists_check = 'ignore'
+'''
