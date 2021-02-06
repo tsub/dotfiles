@@ -1,3 +1,4 @@
+jorgebucaran/fisher
 oh-my-fish/plugin-aws
 edc/bass
 brgmnn/fish-docker-compose
@@ -5,7 +6,6 @@ barnybug/docker-fish-completion
 fisherman/done
 tsub/fkill
 fisherman/fzf
-tsub/fish-fzf-ghq
 tsub/fish-fzf-git-recent-branch
 fisherman/getopts
 tsub/fish-git
@@ -14,5 +14,6 @@ tsub/hatebu-watch
 abaez/fish-rustup
 tsub/fish-theme
 fisherman/z
-danhper/fish-kubectl
 tsub/git-cd
+tsub/fish-fzf-ghq
+evanlucas/fish-kubectl-completions

@@ -52,12 +52,12 @@ end
 
 ## fisherman
 
-execute 'curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish' do
+execute 'curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher' do
   not_if { 'test -f ~/.config/fish/functions/fisher.fish' }
 end
 
-link File.expand_path('~/.config/fish/fishfile') do
-  to File.expand_path('../files/.config/fish/fishfile', __FILE__)
+link File.expand_path('~/.config/fish/fish_plugins') do
+  to File.expand_path('../files/.config/fish/fish_plugins', __FILE__)
   user node[:user]
   force true
 end
