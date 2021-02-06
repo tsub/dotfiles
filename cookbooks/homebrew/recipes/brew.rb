@@ -39,8 +39,9 @@ brew 'pet'
 brew 'pget'
 brew 'pinentry-mac'
 brew 'pstree'
-brew 'python'
-brew 'python@2'
+brew 'python' do
+  use_cellar_option true
+end
 brew 'ripgrep'
 brew 'rustup-init'
 brew 's3-edit'
