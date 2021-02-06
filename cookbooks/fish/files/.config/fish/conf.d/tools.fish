@@ -59,6 +59,9 @@ end
 eval (direnv hook fish)
 
 ## python
+if [ -d /usr/local/opt/python/libexec/bin/ ]
+  set -x PATH /usr/local/opt/python/libexec/bin/ $PATH
+end
 set USER_BASE_PATH (python -m site --user-base)
 if [ -d "$USER_BASE_PATH/bin" ]
   set -x PATH $PATH $USER_BASE_PATH/bin
