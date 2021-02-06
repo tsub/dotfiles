@@ -42,11 +42,21 @@ directory "#{node[:fish][:home]}/completions" do
   user node[:user]
 end
 
-%w[hub.fish alacritty.fish].each do |completion_file|
-  link File.expand_path("~/.config/fish/completions/#{completion_file}") do
-    to File.expand_path("../files/.config/fish/completions/#{completion_file}", __FILE__)
+%w[hub alacritty aws].each do |completion_file|
+  link File.expand_path("~/.config/fish/completions/#{completion_file}.fish") do
+    to File.expand_path("../files/.config/fish/completions/#{completion_file}.fish", __FILE__)
     user node[:user]
     force true
+  end
+end
+
+if node[:platform] == 'darwin'
+  %w[docker docker-compose].each do |completion_file|
+    link File.expand_path("~/.config/fish/completions/#{completion_file}.fish") do
+      to "/Applications/Docker.app/Contents/Resources/etc/#{completion_file}.fish-completion"
+      user node[:user]
+      force true
+    end
   end
 end
 
