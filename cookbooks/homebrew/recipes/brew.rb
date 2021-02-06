@@ -26,10 +26,10 @@ brew 'heroku'
 brew 'hub'
 brew 'ipcalc'
 brew 'jq'
+brew 'krew'
 brew 'kubectl' do
   directory_name 'kubernetes-cli'
 end
-brew 'kubectx'
 brew 'kubernetes-helm'
 brew 'neovim' do
   head true
