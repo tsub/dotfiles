@@ -22,9 +22,9 @@ hook_add = '''
   inoremap <BS> <BS>
 '''
 
-[[plugins]]
-repo = 'w0rp/ale'
-hook_add = 'source ~/.config/nvim/plugins/ale.vim'
+# [[plugins]]
+# repo = 'w0rp/ale'
+# hook_add = 'source ~/.config/nvim/plugins/ale.vim'
 
 [[plugins]]
 repo = 'tpope/vim-endwise'
@@ -32,14 +32,21 @@ repo = 'tpope/vim-endwise'
 [[plugins]]
 repo = 'tpope/vim-surround'
 
-[[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-build = 'bash install.sh'
-hook_add = 'source ~/.config/nvim/plugins/language-client.vim'
+# [[plugins]]
+# repo = 'autozimu/LanguageClient-neovim'
+# rev = 'next'
+# build = 'bash install.sh'
+# hook_add = 'source ~/.config/nvim/plugins/language-client.vim'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
   let g:deoplete#enable_at_startup = 1
 '''
+
+[[plugins]]
+repo = 'deoplete-plugins/deoplete-lsp'
+
+[[plugins]]
+repo = 'neovim/nvim-lspconfig'
+hook_add = 'source ~/.config/nvim/plugins/nvim-lspconfig.vim'
