@@ -65,6 +65,7 @@ set number
 set list
 set listchars=tab:\ \ ,trail:_
 set mouse=
+let g:vimsyn_embed='lPr'
 hi LineNr      ctermbg=none guibg=none
 hi Normal      ctermbg=none guibg=none
 hi NonText     ctermbg=none guibg=none
