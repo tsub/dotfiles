@@ -1,10 +1,12 @@
 lua << EOF
   local lspconfig = require'lspconfig'
+  local completion = require'completion'
 
-  lspconfig.gopls.setup{}
-  lspconfig.rust_analyzer.setup{}
-  lspconfig.terraformls.setup{}
+  lspconfig.gopls.setup{on_attach=completion.on_attach}
+  lspconfig.rust_analyzer.setup{on_attach=completion.on_attach}
+  lspconfig.terraformls.setup{on_attach=completion.on_attach}
   lspconfig.yamlls.setup{
+    on_attach = completion.on_attach;
     settings = {
       yaml = {
         schemas = {

@@ -50,7 +50,12 @@ set showcmd
 set shell=/bin/sh
 set sh=fish
 set clipboard+=unnamedplus
-set completeopt-=preview
+
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+
+" Avoid showing message extra message when using completion
+set shortmess+=c
 
 " workaround: https://github.com/neovim/neovim/issues/8631
 let g:clipboard = {'copy': {'+': 'pbcopy', '*': 'pbcopy'}, 'paste': {'+': 'pbpaste', '*': 'pbpaste'}, 'name': 'pbcopy', 'cache_enabled': 0}
@@ -90,6 +95,10 @@ nnoremap <C-w><C-j> :resize +5<CR>
 nnoremap <C-w><C-k> :resize -5<CR>
 nnoremap <C-w><C-l> :vertical resize +5<CR>
 nnoremap <leader>/ :noh<CR>
+
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 "" Editor
 set autoindent
