@@ -11,6 +11,15 @@ lua << EOF
       ]], false)
     end
 
+    if client.resolved_capabilities.document_formatting then
+      vim.api.nvim_exec([[
+        augroup lsp_document_formatting
+          autocmd!
+          autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting()
+        augroup END
+      ]], false)
+    end
+    
     require'completion'.on_attach(client)
   end
 
@@ -28,11 +37,6 @@ lua << EOF
     }
   }
 EOF
-
-augroup nvim-lspconfig
-  autocmd!
-  autocmd BufWritePre *.rs,*.tf lua vim.lsp.buf.formatting()
-augroup END
 
 nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> <C-t> <C-o>
