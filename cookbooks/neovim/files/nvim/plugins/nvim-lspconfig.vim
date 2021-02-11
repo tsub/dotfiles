@@ -1,12 +1,24 @@
 lua << EOF
   local lspconfig = require'lspconfig'
-  local completion = require'completion'
 
-  lspconfig.gopls.setup{on_attach=completion.on_attach}
-  lspconfig.rust_analyzer.setup{on_attach=completion.on_attach}
-  lspconfig.terraformls.setup{on_attach=completion.on_attach}
+  local on_attach = function(client, bufnr)
+    if client.resolved_capabilities.hover then
+      vim.api.nvim_exec([[
+        augroup lsp_hover
+          autocmd!
+          autocmd CursorHold <buffer> lua vim.lsp.buf.hover()
+        augroup END
+      ]], false)
+    end
+
+    require'completion'.on_attach(client)
+  end
+
+  lspconfig.gopls.setup{on_attach=on_attach}
+  lspconfig.rust_analyzer.setup{on_attach=on_attach}
+  lspconfig.terraformls.setup{on_attach=on_attach}
   lspconfig.yamlls.setup{
-    on_attach = completion.on_attach;
+    on_attach = on_attach;
     settings = {
       yaml = {
         schemas = {

@@ -50,6 +50,7 @@ set showcmd
 set shell=/bin/sh
 set sh=fish
 set clipboard+=unnamedplus
+set updatetime=1000
 
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
