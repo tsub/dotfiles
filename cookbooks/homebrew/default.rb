@@ -1,5 +1,5 @@
-define :tap do
-  execute "brew tap #{params[:name]}" do
+define :tap, uri: nil do
+  execute "brew tap #{params[:name]} #{params[:uri]}" do
     user, repository = params[:name].split('/')
     not_if "test -d /usr/local/Homebrew/Library/Taps/#{user}/homebrew-#{repository}"
   end
