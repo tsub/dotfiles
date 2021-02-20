@@ -26,3 +26,5 @@
 	process = git-lfs filter-process
 [pull]
 	rebase = false
+[init]
+	defaultBranch = main
