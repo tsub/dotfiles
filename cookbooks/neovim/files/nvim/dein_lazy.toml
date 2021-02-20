@@ -142,7 +142,7 @@ hook_post_source = '''
   call which_key#register('<Space>', "g:which_key_map")
   let g:which_key_map = {}
 
-  let g:which_key_map.g = {
+  let g:which_key_map.G = {
     \ 'name' : '+github',
     \ 'o'    : [':OpenGithubFile', 'open-github-file'],
     \ 'i'    : [':OpenGithubIssue', 'open-github-issues'],
@@ -156,6 +156,8 @@ hook_post_source = '''
     \ 'f'    : [':Denite file/rec', 'file/rec'],
     \ 'g'    : [':Denite grep:. -buffer-name=search-buffer', 'grep'],
     \ }
+
+  let g:which_key_map.g = [':Glow', 'glow']
 '''
 
 ## Others
@@ -175,3 +177,7 @@ on_cmd = ['OpenGithubFile', 'OpenGithubIssue', 'OpenGithubPullReq', 'OpenGithubP
 hook_add = '''
   let g:openbrowser_github_url_exists_check = 'ignore'
 '''
+
+[[plugins]]
+repo = 'npxbr/glow.nvim'
+on_cmd = 'Glow'
