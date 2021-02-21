@@ -7,10 +7,9 @@ end
 
 define :brew, directory_name: nil, use_cellar_option: false, head: false do
   directory_name = params[:directory_name] || params[:name]
-  head_option = '--HEAD' if params[:head]
-  use_cellar_option = "--cellar #{params[:name]}" if params[:use_cellar_option]
+  head_option = '--HEAD ' if params[:head]
 
-  execute "brew install #{head_option} #{params[:name]}" do
+  execute "brew install #{head_option}#{params[:name]}" do
     if params[:use_cellar_option]
       not_if "test -d $(brew --cellar #{params[:name]})"
     else
