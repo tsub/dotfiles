@@ -7,6 +7,7 @@ tap 'itchyny/fillin'
 tap 'knqyf263/pet'
 tap 'knqyf263/utern'
 tap 'masutaka/github-nippou'
+tap 'melonamin/formulae'
 tap 'minamijoyo/tfschema'
 tap 'tsub/s3-edit'
 tap 'tsub/yamlls' { uri 'git@github.com:tsub/homebrew-yamlls.git' }
