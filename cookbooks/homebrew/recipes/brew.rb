@@ -33,6 +33,7 @@ brew 'kubectl' do
   directory_name 'kubernetes-cli'
 end
 brew 'kubernetes-helm'
+brew 'mas'
 brew 'neovim' do
   head true
 end
