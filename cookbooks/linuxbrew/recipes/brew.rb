@@ -1,9 +1,7 @@
 brew 'amazon-ecs-cli'
 brew 'aws-sam-cli'
 brew 'awscli'
-brew 'b4b4r07/gist/gist' do
-  directory_name 'gist'
-end
+brew 'b4b4r07/gist/gist' { directory_name 'gist' }
 brew 'colordiff'
 brew 'ctop'
 brew 'direnv'
@@ -29,9 +27,7 @@ brew 'ipcalc'
 brew 'jq'
 brew 'kompose'
 brew 'kube-aws'
-brew 'kubectl' do
-  directory_name 'kubernetes-cli'
-end
+brew 'kubectl' { directory_name 'kubernetes-cli' }
 brew 'kubectx'
 brew 'helm'
 brew 'kustomize'
@@ -58,8 +54,6 @@ brew 'the_silver_searcher'
 brew 'tig'
 brew 'tmux'
 brew 'tree'
-# brew 'universal-ctags' do # failed to build
-#   head true
-# end
+# brew 'universal-ctags' { head true } # failed to build
 # brew 'urlview' # failed to build
 brew 'yarn'

@@ -1,6 +1,4 @@
-ghg 'CircleCI-Public/circleci-cli' do
-  cli_name 'circleci'
-end
+ghg 'CircleCI-Public/circleci-cli' { cli_name 'circleci' }
 ghg 'c-bata/kube-prompt'
 ghg 'golang/dep'
 ghg 'hyperhq/pi'

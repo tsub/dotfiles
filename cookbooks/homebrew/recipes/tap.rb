@@ -9,9 +9,7 @@ tap 'knqyf263/utern'
 tap 'masutaka/github-nippou'
 tap 'minamijoyo/tfschema'
 tap 'tsub/s3-edit'
-tap 'tsub/yamlls' do
-  uri 'git@github.com:tsub/homebrew-yamlls.git'
-end
+tap 'tsub/yamlls' { uri 'git@github.com:tsub/homebrew-yamlls.git' }
 tap 'universal-ctags/universal-ctags'
 tap 'wagoodman/dive'
 tap 'weaveworks/tap'
