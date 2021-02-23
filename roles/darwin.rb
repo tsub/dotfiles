@@ -16,7 +16,7 @@ node.reverse_merge!(
   asdf_global_version: {
     ruby: '2.6.3',
     nodejs: '10.16.0',
-    terraform: '0.12.3',
+    terraform: '0.14.7',
     golang: '1.12.6'
   },
   ghg: {
