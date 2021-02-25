@@ -158,6 +158,11 @@ hook_post_source = '''
     \ }
 
   let g:which_key_map.g = [':Glow', 'glow']
+
+  let g:which_key_map.l = {
+    \ 'name' : '+lsp',
+    \ 'r'    : [':execute "lua vim.lsp.buf.references()"', 'references'],
+    \ }
 '''
 
 ## Others
