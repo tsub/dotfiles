@@ -3,10 +3,10 @@ set -x XDG_CONFIG_HOME $HOME/.config
 set -x PAGER less
 set -x LESS "-g -i -M -R -S -W -z-4 -x4 -X"
 if [ -d "$HOME/.bin" ]
-  set -x PATH $HOME/.bin $PATH
+  fish_add_path $HOME/.bin
 end
 if [ -d "/usr/local/sbin" ]
-  set -x PATH $PATH /usr/local/sbin
+  fish_add_path /usr/local/sbin
 end
 
 ## Set Locale

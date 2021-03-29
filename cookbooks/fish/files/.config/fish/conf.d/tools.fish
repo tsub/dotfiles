@@ -3,7 +3,7 @@ set -x GHQ_ROOT $HOME/ghq/src
 
 ## ghg
 if [ -d "$HOME/.ghg/bin" ]
-  set -x PATH $PATH $HOME/.ghg/bin
+  fish_add_path $HOME/.ghg/bin
 end
 
 ## gpg agent
@@ -19,19 +19,19 @@ end
 
 ## diff-highlight
 if [ -d "/usr/local/opt/git/share/git-core/contrib/diff-highlight" ]
-  set -x PATH /usr/local/opt/git/share/git-core/contrib/diff-highlight $PATH
+  fish_add_path /usr/local/opt/git/share/git-core/contrib/diff-highlight
 end
 if [ -d "/usr/share/git/diff-highlight" ]
-  set -x PATH /usr/share/git/diff-highlight $PATH
+  fish_add_path /usr/share/git/diff-highlight
 end
 if [ -d "/home/linuxbrew/.linuxbrew/opt/git/share/git-core/contrib/diff-highlight" ]
-  set -x PATH /home/linuxbrew/.linuxbrew/opt/git/share/git-core/contrib/diff-highlight $PATH
+  fish_add_path /home/linuxbrew/.linuxbrew/opt/git/share/git-core/contrib/diff-highlight
 end
 
 ## go
 set -x GOPATH $HOME/go
 if [ -d "$GOPATH/bin" ]
-  set -x PATH $PATH $GOPATH/bin
+  fish_add_path $GOPATH/bin
 end
 
 ## gcloud
@@ -52,34 +52,34 @@ set -x FZF_DEFAULT_OPTS '--ansi --height 40% --reverse --border'
 ## rust
 set -x CARGO_HOME $HOME/.cargo
 if [ -d "$CARGO_HOME/bin" ]
-  set -x PATH $PATH $CARGO_HOME/bin
+  fish_add_path $CARGO_HOME/bin
 end
 
 ## direnv
 eval (direnv hook fish)
 
 ## python
-if [ -d /usr/local/opt/python/libexec/bin/ ]
-  set -x PATH /usr/local/opt/python/libexec/bin/ $PATH
+if [ -d /usr/local/opt/python/libexec/bin ]
+  fish_add_path /usr/local/opt/python/libexec/bin
 end
 set USER_BASE_PATH (python -m site --user-base)
 if [ -d "$USER_BASE_PATH/bin" ]
-  set -x PATH $PATH $USER_BASE_PATH/bin
+  fish_add_path $USER_BASE_PATH/bin
 end
 
 ## nodenv
 if [ -d "$HOME/.nodenv" ]
-  set -x PATH $HOME/.nodenv/shims $PATH
+  fish_add_path $HOME/.nodenv/shims
 end
 
 ## krew
 if [ -d "$HOME/.krew/bin" ]
-  set -x PATH $PATH $HOME/.krew/bin
+  fish_add_path $HOME/.krew/bin
 end
 
 ## Linuxbrew
 if [ -d "/home/linuxbrew/.linuxbrew/bin" ]
-  set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
+  fish_add_path /home/linuxbrew/.linuxbrew/bin
 end
 
 ## asdf
