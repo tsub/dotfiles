@@ -13,15 +13,16 @@ define :asdf_plugin do
   end
 end
 
-define :asdf, version: nil do
-  execute "asdf install #{params[:name]} #{params[:version]}" do
+define :asdf do
+  execute "asdf install #{params[:name]} latest" do
     user node[:user]
-    not_if "test -d ~/.asdf/installs/#{params[:name]}/#{params[:version]}"
+    not_if "test -d ~/.asdf/installs/#{params[:name]}/$(asdf latest #{params[:name]})"
   end
 
-  execute "asdf global #{params[:name]} #{params[:version]}" do
+  # TODO: https://github.com/asdf-vm/asdf/pull/802 がリリースされたら "asdf global #{params[:name]} latest" に置き換えできる
+  execute "asdf global #{params[:name]} $(asdf latest #{params[:name]})" do
     user node[:user]
-    not_if "asdf current #{params[:name]} | grep #{params[:version]}"
+    not_if "asdf current #{params[:name]} | grep $(asdf latest #{params[:name]})"
   end
 end
 
