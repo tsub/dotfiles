@@ -150,14 +150,9 @@ hook_post_source = '''
     \ 'c'    : [':OpenGithubCommit', 'open-github-commit'],
     \ }
 
-  let g:which_key_map.d = {
-    \ 'name' : '+denite',
-    \ 'b'    : [':Denite buffer', 'buffer'],
-    \ 'f'    : [':Denite file/rec', 'file/rec'],
-    \ 'g'    : [':Denite grep:. -buffer-name=search-buffer', 'grep'],
-    \ }
-
-  let g:which_key_map.g = [':Glow', 'glow']
+  let g:which_key_map.b = [':Denite buffer', 'denite buffer']
+  let g:which_key_map.f = [':Denite file/rec', 'denite file/rec']
+  let g:which_key_map.g = [':Denite grep:. -buffer-name=search-buffer', 'grep']
 
   let g:which_key_map.l = {
     \ 'name' : '+lsp',
