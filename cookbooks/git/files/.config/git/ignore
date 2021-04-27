@@ -195,3 +195,6 @@ xcuserdata
 
 ## terraform-ls
 tf-lsp.log
+
+## VSCode
+.vscode
