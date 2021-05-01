@@ -11,21 +11,12 @@ define :asdf_plugin do
     action :nothing
     only_if { params[:name] == 'nodejs' }
   end
-end
 
-define :asdf do
-  execute "asdf install #{params[:name]} latest" do
+  execute "asdf global #{params[:name]} system" do
     user node[:user]
-    not_if "test -d ~/.asdf/installs/#{params[:name]}/$(asdf latest #{params[:name]})"
-  end
-
-  # TODO: https://github.com/asdf-vm/asdf/pull/802 がリリースされたら "asdf global #{params[:name]} latest" に置き換えできる
-  execute "asdf global #{params[:name]} $(asdf latest #{params[:name]})" do
-    user node[:user]
-    not_if "asdf current #{params[:name]} | grep $(asdf latest #{params[:name]})"
+    not_if "grep '#{params[:name]} system' ~/.tool-versions"
   end
 end
 
 include_recipe 'recipes/settings.rb'
 include_recipe 'recipes/asdf_plugin.rb'
-include_recipe 'recipes/asdf.rb'
