@@ -46,10 +46,6 @@ repo = 'noprompt/vim-yardoc'
 on_ft = 'ruby'
 
 [[plugins]]
-repo = 'rust-lang/rust.vim'
-on_ft = 'rust'
-
-[[plugins]]
 repo = 'mxw/vim-jsx'
 on_ft = 'jsx'
 
