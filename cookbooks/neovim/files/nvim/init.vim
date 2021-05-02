@@ -1,33 +1,9 @@
 "*****************************************************************************
-"" Dein.vim
+"" Packer.nvim
 "*****************************************************************************
 
-let s:dein_dir = expand('~/.cache/dein')
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-let g:dein#install_process_timeout = 300
-
-if &runtimepath !~# '/dein.vim'
-  if !isdirectory(s:dein_repo_dir)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-  endif
-  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
-endif
-
-if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
-
-  call dein#add('Shougo/dein.vim')
-
-  call dein#load_toml("$XDG_CONFIG_HOME/nvim/dein.toml", {'lazy': 0})
-  call dein#load_toml("$XDG_CONFIG_HOME/nvim/dein_lazy.toml", {'lazy': 1})
-
-  call dein#end()
-  call dein#save_state()
-endif
-
-if dein#check_install()
-  call dein#install()
-endif
+lua require('plugins')
+autocmd BufWritePost plugins.lua PackerCompile
 
 "*****************************************************************************
 "" Basic
