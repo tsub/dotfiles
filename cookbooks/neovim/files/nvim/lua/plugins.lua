@@ -65,18 +65,21 @@ return packer.startup(function(use)
           },
         }
       end
-    }
+    },
+    {
+      'hoob3rt/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+      config = function()
+        require('lualine').setup{
+          options = { theme = 'iceberg_dark' },
+        }
+      end
+    },
   }
 
   -- vimscript plugins
   use {
     { 'cocopon/iceberg.vim' },
-    {
-      'itchyny/lightline.vim',
-      config = function()
-        vim.api.nvim_command([[source ~/.config/nvim/plugins/lightline.vim]])
-      end
-    },
     { 'tpope/vim-fugitive' },
     {
       'kana/vim-smartinput',
