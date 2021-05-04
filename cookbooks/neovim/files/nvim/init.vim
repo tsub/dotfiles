@@ -106,12 +106,6 @@ hi ALEErrorSign   ctermfg=red    guifg=red    ctermbg=none guibg=none
 hi ALEInfoSign    ctermfg=blue   guifg=blue   ctermbg=none guibg=none
 hi SignColumn                                 ctermbg=none guibg=none
 
-"" GitGutter
-hi GitGutterAdd          guibg=none
-hi GitGutterChange       guibg=none
-hi GitGutterChangeDelete guibg=none
-hi GitGutterDelete       guibg=none
-
 "*****************************************************************************
 "" Local settings
 "*****************************************************************************

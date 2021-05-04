@@ -54,6 +54,18 @@ return packer.startup(function(use)
         { prefix = '<leader>' })
       end
     },
+    {
+      'lewis6991/gitsigns.nvim',
+      requires = { 'nvim-lua/plenary.nvim' },
+      config = function()
+        require('gitsigns').setup {
+          signs = {
+            -- default: text = '_'
+            delete = { hl = 'GitSignsDelete', text = '│', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
+          },
+        }
+      end
+    }
   }
 
   -- vimscript plugins
@@ -66,7 +78,6 @@ return packer.startup(function(use)
       end
     },
     { 'tpope/vim-fugitive' },
-    { 'mhinz/vim-signify' },
     {
       'kana/vim-smartinput',
       config = function()
