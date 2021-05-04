@@ -28,7 +28,10 @@ return packer.startup(function(use)
     { 'wbthomason/packer.nvim' },
     {
       'neovim/nvim-lspconfig',
-      requires = 'nvim-lua/completion-nvim',
+      requires = {
+        'nvim-lua/completion-nvim',
+        'nvim-lua/lsp-status.nvim',
+      },
       config = function()
         require('lsp')
       end
@@ -68,10 +71,18 @@ return packer.startup(function(use)
     },
     {
       'hoob3rt/lualine.nvim',
-      requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+      requires = {
+        { 'kyazdani42/nvim-web-devicons', opt = true },
+        { 'nvim-lua/lsp-status.nvim' },
+      },
       config = function()
+        local lsp_status = require('lsp-status')
+
         require('lualine').setup{
           options = { theme = 'iceberg_dark' },
+          sections = {
+            lualine_x = { lsp_status.status, 'encoding', 'fileformat', 'filetype' },
+          },
         }
       end
     },

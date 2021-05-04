@@ -1,4 +1,7 @@
 local lspconfig = require('lspconfig')
+local lsp_status = require('lsp-status')
+
+lsp_status.register_progress()
 
 local on_attach = function(client, bufnr)
   if client.resolved_capabilities.hover then
@@ -25,13 +28,22 @@ local on_attach = function(client, bufnr)
   end
 
   require('completion').on_attach(client)
+  lsp_status.on_attach(client)
 end
 
-lspconfig.gopls.setup({ on_attach = on_attach })
-lspconfig.terraformls.setup({ on_attach = on_attach })
-
-lspconfig.rust_analyzer.setup({
+lspconfig.gopls.setup {
   on_attach = on_attach,
+  capabilities = lsp_status.capabilities,
+}
+
+lspconfig.terraformls.setup {
+  on_attach = on_attach,
+  capabilities = lsp_status.capabilities,
+}
+
+lspconfig.rust_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = lsp_status.capabilities,
   settings = {
     ["rust-analyzer"] = {
       cargo = {
@@ -42,10 +54,11 @@ lspconfig.rust_analyzer.setup({
       }
     }
   }
-})
+}
 
-lspconfig.yamlls.setup({
+lspconfig.yamlls.setup {
   on_attach = on_attach,
+  capabilities = lsp_status.capabilities,
   settings = {
     yaml = {
       schemas = {
@@ -53,10 +66,11 @@ lspconfig.yamlls.setup({
       }
     }
   }
-})
+}
 
-lspconfig.sumneko_lua.setup({
+lspconfig.sumneko_lua.setup {
   on_attach = on_attach,
+  capabilities = lsp_status.capabilities,
   cmd = { 'lua-langserver' },
   settings = {
     Lua = {
@@ -66,4 +80,4 @@ lspconfig.sumneko_lua.setup({
       }
     }
   }
-})
+}
