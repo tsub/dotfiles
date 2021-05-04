@@ -30,6 +30,7 @@ brew 'jq'
 brew 'krew'
 brew 'kubectl' { directory_name 'kubernetes-cli' }
 brew 'kubernetes-helm'
+brew 'lua-language-server'
 brew 'mas'
 brew 'neovim' { head true }
 brew 'node'

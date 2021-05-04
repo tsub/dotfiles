@@ -54,3 +54,16 @@ lspconfig.yamlls.setup({
     }
   }
 })
+
+lspconfig.sumneko_lua.setup({
+  on_attach = on_attach,
+  cmd = { 'lua-langserver' },
+  settings = {
+    Lua = {
+      diagnostics = {
+        -- Suppress "Undefined global `vim`" error for neovim lua
+        globals = { 'vim' }
+      }
+    }
+  }
+})
