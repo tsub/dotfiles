@@ -33,6 +33,27 @@ return packer.startup(function(use)
         require('lsp')
       end
     },
+    {
+      'folke/which-key.nvim',
+      -- TODO: Lazy loading
+      -- cmd = { 'WhichKey' },
+      -- keys = { '<leader>', '<Space>' },
+      config = function()
+        local wk = require('which-key')
+
+        wk.register({
+          g = {
+            name = '+git',
+            o = { '<cmd>OpenGithubFile<CR>', 'Open GitHub file' },
+          },
+          l = {
+            name = '+lsp',
+            r = { vim.lsp.buf.references, 'references' }
+          }
+        },
+        { prefix = '<leader>' })
+      end
+    },
   }
 
   -- vimscript plugins

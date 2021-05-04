@@ -112,10 +112,6 @@ hi GitGutterChange       guibg=none
 hi GitGutterChangeDelete guibg=none
 hi GitGutterDelete       guibg=none
 
-"" vim-which-key
-nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
-nnoremap <silent> <localleader> :<c-u>WhichKey ','<CR>
-
 "*****************************************************************************
 "" Local settings
 "*****************************************************************************
