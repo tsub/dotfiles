@@ -51,7 +51,8 @@ return packer.startup(function(use)
           },
           l = {
             name = '+lsp',
-            r = { vim.lsp.buf.references, 'references' }
+            r = { vim.lsp.buf.references, 'references' },
+            d = { '<cmd>LspTroubleToggle<CR>', 'diagnostics' },
           }
         },
         { prefix = '<leader>' })
@@ -86,6 +87,22 @@ return packer.startup(function(use)
         }
       end
     },
+    {
+      'folke/lsp-trouble.nvim',
+      config = function()
+        require('trouble').setup {
+          icons = false,
+          signs = {
+            error = 'error',
+            warning = 'warn',
+            hint = 'hint',
+            information = 'info'
+          },
+          auto_open = true, -- not working
+          auto_close = true,
+        }
+      end
+    }
   }
 
   -- vimscript plugins
