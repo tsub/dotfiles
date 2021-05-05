@@ -102,19 +102,19 @@ return packer.startup(function(use)
           auto_close = true,
         }
       end
-    }
+    },
+    {
+      'windwp/nvim-autopairs',
+      config = function()
+        require('nvim-autopairs').setup()
+      end,
+    },
   }
 
   -- vimscript plugins
   use {
     { 'cocopon/iceberg.vim' },
     { 'tpope/vim-fugitive' },
-    {
-      'kana/vim-smartinput',
-      config = function()
-        vim.api.nvim_set_keymap('i', '<BS>', '<BS>', { noremap = true })
-      end
-    },
     { 'tpope/vim-endwise' },
     { 'tpope/vim-surround' },
     { 'hashivim/vim-terraform', ft = 'terraform' },
