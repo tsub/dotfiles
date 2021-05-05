@@ -46,7 +46,8 @@ return packer.startup(function(use)
 
         wk.register({
           G = {
-            name = '+github',
+            name = '+git',
+            g = { '<cmd>Telescope ghq list cwd=~ theme=get_dropdown<CR>', 'List ghq repository' },
             o = { '<cmd>OpenGithubFile<CR>', 'Open GitHub file' },
           },
           l = {
@@ -117,10 +118,14 @@ return packer.startup(function(use)
       cmd = { 'Telescope' },
       requires = {
         'nvim-lua/popup.nvim',
-        'nvim-lua/plenary.nvim'
+        'nvim-lua/plenary.nvim',
+        'nvim-telescope/telescope-ghq.nvim',
       },
       config = function()
-        require('telescope').setup {
+        local telescope = require('telescope')
+
+        telescope.load_extension('ghq')
+        telescope.setup {
           defaults = {
             mappings = {
               i = {
