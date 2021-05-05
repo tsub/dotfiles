@@ -58,6 +58,8 @@ return packer.startup(function(use)
           f = { '<cmd>Telescope find_files theme=get_dropdown<CR>', 'find_files' },
           b = { '<cmd>Telescope buffers theme=get_dropdown<CR>', 'buffers' },
           g = { '<cmd>Telescope live_grep theme=get_dropdown<CR>', 'live_grep' },
+          p = { '<cmd>BufferLineCyclePrev<CR>', 'buffer prev' },
+          n = { '<cmd>BufferLineCycleNext<CR>', 'buffer next' },
         },
         { prefix = '<leader>' })
       end
@@ -77,8 +79,8 @@ return packer.startup(function(use)
     {
       'hoob3rt/lualine.nvim',
       requires = {
-        { 'kyazdani42/nvim-web-devicons', opt = true },
-        { 'nvim-lua/lsp-status.nvim' },
+        'kyazdani42/nvim-web-devicons',
+        'nvim-lua/lsp-status.nvim',
       },
       config = function()
         local lsp_status = require('lsp-status')
@@ -93,15 +95,9 @@ return packer.startup(function(use)
     },
     {
       'folke/lsp-trouble.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons' },
       config = function()
         require('trouble').setup {
-          icons = false,
-          signs = {
-            error = 'error',
-            warning = 'warn',
-            hint = 'hint',
-            information = 'info'
-          },
           auto_open = true, -- not working
           auto_close = true,
         }
@@ -133,6 +129,20 @@ return packer.startup(function(use)
                 ["<C-u>"] = false,
               },
             },
+          },
+        }
+      end,
+    },
+    {
+      'akinsho/nvim-bufferline.lua',
+      requires = {
+        'kyazdani42/nvim-web-devicons',
+      },
+      config = function()
+        require('bufferline').setup {
+          options = {
+            separator_style = 'thin',
+            diagnostics = "nvim_lsp",
           },
         }
       end,
