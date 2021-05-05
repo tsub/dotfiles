@@ -45,15 +45,18 @@ return packer.startup(function(use)
         local wk = require('which-key')
 
         wk.register({
-          g = {
-            name = '+git',
+          G = {
+            name = '+github',
             o = { '<cmd>OpenGithubFile<CR>', 'Open GitHub file' },
           },
           l = {
             name = '+lsp',
             r = { vim.lsp.buf.references, 'references' },
             d = { '<cmd>LspTroubleToggle<CR>', 'diagnostics' },
-          }
+          },
+          f = { '<cmd>Telescope find_files theme=get_dropdown<CR>', 'find_files' },
+          b = { '<cmd>Telescope buffers theme=get_dropdown<CR>', 'buffers' },
+          g = { '<cmd>Telescope live_grep theme=get_dropdown<CR>', 'live_grep' },
         },
         { prefix = '<leader>' })
       end
@@ -107,6 +110,26 @@ return packer.startup(function(use)
       'windwp/nvim-autopairs',
       config = function()
         require('nvim-autopairs').setup()
+      end,
+    },
+    {
+      'nvim-telescope/telescope.nvim',
+      cmd = { 'Telescope' },
+      requires = {
+        'nvim-lua/popup.nvim',
+        'nvim-lua/plenary.nvim'
+      },
+      config = function()
+        require('telescope').setup {
+          defaults = {
+            mappings = {
+              i = {
+                -- see https://github.com/nvim-telescope/telescope.nvim/issues/499
+                ["<C-u>"] = false,
+              },
+            },
+          },
+        }
       end,
     },
   }
