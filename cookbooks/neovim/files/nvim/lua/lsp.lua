@@ -27,7 +27,6 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_set_keymap('n', '<C-t>', '<C-o>', { noremap = true, silent = true })
   end
 
-  require('completion').on_attach(client)
   lsp_status.on_attach(client)
 end
 

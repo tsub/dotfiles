@@ -29,12 +29,31 @@ return packer.startup(function(use)
     {
       'neovim/nvim-lspconfig',
       requires = {
-        'nvim-lua/completion-nvim',
         'nvim-lua/lsp-status.nvim',
       },
       config = function()
         require('lsp')
       end
+    },
+    {
+      'hrsh7th/nvim-compe',
+      setup = function()
+        -- see https://github.com/hrsh7th/nvim-compe#prerequisite
+        vim.o.completeopt = 'menuone,noselect'
+      end,
+      config = function()
+        require('compe').setup {
+          enabled = true,
+          autocomplete = true,
+          source = {
+            path = true,
+            buffer = true,
+            calc = true,
+            nvim_lsp = true,
+            nvim_lua = true,
+          },
+        }
+      end,
     },
     {
       'folke/which-key.nvim',
