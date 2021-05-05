@@ -27,6 +27,7 @@ set shell=/bin/sh
 set sh=fish
 set clipboard+=unnamedplus
 set updatetime=1000
+set mouse=a
 
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
@@ -46,7 +47,6 @@ set ruler
 set number
 set list
 set listchars=tab:\ \ ,trail:_
-set mouse=
 let g:vimsyn_embed='lPr'
 hi LineNr      ctermbg=none guibg=none
 hi Normal      ctermbg=none guibg=none
