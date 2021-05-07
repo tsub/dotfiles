@@ -18,5 +18,10 @@ define :asdf_plugin do
   end
 end
 
+execute 'git clone https://github.com/asdf-vm/asdf.git ~/.asdf' do
+  user node[:user]
+  not_if 'test -d ~/.asdf'
+end
+
 include_recipe 'recipes/settings.rb'
 include_recipe 'recipes/asdf_plugin.rb'
