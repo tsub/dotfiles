@@ -1,4 +1,4 @@
-cask '1password-beta'
+cask '1password'
 cask 'alacritty'
 cask 'alfred'
 cask 'appcleaner'
