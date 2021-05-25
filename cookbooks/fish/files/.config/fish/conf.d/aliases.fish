@@ -7,7 +7,7 @@ alias ctags="/usr/local/bin/ctags"
 alias deckset="open -a Deckset"
 alias rm="rm -i"
 alias zatsu="memo edit zatsu.md"
-alias ls="exa"
+alias ls="exa --icons"
 alias ghqg="$GOPATH/bin/get -shallow -unshallow ghq"
 alias tig="env TERM=xterm-256color tig"
 
