@@ -79,6 +79,13 @@ return packer.startup(function(use)
           g = { '<cmd>Telescope live_grep theme=get_dropdown<CR>', 'live_grep' },
           p = { '<cmd>BufferLineCyclePrev<CR>', 'buffer prev' },
           n = { '<cmd>BufferLineCycleNext<CR>', 'buffer next' },
+          P = {
+            name = '+packer',
+            u = { '<cmd>PackerUpdate<CR>', 'update' },
+            s = { '<cmd>PackerSync<CR>', 'sync' },
+            i = { '<cmd>PackerInstall<CR>', 'install' },
+            c = { '<cmd>PackerCompile<CR>', 'compile' },
+          },
         },
         { prefix = '<leader>' })
       end
