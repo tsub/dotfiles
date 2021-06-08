@@ -120,11 +120,10 @@ return packer.startup(function(use)
       end
     },
     {
-      'folke/lsp-trouble.nvim',
+      'folke/trouble.nvim',
       requires = { 'kyazdani42/nvim-web-devicons' },
       config = function()
         require('trouble').setup {
-          auto_open = true, -- not working
           auto_close = true,
         }
       end
