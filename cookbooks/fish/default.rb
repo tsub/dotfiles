@@ -1,6 +1,11 @@
 ## fish
 
-fish_path = node[:platform] == 'darwin' ? '/usr/local/bin/fish' : '/usr/bin/fish'
+arch = run_command('uname -m').stdout.strip # workaround: node['kernel'] return nil when Darwin
+homebrew_dir = case arch
+               when 'amd64' then '/usr/local'
+               when 'arm64' then '/opt/homebrew'
+               end
+fish_path = node[:platform] == 'darwin' ? homebrew_dir + '/bin/fish' : '/usr/bin/fish'
 
 directory node[:fish][:home] do
   user node[:user]

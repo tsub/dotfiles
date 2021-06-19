@@ -2,19 +2,22 @@
 
 set -eu
 
-version='1.9.0'
+version='1.12.7'
 
 binary_dir=$(cd $(dirname $0) && pwd)
 
-if [ -f "$binary_dir/mitamae" ] && [ "$($binary_dir/mitamae version)" = "MItamae v$version" ]; then
+if [ -f "$binary_dir/mitamae" ] && [ "$($binary_dir/mitamae version)" = "mitamae v$version" ]; then
   exit
 fi
 
-case "$(uname)" in
-  "Darwin")
+case "$(uname -sm)" in
+  "Darwin x86_64")
     mitamae_bin="mitamae-x86_64-darwin"
     ;;
-  "Linux")
+  "Darwin arm64")
+    mitamae_bin="mitamae-aarch64-darwin"
+    ;;
+  "Linux x86_64")
     mitamae_bin="mitamae-x86_64-linux"
     ;;
   *)
