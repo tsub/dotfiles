@@ -1,3 +1,5 @@
+arch = run_command('uname -m').stdout.strip # workaround: node['kernel'] return nil when Darwin
+
 ## Git
 
 link File.expand_path('~/.gitconfig') do
@@ -45,7 +47,7 @@ directory File.expand_path('~/.gnupg') do
 end
 
 link File.expand_path('~/.gnupg/gpg-agent.conf') do
-  to File.expand_path("../files/.gnupg/gpg-agent.#{node[:platform]}.conf", __FILE__)
+  to File.expand_path("../files/.gnupg/gpg-agent.#{node[:platform]}.#{arch}.conf", __FILE__)
   user node[:user]
   force true
 end
