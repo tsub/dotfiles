@@ -3,6 +3,8 @@
 ## Quick starting
 
 ```
-$ git clone git@github.com:tsub/dotfiles.git && cd dotfiles
+$ mkdir -p ~/ghq/src/github.com/tsub
+$ git clone https://github.com/tsub/dotfiles.git ~/ghq/src/github.com/tsub/
+$ cd ~/ghq/src/github.com/tsub/dotfiles
 $ ./install.sh
 ```
