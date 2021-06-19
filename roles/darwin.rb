@@ -20,6 +20,7 @@ node.reverse_merge!(
 )
 
 include_recipe '../cookbooks/homebrew/default.rb'
+include_recipe '../cookbooks/zsh/default.rb'
 include_recipe '../cookbooks/fish/default.rb'
 include_recipe '../cookbooks/asdf/default.rb'
 include_recipe '../cookbooks/git/default.rb'
