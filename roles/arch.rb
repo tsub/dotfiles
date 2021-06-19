@@ -13,12 +13,6 @@ node.reverse_merge!(
   neovim: {
     home: config_home
   },
-  rbenv: {
-    ruby_version: '2.6.3'
-  },
-  nodenv: {
-    node_version: '10.16.0'
-  },
   ghg: {
     version: '0.1.4'
   },
@@ -28,8 +22,7 @@ node.reverse_merge!(
 include_recipe '../cookbooks/pacman'
 include_recipe '../cookbooks/aur'
 include_recipe '../cookbooks/fish'
-include_recipe '../cookbooks/rbenv'
-include_recipe '../cookbooks/nodenv'
+include_recipe '../cookbooks/asdf'
 include_recipe '../cookbooks/git'
 include_recipe '../cookbooks/neovim'
 include_recipe '../cookbooks/tmux'
