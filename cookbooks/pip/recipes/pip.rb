@@ -1,2 +1,1 @@
-pip 'pynvim'
 pip 'tmuxp'
