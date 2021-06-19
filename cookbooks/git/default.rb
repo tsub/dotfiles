@@ -3,7 +3,7 @@ arch = run_command('uname -m').stdout.strip # workaround: node['kernel'] return 
 ## Git
 
 link File.expand_path('~/.gitconfig') do
-  to File.expand_path('../files/.gitconfig', __FILE__)
+  to File.expand_path("../files/.gitconfig.#{node[:platform]}", __FILE__)
   user node[:user]
   force true
 end
