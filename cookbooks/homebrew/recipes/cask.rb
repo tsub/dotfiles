@@ -1,5 +1,4 @@
 cask '1password'
-cask 'alacritty'
 cask 'alfred'
 cask 'appcleaner'
 cask 'authy'
