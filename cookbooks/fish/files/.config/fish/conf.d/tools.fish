@@ -21,6 +21,9 @@ end
 if [ -d "/usr/local/opt/git/share/git-core/contrib/diff-highlight" ]
   fish_add_path /usr/local/opt/git/share/git-core/contrib/diff-highlight
 end
+if [ -d "/opt/homebrew/opt/git/share/git-core/contrib/diff-highlight" ]
+  fish_add_path /opt/homebrew/opt/git/share/git-core/contrib/diff-highlight
+end
 if [ -d "/usr/share/git/diff-highlight" ]
   fish_add_path /usr/share/git/diff-highlight
 end
@@ -61,6 +64,9 @@ eval (direnv hook fish)
 ## python
 if [ -d /usr/local/opt/python/libexec/bin ]
   fish_add_path /usr/local/opt/python/libexec/bin
+end
+if [ -d /opt/homebrew/opt/python/libexec/bin ]
+  fish_add_path /opt/homebrew/opt/python/libexec/bin
 end
 set USER_BASE_PATH (python -m site --user-base)
 if [ -d "$USER_BASE_PATH/bin" ]
