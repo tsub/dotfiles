@@ -29,6 +29,7 @@ brew 'kubectl' { directory_name 'kubernetes-cli' }
 brew 'kubernetes-helm'
 brew 'lua-language-server'
 brew 'mas'
+brew 'minikube'
 brew 'neovim' { head true }
 brew 'node'
 brew 'packer'
