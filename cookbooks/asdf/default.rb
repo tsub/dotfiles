@@ -1,5 +1,7 @@
-define :asdf_plugin do
-  execute "asdf plugin-add #{params[:name]}" do
+define :asdf_plugin, git: nil do
+  git_url = params[:git] ? ' ' + params[:git] : nil
+
+  execute "asdf plugin-add #{params[:name]}#{git_url}" do
     user node[:user]
     not_if "test -d ~/.asdf/plugins/#{params[:name]}"
     notifies :run, 'execute[import-release-team-keyring]'
