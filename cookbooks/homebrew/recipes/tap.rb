@@ -5,4 +5,4 @@ tap 'homebrew/cask-versions'
 tap 'masutaka/github-nippou'
 tap 'saadparwaiz1/personal' # for lua-language-server
 tap 'tsub/s3-edit'
-tap 'tsub/yamlls' { uri 'git@github.com:tsub/homebrew-yamlls.git' }
+tap 'tsub/yamlls' { uri 'https://github.com/tsub/homebrew-yamlls.git' }
