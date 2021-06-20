@@ -1,3 +1,11 @@
+## ruby installed in homebrew
+if [ -d "/opt/homebrew/opt/ruby/bin" ]
+  fish_add_path /opt/homebrew/opt/ruby/bin
+end
+if [ -d "/usr/local/opt/ruby/bin" ]
+  fish_add_path /usr/local/opt/ruby/bin
+end
+
 ## ghq
 set -x GHQ_ROOT $HOME/ghq/src
 
