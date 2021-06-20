@@ -25,5 +25,11 @@ execute 'git clone https://github.com/asdf-vm/asdf.git ~/.asdf' do
   not_if 'test -d ~/.asdf'
 end
 
+link File.expand_path('~/.config/fish/completions/asdf.fish') do
+  to File.expand_path('~/.asdf/completions/asdf.fish')
+  user node[:user]
+  force true
+end
+
 include_recipe 'recipes/settings.rb'
 include_recipe 'recipes/asdf_plugin.rb'
