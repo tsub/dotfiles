@@ -184,6 +184,7 @@ return packer.startup(function(use)
     { 'tmux-plugins/vim-tmux', ft = 'tmux' },
     { 'cespare/vim-toml' },
     { 'dag/vim-fish' },
+    { 'ekalinin/Dockerfile.vim', ft = 'docker' },
     {
       'tyru/caw.vim',
       keys = { '<C-k>' },
