@@ -33,6 +33,7 @@ brew 'pstree'
 brew 'python' { use_cellar_option true }
 brew 'ripgrep'
 brew 'ruby'
+brew 'rust-analyzer'
 brew 'rustup-init'
 brew 's3-edit'
 brew 'stern'
