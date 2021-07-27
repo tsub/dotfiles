@@ -1,4 +1,4 @@
 bin/mitamae*
 **/.bundle/cache
 local.vim
-cookbooks/neovim/files/nvim/plugin/packer_compiled.vim
+cookbooks/neovim/files/nvim/plugin/packer_compiled.lua
