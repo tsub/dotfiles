@@ -63,6 +63,8 @@ return packer.startup(function(use)
       config = function()
         local wk = require('which-key')
 
+        wk.setup({ triggers = { '<leader>' } })
+
         wk.register({
           G = {
             name = '+git',
