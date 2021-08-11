@@ -19,6 +19,7 @@
   prune = true
 [rebase]
   autosquash = true
+  autostash = true
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
