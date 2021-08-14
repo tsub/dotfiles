@@ -174,6 +174,18 @@ return packer.startup(function(use)
         }
       end,
     },
+    {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate',
+      config = function()
+        require('nvim-treesitter.configs').setup {
+          ensure_installed = "maintained",
+          highlight = {
+            enable = true,
+          },
+        }
+      end,
+    },
   }
 
   -- vimscript plugins
@@ -182,11 +194,9 @@ return packer.startup(function(use)
     { 'tpope/vim-fugitive' },
     { 'tpope/vim-endwise' },
     { 'tpope/vim-surround' },
-    { 'hashivim/vim-terraform', ft = 'terraform' },
     { 'tmux-plugins/vim-tmux', ft = 'tmux' },
     { 'cespare/vim-toml' },
     { 'dag/vim-fish' },
-    { 'ekalinin/Dockerfile.vim', ft = 'docker' },
     {
       'tyru/caw.vim',
       keys = { '<C-k>' },
