@@ -30,27 +30,28 @@ return packer.startup(function(use)
       'neovim/nvim-lspconfig',
       requires = {
         'nvim-lua/lsp-status.nvim',
+        'hrsh7th/cmp-nvim-lsp',
       },
       config = function()
         require('lsp')
       end
     },
     {
-      'hrsh7th/nvim-compe',
-      setup = function()
-        -- see https://github.com/hrsh7th/nvim-compe#prerequisite
-        vim.o.completeopt = 'menuone,noselect'
-      end,
+      'hrsh7th/nvim-cmp',
+      requires = {
+        'hrsh7th/cmp-buffer',
+        'hrsh7th/cmp-nvim-lua',
+        'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/cmp-path',
+      },
       config = function()
-        require('compe').setup {
-          enabled = true,
-          autocomplete = true,
-          source = {
-            path = true,
-            buffer = true,
-            calc = true,
-            nvim_lsp = true,
-            nvim_lua = true,
+        local cmp = require('cmp')
+        cmp.setup {
+          sources = {
+            { name = 'buffer' },
+            { name = 'nvim_lua' },
+            { name = 'nvim_lsp' },
+            { name = 'path' },
           },
         }
       end,

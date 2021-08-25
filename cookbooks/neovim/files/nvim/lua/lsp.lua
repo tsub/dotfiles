@@ -1,5 +1,6 @@
 local lspconfig = require('lspconfig')
 local lsp_status = require('lsp-status')
+local cmp_nvim_lsp = require('cmp_nvim_lsp')
 
 lsp_status.register_progress()
 
@@ -30,19 +31,22 @@ local on_attach = function(client, bufnr)
   lsp_status.on_attach(client)
 end
 
+local capabilities = lsp_status.capabilities
+capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+
 lspconfig.gopls.setup {
   on_attach = on_attach,
-  capabilities = lsp_status.capabilities,
+  capabilities = capabilities,
 }
 
 lspconfig.terraformls.setup {
   on_attach = on_attach,
-  capabilities = lsp_status.capabilities,
+  capabilities = capabilities,
 }
 
 lspconfig.rust_analyzer.setup {
   on_attach = on_attach,
-  capabilities = lsp_status.capabilities,
+  capabilities = capabilities,
   settings = {
     ["rust-analyzer"] = {
       cargo = {
@@ -57,7 +61,7 @@ lspconfig.rust_analyzer.setup {
 
 lspconfig.yamlls.setup {
   on_attach = on_attach,
-  capabilities = lsp_status.capabilities,
+  capabilities = capabilities,
   settings = {
     yaml = {
       schemas = {
@@ -69,7 +73,7 @@ lspconfig.yamlls.setup {
 
 lspconfig.sumneko_lua.setup {
   on_attach = on_attach,
-  capabilities = lsp_status.capabilities,
+  capabilities = capabilities,
   cmd = { 'lua-langserver' },
   settings = {
     Lua = {
@@ -83,5 +87,5 @@ lspconfig.sumneko_lua.setup {
 
 lspconfig.tsserver.setup {
   on_attach = on_attach,
-  capabilities = lsp_status.capabilities,
+  capabilities = capabilities,
 }
