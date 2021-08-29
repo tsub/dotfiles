@@ -110,12 +110,13 @@ return packer.startup(function(use)
       requires = {
         'kyazdani42/nvim-web-devicons',
         'nvim-lua/lsp-status.nvim',
+        'projekt0n/github-nvim-theme',
       },
       config = function()
         local lsp_status = require('lsp-status')
 
         require('lualine').setup{
-          options = { theme = 'iceberg_dark' },
+          options = { theme = 'github' },
           sections = {
             lualine_x = { lsp_status.status, 'encoding', 'fileformat', 'filetype' },
           },
@@ -187,11 +188,19 @@ return packer.startup(function(use)
         }
       end,
     },
+    {
+      'projekt0n/github-nvim-theme',
+      config = function()
+        require('github-theme').setup {
+          transparent = true,
+          hideInactiveStatusline = true,
+        }
+      end,
+    }
   }
 
   -- vimscript plugins
   use {
-    { 'cocopon/iceberg.vim' },
     { 'tpope/vim-fugitive' },
     { 'tpope/vim-endwise' },
     { 'tpope/vim-surround' },
