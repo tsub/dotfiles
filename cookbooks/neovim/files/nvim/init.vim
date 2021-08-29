@@ -33,24 +33,10 @@ set mouse=a
 let g:clipboard = {'copy': {'+': 'pbcopy', '*': 'pbcopy'}, 'paste': {'+': 'pbpaste', '*': 'pbpaste'}, 'name': 'pbcopy', 'cache_enabled': 0}
 
 "" Visual
-syntax enable
-set termguicolors
-set background=dark
-colorscheme iceberg
-set ruler
 set number
 set list
 set listchars=tab:\ \ ,trail:_
 let g:vimsyn_embed='lPr'
-hi LineNr      ctermbg=none guibg=none
-hi Normal      ctermbg=none guibg=none
-hi NonText     ctermbg=none guibg=none
-hi Folded      ctermbg=none guibg=none
-hi EndOfBuffer ctermbg=none guibg=none
-hi WarningMsg  ctermbg=none guibg=none
-hi ErrorMsg    ctermbg=none guibg=none
-hi Error       ctermbg=none guibg=none
-hi VertSplit   ctermbg=none guibg=none
 
 "" Mapping
 inoremap <silent> jj <ESC>
@@ -89,16 +75,6 @@ if executable(expand('~/.asdf/shims/ruby'))
 else
   let g:ruby_path = system('which ruby')
 endif
-
-"*****************************************************************************
-"" Plugins
-"*****************************************************************************
-
-"" ALE
-hi ALEWarningSign ctermfg=yellow guifg=yellow ctermbg=none guibg=none
-hi ALEErrorSign   ctermfg=red    guifg=red    ctermbg=none guibg=none
-hi ALEInfoSign    ctermfg=blue   guifg=blue   ctermbg=none guibg=none
-hi SignColumn                                 ctermbg=none guibg=none
 
 "*****************************************************************************
 "" Local settings
