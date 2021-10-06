@@ -193,7 +193,7 @@ return packer.startup(function(use)
       config = function()
         require('github-theme').setup {
           transparent = true,
-          hideInactiveStatusline = true,
+          hide_inactive_statusline = true,
         }
       end,
     }
