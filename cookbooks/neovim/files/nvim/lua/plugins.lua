@@ -76,6 +76,7 @@ return packer.startup(function(use)
             name = '+lsp',
             r = { vim.lsp.buf.references, 'references' },
             d = { '<cmd>LspTroubleToggle<CR>', 'diagnostics' },
+            f = { vim.lsp.buf.formatting, 'formatting' },
           },
           f = { '<cmd>Telescope find_files theme=get_dropdown<CR>', 'find_files' },
           b = { '<cmd>Telescope buffers theme=get_dropdown<CR>', 'buffers' },
