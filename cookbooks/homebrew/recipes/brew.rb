@@ -28,6 +28,7 @@ brew 'minikube'
 brew 'neovim' { head true }
 brew 'node'
 brew 'packer'
+brew 'php'
 brew 'pinentry-mac'
 brew 'pstree'
 brew 'python' { use_cellar_option true }
