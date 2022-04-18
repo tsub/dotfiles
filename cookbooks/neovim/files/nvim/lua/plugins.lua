@@ -165,7 +165,8 @@ return packer.startup(function(use)
       end,
     },
     {
-      'akinsho/nvim-bufferline.lua',
+      'akinsho/bufferline.nvim',
+      tag = '*',
       requires = {
         'kyazdani42/nvim-web-devicons',
       },
