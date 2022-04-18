@@ -108,9 +108,9 @@ return packer.startup(function(use)
       end
     },
     {
-      'hoob3rt/lualine.nvim',
+      'nvim-lualine/lualine.nvim',
       requires = {
-        'kyazdani42/nvim-web-devicons',
+        { 'kyazdani42/nvim-web-devicons', opt = true },
         'nvim-lua/lsp-status.nvim',
         'projekt0n/github-nvim-theme',
       },
@@ -118,7 +118,7 @@ return packer.startup(function(use)
         local lsp_status = require('lsp-status')
 
         require('lualine').setup{
-          options = { theme = 'github' },
+          options = { theme = 'auto' },
           sections = {
             lualine_x = { lsp_status.status, 'encoding', 'fileformat', 'filetype' },
           },
@@ -194,8 +194,8 @@ return packer.startup(function(use)
       'projekt0n/github-nvim-theme',
       config = function()
         require('github-theme').setup {
+          theme_style = 'dark_default',
           transparent = true,
-          hide_inactive_statusline = true,
         }
       end,
     }
