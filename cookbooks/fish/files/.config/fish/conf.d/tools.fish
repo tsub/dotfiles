@@ -80,7 +80,7 @@ end
 if [ -d /opt/homebrew/opt/python/libexec/bin ]
   fish_add_path /opt/homebrew/opt/python/libexec/bin
 end
-set USER_BASE_PATH (python -m site --user-base)
+set USER_BASE_PATH (python3 -m site --user-base)
 if [ -d "$USER_BASE_PATH/bin" ]
   fish_add_path $USER_BASE_PATH/bin
 end
