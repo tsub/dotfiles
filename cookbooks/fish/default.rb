@@ -1,5 +1,7 @@
 ## fish
 
+package 'fish'
+
 arch = run_command('uname -m').stdout.strip # workaround: node['kernel'] return nil when Darwin
 homebrew_dir = case arch
                when 'amd64' then '/usr/local'
@@ -61,7 +63,7 @@ end
 
 ## fisherman
 
-execute 'curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher' do
+execute 'curl -sL  https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher' do
   not_if { 'test -f ~/.config/fish/functions/fisher.fish' }
 end
 
