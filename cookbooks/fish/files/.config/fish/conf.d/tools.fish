@@ -69,7 +69,9 @@ if [ -d "$CARGO_HOME/bin" ]
 end
 
 ## direnv
-eval (direnv hook fish)
+if which direnv > /dev/null
+  eval (direnv hook fish)
+end
 
 ## python
 if [ -d /usr/local/opt/python/libexec/bin ]
