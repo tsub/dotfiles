@@ -1,7 +1,7 @@
 define :asdf_plugin, git: nil do
   git_url = params[:git] ? ' ' + params[:git] : nil
 
-  execute "asdf plugin-add #{params[:name]}#{git_url}" do
+  execute "~/.asdf/bin/asdf plugin-add #{params[:name]}#{git_url}" do
     user node[:user]
     not_if "test -d ~/.asdf/plugins/#{params[:name]}"
     notifies :run, 'execute[import-release-team-keyring]'
@@ -14,7 +14,7 @@ define :asdf_plugin, git: nil do
     only_if { params[:name] == 'nodejs' }
   end
 
-  execute "asdf global #{params[:name]} system" do
+  execute "~/.asdf/bin/asdf global #{params[:name]} system" do
     user node[:user]
     not_if "grep '#{params[:name]} system' ~/.tool-versions"
   end
