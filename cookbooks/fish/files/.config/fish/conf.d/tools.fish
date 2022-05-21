@@ -38,6 +38,9 @@ end
 if [ -d "/home/linuxbrew/.linuxbrew/opt/git/share/git-core/contrib/diff-highlight" ]
   fish_add_path /home/linuxbrew/.linuxbrew/opt/git/share/git-core/contrib/diff-highlight
 end
+if [ -x "/usr/share/doc/git/contrib/diff-highlight/diff-highlight" ]
+  fish_add_path /usr/share/doc/git/contrib/diff-highlight/
+end
 
 ## go
 set -x GOPATH $HOME/go
