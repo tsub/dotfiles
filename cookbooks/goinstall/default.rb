@@ -1,4 +1,9 @@
-package 'golang'
+case node[:platform]
+when 'ubuntu'
+  package 'golang'
+when 'darwin'
+  package 'go'
+end
 
 define :goinstall, binary_name: nil, version: 'latest' do
   execute "GOPATH=#{node[:gopath]} go install #{params[:name]}@#{params[:version]}" do
