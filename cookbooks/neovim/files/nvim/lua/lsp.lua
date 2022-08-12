@@ -16,9 +16,9 @@ local on_attach = function(client, bufnr)
 
   if client.resolved_capabilities.document_formatting then
     vim.api.nvim_exec([[
-      augroup lsp_document_formatting
+      augroup lsp_document_format
         autocmd!
-        autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting()
+        autocmd BufWritePre <buffer> lua vim.lsp.buf.format({ async = true})
       augroup END
     ]], false)
   end
