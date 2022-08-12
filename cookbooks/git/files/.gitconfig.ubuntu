@@ -6,6 +6,7 @@
   ui = auto
 [push]
   default = simple
+  autoSetupRemote = true
 [commit]
   template = ~/.git_commit_messages
   verbose = true
