@@ -106,6 +106,7 @@ return packer.startup(function(use)
             -- default: text = '_'
             delete = { hl = 'GitSignsDelete', text = '│', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
           },
+          current_line_blame = true,
         }
       end
     },
