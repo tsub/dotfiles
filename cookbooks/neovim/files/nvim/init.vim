@@ -28,6 +28,7 @@ set sh=fish
 set clipboard+=unnamedplus
 set updatetime=1000
 set mouse=a
+set completeopt=menu,menuone,noselect
 
 " workaround: https://github.com/neovim/neovim/issues/8631
 let g:clipboard = {'copy': {'+': 'pbcopy', '*': 'pbcopy'}, 'paste': {'+': 'pbpaste', '*': 'pbpaste'}, 'name': 'pbcopy', 'cache_enabled': 0}

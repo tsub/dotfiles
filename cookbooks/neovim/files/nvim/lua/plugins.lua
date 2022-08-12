@@ -39,6 +39,7 @@ return packer.startup(function(use)
     {
       'hrsh7th/nvim-cmp',
       requires = {
+        'neovim/nvim-lspconfig',
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-nvim-lua',
         'hrsh7th/cmp-nvim-lsp',
@@ -47,6 +48,7 @@ return packer.startup(function(use)
       config = function()
         local cmp = require('cmp')
         cmp.setup {
+          mapping = cmp.mapping.preset.insert({}),
           sources = {
             { name = 'buffer' },
             { name = 'nvim_lua' },
