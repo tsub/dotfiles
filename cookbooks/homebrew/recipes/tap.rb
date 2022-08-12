@@ -1,3 +1,4 @@
+tap 'aquaproj/aqua'
 tap 'aws/tap'
 tap 'heroku/brew'
 tap 'homebrew/cask-fonts'

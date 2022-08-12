@@ -1,3 +1,4 @@
+brew 'aqua'
 brew 'awscli'
 brew 'circleci'
 brew 'colordiff'
