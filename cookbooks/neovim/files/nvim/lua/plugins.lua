@@ -248,5 +248,6 @@ return packer.startup(function(use)
         vim.g.openbrowser_github_url_exists_check = 'ignore'
       end
     },
+    { 'towolf/vim-helm' },
   }
 end)
