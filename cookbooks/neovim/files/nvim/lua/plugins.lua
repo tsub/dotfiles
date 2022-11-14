@@ -231,6 +231,8 @@ return packer.startup(function(use)
         vim.g.NERDTreeChDirMode = 0
         vim.g.NERDTreeShowHidden = 1
         vim.g.NERDTreeWinSize = 30
+        -- workaround (https://github.com/preservim/nerdtree/issues/1321)
+        vim.g.NERDTreeMinimalMenu = 1
       end,
       config = function()
         vim.api.nvim_set_keymap('n', '<F2>', ':NERDTreeFind<CR>', { noremap = true, silent = true })
