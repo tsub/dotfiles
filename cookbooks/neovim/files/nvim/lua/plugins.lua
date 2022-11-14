@@ -239,13 +239,24 @@ return packer.startup(function(use)
     },
     {
       'tyru/open-browser-github.vim',
-      requires = { 'tyru/open-browser.vim', opt = true },
+      requires = {
+        {
+          'tyru/open-browser.vim',
+          cmd = {
+            'OpenGithubFile',
+            'OpenGithubIssue',
+            'OpenGithubPullReq',
+            'OpenGithubProject',
+            'OpenGithubCommit',
+          }
+        },
+      },
       cmd = {
         'OpenGithubFile',
         'OpenGithubIssue',
         'OpenGithubPullReq',
         'OpenGithubProject',
-        'OpenGithubCommit'
+        'OpenGithubCommit',
       },
       setup = function()
         vim.g.openbrowser_github_url_exists_check = 'ignore'
