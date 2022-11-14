@@ -121,7 +121,10 @@ return packer.startup(function(use)
         local lsp_status = require('lsp-status')
 
         require('lualine').setup{
-          options = { theme = 'auto' },
+          options = {
+            theme = 'auto',
+            globalstatus = true,
+          },
           sections = {
             lualine_x = { lsp_status.status, 'encoding', 'fileformat', 'filetype' },
           },
