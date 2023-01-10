@@ -212,7 +212,7 @@ return packer.startup(function(use)
     { 'tpope/vim-fugitive' },
     { 'tpope/vim-endwise' },
     { 'tpope/vim-surround' },
-    { 'hashivim/vim-terraform', ft = 'terraform' },
+    { 'hashivim/vim-terraform', ft = { 'terraform', 'hcl' } },
     { 'tmux-plugins/vim-tmux', ft = 'tmux' },
     { 'cespare/vim-toml' },
     { 'dag/vim-fish' },
