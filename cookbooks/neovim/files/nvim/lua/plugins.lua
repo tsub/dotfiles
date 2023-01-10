@@ -80,7 +80,7 @@ return packer.startup(function(use)
             d = { '<cmd>Trouble<CR>', 'diagnostics' },
             f = { function() vim.lsp.buf.format({ async = true }) end, 'format' },
           },
-          f = { '<cmd>Telescope find_files theme=get_dropdown<CR>', 'find_files' },
+          f = { '<cmd>Telescope find_files theme=get_dropdown follow=true<CR>', 'find_files' },
           b = { '<cmd>Telescope buffers theme=get_dropdown<CR>', 'buffers' },
           g = { '<cmd>Telescope live_grep theme=get_dropdown<CR>', 'live_grep' },
           p = { '<cmd>BufferLineCyclePrev<CR>', 'buffer prev' },
