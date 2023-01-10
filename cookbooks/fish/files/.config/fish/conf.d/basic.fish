@@ -14,6 +14,9 @@ end
 if [ -d "/opt/homebrew/bin" ]
   fish_add_path /opt/homebrew/bin
 end
+if [ -d "/opt/homebrew/sbin" ]
+  fish_add_path /opt/homebrew/sbin
+end
 
 ## Set Locale
 set -x LC_ALL en_US.UTF-8
