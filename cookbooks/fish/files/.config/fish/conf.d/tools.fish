@@ -112,3 +112,8 @@ end
 if [ -f "$HOME/.asdf/asdf.fish" ]
   source $HOME/.asdf/asdf.fish
 end
+
+## 1password-cli shell plugins
+if [ -f "$HOME"/.config/op/plugins.sh ]
+  source $HOME/.config/op/plugins.sh
+end
