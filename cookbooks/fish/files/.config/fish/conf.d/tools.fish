@@ -103,6 +103,11 @@ if [ -d "/home/linuxbrew/.linuxbrew/bin" ]
   fish_add_path /home/linuxbrew/.linuxbrew/bin
 end
 
+## aqua
+if [ -d "$HOME/.local/share/aquaproj-aqua/bin" ]
+  fish_add_path $HOME/.local/share/aquaproj-aqua/bin
+end
+
 ## asdf
 if [ -f "$HOME/.asdf/asdf.fish" ]
   source $HOME/.asdf/asdf.fish
