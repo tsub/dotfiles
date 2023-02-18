@@ -1,0 +1,42 @@
+## Settings
+
+# main view
+set main-view = id date author commit-title:graph=yes,refs=yes
+
+# Enable diff-highlight
+set diff-highlight = true
+
+# Show line number
+set pager-view  = line-number:yes,interval=1 text
+set stage-view  = line-number:yes,interval=1 text
+set log-view    = line-number:yes,interval=1 text
+set blob-view   = line-number:yes,interval=1 text
+set diff-view   = line-number:yes,interval=1 text:yes,commit-title-overflow=no
+set blame-view  = date:default author:email-user id:yes,color line-number:yes,interval=1 text
+
+# Auto refresh
+set refresh-mode = auto
+
+## Key bindings
+
+# commit
+# ref: http://qiita.com/yuku_t/items/04853c9aecb40edadbb2
+bind status C !git commit -v
+bind generic + !git commit -v --amend --allow-empty
+bind diff F ?!git commit --fixup %(commit)
+bind main F ?!git commit --fixup %(commit)
+
+# rebase
+# ref: http://sue445.hatenablog.com/entry/2014/08/07/015811
+bind main R !git rebase -i %(commit)
+bind diff R !git rebase -i %(commit)
+
+# clean
+bind status D ?@git clean -d -f -- %(file)
+
+# hub
+# ref: http://hisaichi5518.hatenablog.jp/entry/2017/02/09/160007
+bind generic P @sh -c 'hub browse -- commit/%(commit)'
+
+# stash
+bind stash S !git stash save --include-untracked
