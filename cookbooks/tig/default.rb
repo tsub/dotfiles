@@ -1,3 +1,5 @@
+package 'libncurses-dev'
+
 tig_install_dir = Dir.tmpdir
 execute "git clone http://github.com/jonas/tig #{tig_install_dir}/tig" do
   user node[:user]
