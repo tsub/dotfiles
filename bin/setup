@@ -20,8 +20,11 @@ case "$(uname -sm)" in
   "Linux x86_64")
     mitamae_bin="mitamae-x86_64-linux"
     ;;
+  "Linux aarch64")
+    mitamae_bin="mitamae-aarch64-linux"
+    ;;
   *)
-    echo "unknown uname: $(uname)"
+    echo "unknown uname: $(uname -sm)"
     exit 1
     ;;
 esac
