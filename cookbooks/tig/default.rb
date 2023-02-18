@@ -8,7 +8,6 @@ end
 
 execute "make prefix=/usr/local && make install prefix=/usr/local" do
   cwd "#{tig_install_dir}/tig"
-  user node[:user]
   not_if 'which tig'
 end
 
