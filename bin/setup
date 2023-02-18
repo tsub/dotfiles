@@ -4,9 +4,9 @@ set -eu
 
 version='1.12.7'
 
-binary_dir=$(cd $(dirname $0) && pwd)
+basedir=$(dirname ${0})
 
-if [ -f "$binary_dir/mitamae" ] && [ "$($binary_dir/mitamae version)" = "mitamae v$version" ]; then
+if [ -f "$basedir/mitamae" ] && [ "$($basedir/mitamae version)" = "mitamae v$version" ]; then
   exit
 fi
 
@@ -26,5 +26,5 @@ case "$(uname -sm)" in
     ;;
 esac
 
-curl -fL -o "${binary_dir}/mitamae" "https://github.com/itamae-kitchen/mitamae/releases/download/v${version}/${mitamae_bin}"
-chmod +x "${binary_dir}/mitamae"
+curl -fL -o "${basedir}/mitamae" "https://github.com/itamae-kitchen/mitamae/releases/download/v${version}/${mitamae_bin}"
+chmod +x "${basedir}/mitamae"
