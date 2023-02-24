@@ -1,0 +1,2 @@
+package 'dnsutils'
+package 'ripgrep'
