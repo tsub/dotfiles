@@ -8,5 +8,6 @@ end
 
 execute 'make install' do
   cwd tmp_dir
+  user node[:user]
   not_if 'which kubectl-neat-diff'
 end
