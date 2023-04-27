@@ -7,7 +7,7 @@ git tmp_dir do
   not_if "test -x #{install_path}"
 end
 
-execute "GOPATH=#{node[:gopath]} make install" do
+execute "PATH=\"#{node[:goroot]}/bin:$PATH\" GOPATH=#{node[:gopath]} make install" do
   cwd tmp_dir
   user node[:user]
   not_if "test -x #{install_path}"

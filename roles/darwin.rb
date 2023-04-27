@@ -16,7 +16,8 @@ node.reverse_merge!(
   ghg: {
     version: '0.1.4'
   },
-  gopath: ENV['GOPATH'] || "#{ENV['HOME']}/go"
+  gopath: ENV['GOPATH'] || "#{ENV['HOME']}/go",
+  goroot: ENV['GOROOT'] || '/opt/homebrew/bin/go',
 )
 
 arch = run_command('uname -m').stdout.strip # workaround: node['kernel'] return nil when Darwin

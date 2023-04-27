@@ -2,7 +2,8 @@
 return unless ENV['REMOTE_CONTAINERS']
 
 node.reverse_merge!(
-  gopath: ENV['GOPATH'] || "#{ENV['HOME']}/go"
+  gopath: ENV['GOPATH'] || "#{ENV['HOME']}/go",
+  goroot: ENV['GOROOT'] || '/usr/local/go',
 )
 
 include_recipe '../cookbooks/tig'
