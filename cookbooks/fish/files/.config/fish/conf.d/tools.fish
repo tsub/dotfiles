@@ -14,17 +14,6 @@ if [ -d "$HOME/.ghg/bin" ]
   fish_add_path $HOME/.ghg/bin
 end
 
-## gpg agent
-set -x GPG_TTY (tty)
-
-if not pgrep gpg-agent > /dev/null
-  eval (gpg-agent --daemon)
-end
-
-if [ -f $HOME/.gpg-agent-info ]
-  source $HOME/.gpg-agent-info
-end
-
 ## diff-highlight
 if [ -d "/usr/local/opt/git/share/git-core/contrib/diff-highlight" ]
   fish_add_path /usr/local/opt/git/share/git-core/contrib/diff-highlight
