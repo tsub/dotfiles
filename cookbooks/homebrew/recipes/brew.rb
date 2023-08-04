@@ -21,6 +21,7 @@ brew 'helm'
 brew 'heroku'
 brew 'hub'
 brew 'ipcalc'
+brew 'jp'
 brew 'jq'
 brew 'krew'
 brew 'kubectl' { directory_name 'kubernetes-cli' }
