@@ -97,7 +97,22 @@ lspconfig.lua_ls.setup {
 lspconfig.tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  }
+  root_dir = lspconfig.util.find_package_json_ancestor,
+  -- See: https://github.com/neovim/nvim-lspconfig/issues/2507
+  single_file_support = false,
+  init_options = {
+    plugins = {
+      {
+        name = 'typescript-eslint-language-service',
+      },
+    },
+  },
+}
+
+lspconfig.denols.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  root_dir = lspconfig.util.root_pattern("deno.json"),
 }
 
 -- See: https://github.com/mrjosh/helm-ls
