@@ -4,13 +4,13 @@ if node[:platform] == 'debian'
     repository 'https://github.com/neovim/neovim.git'
     user node[:user]
     depth 1
-    not_if 'which neovim'
+    not_if 'which nvim'
   end
 
   execute 'make CMAKE_BUILD_TYPE=Release && sudo make install' do
     cwd File.expand_path("#{Dir.tmpdir}/neovim")
     user node[:user]
-    not_if 'which neovim'
+    not_if 'which nvim'
   end
 end
 
