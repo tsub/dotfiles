@@ -1,0 +1,5 @@
+{
+  "dockerFile": "Dockerfile",
+  "remoteUser": "vscode",
+  "postCreateCommand": "sudo apt update -y"
+}
