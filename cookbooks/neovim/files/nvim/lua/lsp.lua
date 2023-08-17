@@ -5,7 +5,7 @@ local cmp_nvim_lsp = require('cmp_nvim_lsp')
 lsp_status.register_progress()
 
 local on_attach = function(client, bufnr)
-  if client.server_capabilities.hover then
+  if client.server_capabilities.hoverProvider then
     vim.api.nvim_exec([[
       augroup lsp_hover
         autocmd!
@@ -14,16 +14,16 @@ local on_attach = function(client, bufnr)
     ]], false)
   end
 
-  if client.server_capabilities.document_formatting then
+  if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_exec([[
       augroup lsp_document_format
         autocmd!
-        autocmd BufWritePre <buffer> lua vim.lsp.buf.format({ async = true})
+        autocmd BufWritePre <buffer> lua vim.lsp.buf.format({ async = true })
       augroup END
     ]], false)
   end
 
-  if client.server_capabilities.definition then
+  if client.server_capabilities.definitionProvider then
     vim.api.nvim_set_keymap('n', '<C-]>', '<Cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', '<C-t>', '<C-o>', { noremap = true, silent = true })
   end
