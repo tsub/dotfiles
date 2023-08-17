@@ -14,5 +14,4 @@ node.reverse_merge!(
 include_recipe '../cookbooks/tig'
 include_recipe '../cookbooks/diff-highlight'
 include_recipe '../cookbooks/apt'
-include_recipe '../cookbooks/kubectl-neat-diff'
 include_recipe '../cookbooks/neovim'
