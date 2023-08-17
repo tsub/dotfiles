@@ -5,10 +5,10 @@
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
+  fn.system({ 'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path })
   execute 'packadd packer.nvim'
 end
 
@@ -69,31 +69,31 @@ return packer.startup(function(use)
         wk.setup({ triggers = { '<leader>' } })
 
         wk.register({
-          G = {
-            name = '+git',
-            g = { '<cmd>Telescope ghq list cwd=~ theme=get_dropdown<CR>', 'List ghq repository' },
-            o = { '<cmd>OpenGithubFile<CR>', 'Open GitHub file' },
+            G = {
+              name = '+git',
+              g = { '<cmd>Telescope ghq list cwd=~ theme=get_dropdown<CR>', 'List ghq repository' },
+              o = { '<cmd>OpenGithubFile<CR>', 'Open GitHub file' },
+            },
+            l = {
+              name = '+lsp',
+              r = { vim.lsp.buf.references, 'references' },
+              d = { '<cmd>Trouble<CR>', 'diagnostics' },
+              f = { function() vim.lsp.buf.format({ async = true }) end, 'format' },
+            },
+            f = { '<cmd>Telescope find_files theme=get_dropdown follow=true<CR>', 'find_files' },
+            b = { '<cmd>Telescope buffers theme=get_dropdown<CR>', 'buffers' },
+            g = { '<cmd>Telescope live_grep theme=get_dropdown<CR>', 'live_grep' },
+            p = { '<cmd>BufferLineCyclePrev<CR>', 'buffer prev' },
+            n = { '<cmd>BufferLineCycleNext<CR>', 'buffer next' },
+            P = {
+              name = '+packer',
+              u = { '<cmd>PackerUpdate<CR>', 'update' },
+              s = { '<cmd>PackerSync<CR>', 'sync' },
+              i = { '<cmd>PackerInstall<CR>', 'install' },
+              c = { '<cmd>PackerCompile<CR>', 'compile' },
+            },
           },
-          l = {
-            name = '+lsp',
-            r = { vim.lsp.buf.references, 'references' },
-            d = { '<cmd>Trouble<CR>', 'diagnostics' },
-            f = { function() vim.lsp.buf.format({ async = true }) end, 'format' },
-          },
-          f = { '<cmd>Telescope find_files theme=get_dropdown follow=true<CR>', 'find_files' },
-          b = { '<cmd>Telescope buffers theme=get_dropdown<CR>', 'buffers' },
-          g = { '<cmd>Telescope live_grep theme=get_dropdown<CR>', 'live_grep' },
-          p = { '<cmd>BufferLineCyclePrev<CR>', 'buffer prev' },
-          n = { '<cmd>BufferLineCycleNext<CR>', 'buffer next' },
-          P = {
-            name = '+packer',
-            u = { '<cmd>PackerUpdate<CR>', 'update' },
-            s = { '<cmd>PackerSync<CR>', 'sync' },
-            i = { '<cmd>PackerInstall<CR>', 'install' },
-            c = { '<cmd>PackerCompile<CR>', 'compile' },
-          },
-        },
-        { prefix = '<leader>' })
+          { prefix = '<leader>' })
       end
     },
     {
@@ -104,7 +104,7 @@ return packer.startup(function(use)
         require('gitsigns').setup {
           signs = {
             -- default: text = '_'
-            delete = { hl = 'GitSignsDelete', text = '│', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
+            delete = { hl = 'GitSignsDelete', text = '│', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
           },
           current_line_blame = true,
         }
@@ -120,7 +120,7 @@ return packer.startup(function(use)
       config = function()
         local lsp_status = require('lsp-status')
 
-        require('lualine').setup{
+        require('lualine').setup {
           options = {
             theme = 'auto',
             globalstatus = true,
@@ -216,7 +216,7 @@ return packer.startup(function(use)
     { 'tpope/vim-endwise' },
     { 'tpope/vim-surround' },
     { 'hashivim/vim-terraform', ft = { 'terraform', 'hcl' } },
-    { 'tmux-plugins/vim-tmux', ft = 'tmux' },
+    { 'tmux-plugins/vim-tmux',  ft = 'tmux' },
     { 'cespare/vim-toml' },
     { 'dag/vim-fish' },
     {
