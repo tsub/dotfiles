@@ -1,13 +1,27 @@
 ## fish
 
-package 'fish'
-
-arch = run_command('uname -m').stdout.strip # workaround: node['kernel'] return nil when Darwin
+arch = run_command('uname -m').stdout.strip.sub('aarch64', 'arm64') # workaround: node['kernel'] return nil when Darwin
 homebrew_dir = case arch
                when 'amd64' then '/usr/local'
                when 'arm64' then '/opt/homebrew'
                end
 fish_path = node[:platform] == 'darwin' ? homebrew_dir + '/bin/fish' : '/usr/bin/fish'
+
+if node[:platform] == 'debian'
+  debian_version = '11'
+  fish_version = '3.6.1-1'
+
+  execute "curl -fSL -o #{Dir.tmpdir}/fish.deb https://download.opensuse.org/repositories/shells:/fish/Debian_#{debian_version}/#{arch}/fish_#{fish_version}_#{arch}.deb" do
+    not_if 'which fish'
+    user node[:user]
+  end
+
+  execute "dpkg -i #{Dir.tmpdir}/fish.deb" do
+    not_if 'which fish'
+  end
+else
+  package 'fish'
+end
 
 directory node[:fish][:home] do
   user node[:user]
