@@ -1,14 +1,16 @@
 if node[:platform] == 'debian'
   package 'cmake'
-  git File.expand_path("#{Dir.tmpdir}/neovim") do
+
+  clone_path = File.expand_path("#{Dir.tmpdir}/neovim")
+
+  git clone_path do
     repository 'https://github.com/neovim/neovim.git'
     user node[:user]
     depth 1
     not_if 'which nvim'
   end
 
-  execute 'make CMAKE_BUILD_TYPE=Release && sudo make install' do
-    cwd File.expand_path("#{Dir.tmpdir}/neovim")
+  execute "cd #{clone_path} && make CMAKE_BUILD_TYPE=Release && sudo make install" do
     user node[:user]
     not_if 'which nvim'
   end
