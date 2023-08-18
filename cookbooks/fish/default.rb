@@ -77,7 +77,7 @@ end
 
 ## fisherman
 
-execute 'curl -sL  https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher' do
+execute "#{fish_path} -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'" do
   not_if { 'test -f ~/.config/fish/functions/fisher.fish' }
 end
 
