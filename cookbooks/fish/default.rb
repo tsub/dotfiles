@@ -79,6 +79,7 @@ end
 
 execute "#{fish_path} -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'" do
   not_if 'test -f ~/.config/fish/functions/fisher.fish'
+  user node[:user]
 end
 
 link File.expand_path('~/.config/fish/fish_plugins') do
