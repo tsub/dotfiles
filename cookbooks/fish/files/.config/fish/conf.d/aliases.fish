@@ -1,15 +1,13 @@
 ## Aliases
-alias vi="nvim"
-alias vim="nvim"
-alias git="hub"
+if [ -x "$(command -v nvim)" ]; alias vi="nvim"; end
+if [ -x "$(command -v nvim)" ]; alias vim="nvim"; end
+if [ -x "$(command -v hub)" ]; alias git="hub"; end
 alias diff="diff -u"
 alias ctags="/usr/local/bin/ctags"
 alias deckset="open -a Deckset"
 alias rm="rm -i"
 alias zatsu="memo edit zatsu.md"
-if [ -x "$(command -v exa)" ]
-  alias ls="exa --icons"
-end
+if [ -x "$(command -v exa)" ]; alias ls="exa --icons"; end
 alias la="ls -al" # workaround: exa does not support -A option
 alias ghqg="$GOPATH/bin/get -shallow -unshallow ghq"
 alias tig="env TERM=xterm-256color tig"
