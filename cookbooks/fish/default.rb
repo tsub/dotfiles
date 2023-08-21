@@ -87,3 +87,8 @@ link File.expand_path('~/.config/fish/fish_plugins') do
   user node[:user]
   force true
 end
+
+execute "#{fish_path} -c 'fisher update'" do
+  not_if 'test -f ~/.config/fish/functions/fish_prompt.fish'
+  user node[:user]
+end
