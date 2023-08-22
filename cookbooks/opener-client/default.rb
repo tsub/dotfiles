@@ -7,7 +7,7 @@ execute 'curl -Lo /usr/local/bin/open https://raw.githubusercontent.com/superbro
 end
 
 file '/usr/local/bin/open' do
-  mode 755
+  mode '0755'
 end
 
 execute 'curl -Lo /usr/local/bin/open https://raw.githubusercontent.com/superbrothers/opener/master/bin/xdg-open' do
@@ -15,5 +15,5 @@ execute 'curl -Lo /usr/local/bin/open https://raw.githubusercontent.com/superbro
 end
 
 file '/usr/local/bin/xdg-open' do
-  mode 755
+  mode '0755'
 end
