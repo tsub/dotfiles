@@ -12,7 +12,7 @@ define :tap, uri: nil do
   end
 end
 
-define :brew, directory_name: nil, use_cellar_option: false, head: false do
+define :brew, directory_name: nil, use_cellar_option: false, head: false, start_service: false do
   directory_name = params[:directory_name] || params[:name]
   head_option = '--HEAD ' if params[:head]
 
@@ -21,6 +21,12 @@ define :brew, directory_name: nil, use_cellar_option: false, head: false do
       not_if "test -d $(brew --cellar #{params[:name]})"
     else
       not_if "test -d #{homebrew_dir}/Cellar/#{directory_name}"
+    end
+  end
+
+  if params[:start_service]
+    execute "brew services start #{params[:name]}" do
+      not_if "brew services info --json #{params[:name]} | grep '\"running\": true'"
     end
   end
 end

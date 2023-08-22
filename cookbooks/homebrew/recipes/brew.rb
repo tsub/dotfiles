@@ -29,6 +29,7 @@ brew 'mas'
 brew 'minikube'
 brew 'neovim' { head true }
 brew 'node'
+brew 'opener' { start_service true }
 brew 'packer'
 brew 'php'
 brew 'pstree'
