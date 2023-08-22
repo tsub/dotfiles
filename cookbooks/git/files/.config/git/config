@@ -32,3 +32,5 @@
 	defaultBranch = main
 [stash]
   showIncludeUntracked = true
+[url "https://github.com/"]
+  insteadOf = "git@github.com:"
