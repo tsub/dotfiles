@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo "$@" | nc host.docker.internal 9999
