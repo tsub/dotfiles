@@ -274,5 +274,11 @@ return packer.startup(function(use)
     { 'towolf/vim-helm' },
     { 'gutenye/json5.vim' },
     { 'github/copilot.vim' },
+    {
+      'wincent/vim-clipper',
+      setup = function()
+        vim.g.ClipperAddress = 'host.docker.internal'
+      end
+    },
   }
 end)
