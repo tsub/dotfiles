@@ -273,5 +273,6 @@ return packer.startup(function(use)
     },
     { 'towolf/vim-helm' },
     { 'gutenye/json5.vim' },
+    { 'github/copilot.vim' },
   }
 end)
