@@ -272,5 +272,6 @@ return packer.startup(function(use)
       end
     },
     { 'towolf/vim-helm' },
+    { 'gutenye/json5.vim' },
   }
 end)
