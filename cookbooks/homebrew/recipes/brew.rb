@@ -1,6 +1,7 @@
 brew 'aqua'
 brew 'awscli'
 brew 'circleci'
+brew 'clipper' { start_service true }
 brew 'colordiff'
 brew 'coreutils'
 brew 'devcontainer'
