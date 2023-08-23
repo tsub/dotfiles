@@ -70,7 +70,8 @@ lspconfig.yamlls.setup {
   settings = {
     yaml = {
       schemas = {
-        kubernetes = { '*deployment.yaml', '*daemonset.yaml', '*service.yaml', '*configmap.yaml', '*pdb.yaml', 'secret.yaml', '*job.yaml' },
+        kubernetes = { '*deployment.yaml', '*daemonset.yaml', '*service.yaml', '*configmap.yaml', '*pdb.yaml',
+          'secret.yaml', '*job.yaml' },
         ['https://json.schemastore.org/kustomization.json'] = 'kustomization.yaml'
       },
       schemaStore = {
