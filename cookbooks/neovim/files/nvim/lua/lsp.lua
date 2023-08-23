@@ -74,6 +74,9 @@ lspconfig.yamlls.setup {
           'secret.yaml', '*job.yaml' },
         ['https://json.schemastore.org/kustomization.json'] = 'kustomization.yaml'
       },
+      customTags = {
+        '!GetAtt scalar', -- for CFn
+      },
       schemaStore = {
         enable = false,
       },
