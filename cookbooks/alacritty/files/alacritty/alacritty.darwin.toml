@@ -19,10 +19,7 @@ yellow = "0xe4aa80"
 
 [colors.cursor]
 cursor = "0xc6c8d1"
-hide_when_typing = false
-style = "Block"
 text = "0x161821"
-unfocused_hollow = true
 
 [colors.dim]
 black = "0x333333"
@@ -59,7 +56,6 @@ size = 11.0
 
 [font.bold]
 family = "FiraCode Nerd Font"
-style = "Bold"
 
 [font.glyph_offset]
 x = 0
@@ -67,11 +63,9 @@ y = 0
 
 [font.italic]
 family = "FiraCode Nerd Font"
-style = "Italic"
 
 [font.normal]
 family = "FiraCode Nerd Font"
-style = "Regular"
 
 [font.offset]
 x = 0
@@ -570,18 +564,9 @@ chars = "\u001B[24;3~"
 key = "F12"
 mods = "Command"
 
-[mouse]
-faux_scrolling_lines = 1
-
 [[mouse.bindings]]
 action = "PasteSelection"
 mouse = "Middle"
-
-[mouse.double_click]
-threshold = 300
-
-[mouse.triple_click]
-threshold = 300
 
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>"
