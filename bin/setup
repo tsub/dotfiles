@@ -29,5 +29,5 @@ case "$(uname -sm)" in
     ;;
 esac
 
-curl -fL -o "${basedir}/mitamae" "https://github.com/itamae-kitchen/mitamae/releases/download/v${version}/${mitamae_bin}"
+curl -fsSL -o "${basedir}/mitamae" "https://github.com/itamae-kitchen/mitamae/releases/download/v${version}/${mitamae_bin}"
 chmod +x "${basedir}/mitamae"
