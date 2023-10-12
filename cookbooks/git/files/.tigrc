@@ -34,9 +34,9 @@ bind diff R !git rebase -i %(commit)
 # clean
 bind status D ?@git clean -d -f -- %(file)
 
-# hub
+# github CLI
 # ref: http://hisaichi5518.hatenablog.jp/entry/2017/02/09/160007
-bind generic P @sh -c 'hub browse -- commit/%(commit)'
+bind generic P @sh -c 'gh browse %(commit)'
 
 # stash
 bind stash S !git stash save --include-untracked
