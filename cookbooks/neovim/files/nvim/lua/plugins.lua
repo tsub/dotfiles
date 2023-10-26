@@ -167,6 +167,16 @@ return packer.startup(function(use)
               },
             },
           },
+          pickers = {
+            find_files = {
+              find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+            },
+            live_grep = {
+              additional_args = function(opts)
+                return { "--hidden", "--glob", "!**/.git/*" }
+              end
+            },
+          }
         }
       end,
     },
