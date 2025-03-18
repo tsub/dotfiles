@@ -98,7 +98,7 @@ lspconfig.lua_ls.setup {
   }
 }
 
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   -- See: https://github.com/neovim/nvim-lspconfig/issues/2507
