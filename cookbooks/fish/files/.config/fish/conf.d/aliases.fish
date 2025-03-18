@@ -7,8 +7,7 @@ alias ctags="/usr/local/bin/ctags"
 alias deckset="open -a Deckset"
 alias rm="rm -i"
 alias zatsu="memo edit zatsu.md"
-if [ -x "$(command -v exa)" ]; alias ls="exa --icons"; end
-alias la="ls -al" # workaround: exa does not support -A option
+if [ -x "$(command -v eza)" ]; alias ls="eza --icons"; end
 alias ghqg="$GOPATH/bin/get -shallow -unshallow ghq"
 alias tig="env TERM=xterm-256color tig"
 
