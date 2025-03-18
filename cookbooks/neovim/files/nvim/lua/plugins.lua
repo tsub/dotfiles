@@ -68,32 +68,26 @@ return packer.startup(function(use)
 
         wk.setup({ triggers = { '<leader>' } })
 
-        wk.register({
-            G = {
-              name = '+git',
-              g = { '<cmd>Telescope ghq list cwd=~ theme=get_dropdown<CR>', 'List ghq repository' },
-              o = { '<cmd>OpenGithubFile<CR>', 'Open GitHub file' },
-            },
-            l = {
-              name = '+lsp',
-              r = { vim.lsp.buf.references, 'references' },
-              d = { '<cmd>Trouble<CR>', 'diagnostics' },
-              f = { function() vim.lsp.buf.format({ async = true }) end, 'format' },
-            },
-            f = { '<cmd>Telescope find_files theme=get_dropdown follow=true<CR>', 'find_files' },
-            b = { '<cmd>Telescope buffers theme=get_dropdown<CR>', 'buffers' },
-            g = { '<cmd>Telescope live_grep theme=get_dropdown<CR>', 'live_grep' },
-            p = { '<cmd>BufferLineCyclePrev<CR>', 'buffer prev' },
-            n = { '<cmd>BufferLineCycleNext<CR>', 'buffer next' },
-            P = {
-              name = '+packer',
-              u = { '<cmd>PackerUpdate<CR>', 'update' },
-              s = { '<cmd>PackerSync<CR>', 'sync' },
-              i = { '<cmd>PackerInstall<CR>', 'install' },
-              c = { '<cmd>PackerCompile<CR>', 'compile' },
-            },
-          },
-          { prefix = '<leader>' })
+        wk.add({
+          { "<leader>G",  group = "git" },
+          { "<leader>Gg", "<cmd>Telescope ghq list cwd=~ theme=get_dropdown<CR>",         desc = "List ghq repository" },
+          { "<leader>Go", "<cmd>OpenGithubFile<CR>",                                      desc = "Open GitHub file" },
+          { "<leader>P",  group = "packer" },
+          { "<leader>Pc", "<cmd>PackerCompile<CR>",                                       desc = "compile" },
+          { "<leader>Pi", "<cmd>PackerInstall<CR>",                                       desc = "install" },
+          { "<leader>Ps", "<cmd>PackerSync<CR>",                                          desc = "sync" },
+          { "<leader>Pu", "<cmd>PackerUpdate<CR>",                                        desc = "update" },
+          { "<leader>b",  "<cmd>Telescope buffers theme=get_dropdown<CR>",                desc = "buffers" },
+          { "<leader>f",  "<cmd>Telescope find_files theme=get_dropdown follow=true<CR>", desc = "find_files" },
+          { "<leader>g",  "<cmd>Telescope live_grep theme=get_dropdown<CR>",              desc = "live_grep" },
+          { "<leader>l",  group = "lsp" },
+          { "<leader>ld", "<cmd>Trouble<CR>",                                             desc = "diagnostics" },
+          { "<leader>lf", function() vim.lsp.buf.format({ async = true }) end,            desc = "format" },
+          { "<leader>lr", vim.lsp.buf.references,                                         desc = "references" },
+          { "<leader>m",  "<cmd>MarkdownPreviewToggle<CR>",                               desc = "markdown preview" },
+          { "<leader>n",  "<cmd>BufferLineCycleNext<CR>",                                 desc = "buffer next" },
+          { "<leader>p",  "<cmd>BufferLineCyclePrev<CR>",                                 desc = "buffer prev" },
+        })
       end
     },
     {
