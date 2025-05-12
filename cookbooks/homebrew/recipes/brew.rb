@@ -31,7 +31,6 @@ brew 'minikube'
 brew 'neovim' { head true }
 brew 'node'
 brew 'opener' { start_service true }
-brew 'packer'
 brew 'php'
 brew 'pstree'
 brew 'python' { use_cellar_option true }
@@ -42,7 +41,6 @@ brew 'rustup-init'
 brew 's3-edit'
 brew 'stern'
 brew 'terminal-notifier'
-brew 'terraform'
 brew 'terraform-docs'
 brew 'terraform-ls'
 brew 'tflint'
