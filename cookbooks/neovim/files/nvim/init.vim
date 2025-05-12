@@ -2,8 +2,7 @@
 "" Packer.nvim
 "*****************************************************************************
 
-lua require('plugins')
-autocmd BufWritePost plugins.lua PackerCompile
+lua require('config.lazy')
 
 "*****************************************************************************
 "" Basic
