@@ -106,3 +106,13 @@ end
 if [ -f "$HOME"/.config/op/plugins.sh ]
   source $HOME/.config/op/plugins.sh
 end
+
+## mysql-client
+if [ -d "/opt/homebrew/opt/mysql-client@5.7/bin" ]
+  fish_add_path /opt/homebrew/opt/mysql-client@5.7/bin
+end
+
+## openjdk
+if [ -d "/opt/homebrew/opt/openjdk/bin" ]
+  fish_add_path /opt/homebrew/opt/openjdk/bin
+end
