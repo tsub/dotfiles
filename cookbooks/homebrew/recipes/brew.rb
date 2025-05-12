@@ -1,4 +1,3 @@
-brew 'aqua'
 brew 'awscli'
 brew 'circleci'
 brew 'clipper' { start_service true }
