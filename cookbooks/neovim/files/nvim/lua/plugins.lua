@@ -72,7 +72,7 @@ return {
       require('gitsigns').setup {
         signs = {
           -- default: text = '_'
-          delete = { hl = 'GitSignsDelete', text = '│', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
+          delete = { text = '│' },
         },
         current_line_blame = true,
       }
