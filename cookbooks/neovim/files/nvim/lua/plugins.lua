@@ -37,7 +37,6 @@ return {
         { "<leader>G",  group = "git" },
         { "<leader>Gg", "<cmd>Telescope ghq list cwd=~ theme=get_dropdown<CR>",         desc = "List ghq repository" },
         { "<leader>Go", "<cmd>OpenGithubFile<CR>",                                      desc = "Open GitHub file" },
-        { "<leader>P",  group = "packer" },
         { "<leader>Pc", "<cmd>PackerCompile<CR>",                                       desc = "compile" },
         { "<leader>Pi", "<cmd>PackerInstall<CR>",                                       desc = "install" },
         { "<leader>Ps", "<cmd>PackerSync<CR>",                                          desc = "sync" },
