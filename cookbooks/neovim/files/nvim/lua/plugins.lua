@@ -1,15 +1,6 @@
 return {
   -- lua plugins
-  {
-    'neovim/nvim-lspconfig',
-    dependencies = {
-      'nvim-lua/lsp-status.nvim',
-      'hrsh7th/cmp-nvim-lsp',
-    },
-    config = function()
-      require('lsp')
-    end
-  },
+  { 'neovim/nvim-lspconfig' },
   {
     'hrsh7th/nvim-cmp',
     dependencies = {
