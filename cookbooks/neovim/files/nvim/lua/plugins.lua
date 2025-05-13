@@ -45,7 +45,7 @@ return {
         { "<leader>f",  "<cmd>Telescope find_files theme=get_dropdown follow=true<CR>", desc = "find_files" },
         { "<leader>g",  "<cmd>Telescope live_grep theme=get_dropdown<CR>",              desc = "live_grep" },
         { "<leader>l",  group = "lsp" },
-        { "<leader>ld", "<cmd>Trouble<CR>",                                             desc = "diagnostics" },
+        { "<leader>ld", "<cmd>Trouble diagnostics toggle<CR>",                          desc = "diagnostics" },
         { "<leader>lf", function() vim.lsp.buf.format({ async = true }) end,            desc = "format" },
         { "<leader>lr", vim.lsp.buf.references,                                         desc = "references" },
         { "<leader>m",  "<cmd>MarkdownPreviewToggle<CR>",                               desc = "markdown preview" },
