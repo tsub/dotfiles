@@ -14,8 +14,6 @@ set noswapfile
 set fileformats=unix,dos,mac
 set nobomb
 set noundofile
-let g:mapleader = "\<Space>"
-let g:maplocalleader = ','
 set hidden
 set encoding=utf-8
 set fileencoding=utf-8
