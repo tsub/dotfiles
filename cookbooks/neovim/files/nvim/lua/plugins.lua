@@ -241,4 +241,8 @@ return {
       vim.g.ClipperAddress = 'host.docker.internal'
     end
   },
+  {
+    'rhadley-recurly/vim-terragrunt',
+    ft = { 'hcl' },
+  },
 }
