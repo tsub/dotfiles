@@ -40,15 +40,6 @@ let g:vimsyn_embed='lPr'
 
 "" Mapping
 lua require('config.keymap')
-inoremap <silent> jj <ESC>
-nnoremap ; :
-noremap <silent> <F5> :e!<CR>
-tnoremap <silent> <C-j><C-j> <C-\><C-n>
-nnoremap <C-w><C-h> :vertical resize -5<CR>
-nnoremap <C-w><C-j> :resize +5<CR>
-nnoremap <C-w><C-k> :resize -5<CR>
-nnoremap <C-w><C-l> :vertical resize +5<CR>
-nnoremap <leader>/ :noh<CR>
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
