@@ -186,4 +186,14 @@ return {
   --   setup = function() vim.g.mkdp_filetypes = { 'markdown' } end,
   --   ft = { 'markdown' },
   -- },
+  {
+    'akinsho/toggleterm.nvim',
+    version = "*",
+    config = function()
+      require("toggleterm").setup {
+        open_mapping = [[<C-t>]],
+        direction = 'float',
+      }
+    end
+  },
 }
