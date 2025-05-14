@@ -1,8 +1,4 @@
-"*****************************************************************************
-"" Packer.nvim
-"*****************************************************************************
-
-lua require('config.lazy')
+lua require('config')
 
 "*****************************************************************************
 "" Basic
@@ -37,9 +33,6 @@ set number
 set list
 set listchars=tab:\ \ ,trail:_
 let g:vimsyn_embed='lPr'
-
-"" Mapping
-lua require('config.keymap')
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
