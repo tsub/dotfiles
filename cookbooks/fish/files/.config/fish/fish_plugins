@@ -10,7 +10,6 @@ tsub/fish-theme
 tsub/git-cd
 tsub/fish-fzf-ghq
 evanlucas/fish-kubectl-completions
-franciscolourenco/done
 jorgebucaran/getopts.fish
 jethrokuan/z
 grimoh/fish-aqua
