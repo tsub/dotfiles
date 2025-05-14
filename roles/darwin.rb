@@ -7,6 +7,9 @@ node.reverse_merge!(
   kitty: {
     home: config_home + '/kitty'
   },
+  ghostty: {
+    home: config_home + '/ghostty'
+  },
   fish: {
     home: config_home + '/fish'
   },
@@ -41,3 +44,4 @@ include_recipe '../cookbooks/mas'
 include_recipe '../cookbooks/helm_plugins' if arch == 'amd64'
 include_recipe '../cookbooks/kubectl-neat-diff'
 include_recipe '../cookbooks/opener-server'
+include_recipe '../cookbooks/ghostty'

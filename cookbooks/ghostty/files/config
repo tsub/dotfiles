@@ -1,0 +1,19 @@
+font-size = 12
+background-opacity = 0.95
+confirm-close-surface = false
+
+# フォントのリガチャによって neovim で `ます` などが文字化けするのを防ぐ
+font-feature = -dlig
+
+# `ctrl+[` で `91;5u` が入力されるのを防ぐ
+# See: https://github.com/ghostty-org/ghostty/discussions/5071
+keybind=ctrl+left_bracket=text:\x1b
+
+# ctrl+` でクイックターミナルを表示する
+# See: https://github.com/ghostty-org/ghostty/discussions/3610
+keybind=global:ctrl+grave_accent=toggle_quick_terminal
+
+# クイックターミナル
+quick-terminal-position=center
+quick-terminal-animation-duration=0
+quick-terminal-autohide=false
