@@ -34,6 +34,7 @@ return {
     })
     vim.lsp.enable('yamlls')
 
+    -- Formatting
     -- See https://neovim.io/doc/user/lsp.html#lsp-config
     vim.api.nvim_create_autocmd('LspAttach', {
       callback = function(args)
@@ -46,13 +47,14 @@ return {
           vim.api.nvim_create_autocmd('BufWritePre', {
             buffer = args.buf,
             callback = function()
-              vim.lsp.buf.format({ bufnr = args.buf, id = client.id, timeout_ms = 1000 })
+              vim.lsp.buf.format({ bufnr = args.buf, id = client.id, timeout_ms = 1000, async = true })
             end,
           })
         end
       end
     })
 
+    -- Diagnostics
     vim.diagnostic.config({
       virtual_lines = true,
     })
