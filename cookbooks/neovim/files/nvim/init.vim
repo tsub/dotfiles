@@ -39,6 +39,7 @@ set listchars=tab:\ \ ,trail:_
 let g:vimsyn_embed='lPr'
 
 "" Mapping
+lua require('config.keymap')
 inoremap <silent> jj <ESC>
 nnoremap ; :
 noremap <silent> <F5> :e!<CR>

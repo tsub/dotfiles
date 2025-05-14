@@ -199,13 +199,6 @@ return {
   { 'cespare/vim-toml' },
   { 'dag/vim-fish' },
   {
-    'tyru/caw.vim',
-    keys = { '<C-k>' },
-    config = function()
-      vim.api.nvim_set_keymap('', '<C-k>', '<Plug>(caw:hatpos:toggle)', {})
-    end
-  },
-  {
     'scrooloose/nerdtree',
     cmd = { 'NERDTreeFind', 'NERDTreeToggle' },
     keys = { '<F2>', '<F3>' },
