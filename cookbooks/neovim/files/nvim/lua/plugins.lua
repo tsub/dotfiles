@@ -1,6 +1,9 @@
 return {
   -- lua plugins
-  { 'neovim/nvim-lspconfig' },
+  {
+    "neovim/nvim-lspconfig",
+    config = function() require("lsp") end,
+  },
   {
     'hrsh7th/nvim-cmp',
     dependencies = {
@@ -72,19 +75,16 @@ return {
     'nvim-lualine/lualine.nvim',
     dependencies = {
       { 'kyazdani42/nvim-web-devicons', opt = true },
-      'nvim-lua/lsp-status.nvim',
       'projekt0n/github-nvim-theme',
     },
     config = function()
-      local lsp_status = require('lsp-status')
-
       require('lualine').setup {
         options = {
           theme = 'auto',
           globalstatus = true,
         },
         sections = {
-          lualine_x = { lsp_status.status, 'encoding', 'fileformat', 'filetype' },
+          lualine_x = { 'lsp_status', 'encoding', 'fileformat', 'filetype' },
         },
       }
     end
