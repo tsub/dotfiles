@@ -76,9 +76,9 @@ if node[:platform] == 'darwin'
   end
 end
 
-## fisherman
+## fisher
 
-execute "#{fish_path} -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'" do
+execute "#{fish_path} -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish -o ~/.config/fish/functions/fisher.fish'" do
   not_if 'test -f ~/.config/fish/functions/fisher.fish'
   user node[:user]
 end
