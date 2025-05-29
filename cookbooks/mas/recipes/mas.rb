@@ -1,1 +1,1 @@
-mas 'Medis', app_id: '1579200037'
+mas 'Medis' { app_id '1579200037' }
