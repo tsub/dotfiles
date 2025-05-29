@@ -22,7 +22,8 @@ set updatetime=1000
 set mouse=a
 set completeopt=menu,menuone,noselect
 
-if has('mac')
+" dev container require clipper (https://github.com/wincent/clipper)
+if has('mac') || getenv('REMOTE_CONTAINERS') == 'true'
   set clipboard+=unnamedplus
   " workaround: https://github.com/neovim/neovim/issues/8631
   let g:clipboard = {'copy': {'+': 'pbcopy', '*': 'pbcopy'}, 'paste': {'+': 'pbpaste', '*': 'pbpaste'}, 'name': 'pbcopy', 'cache_enabled': 0}
