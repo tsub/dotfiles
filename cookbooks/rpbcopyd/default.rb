@@ -13,7 +13,7 @@ file rpbcopyd_path do
   mode '0755'
 end
 
-execute "#{rpbcopyd_path} -d" do
+execute "#{rpbcopyd_path} -d -H 127.0.0.1" do
   not_if 'pgrep -fq rpbcopyd'
   user node[:user]
 end
