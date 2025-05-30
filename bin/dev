@@ -1,5 +1,5 @@
 #!/bin/sh -eu
 
 devcontainer up --workspace-folder . --remote-env REMOTE_CONTAINERS=true --dotfiles-repository tsub/dotfiles
-devcontainer exec --workspace-folder . --remote-env REMOTE_CONTAINERS=true nvim --headless +Lazy +qa
+devcontainer exec --workspace-folder . --remote-env REMOTE_CONTAINERS=true nvim --headless '+Lazy! sync' +qa
 devcontainer exec --workspace-folder . --remote-env REMOTE_CONTAINERS=true bash
