@@ -128,8 +128,8 @@ if [ -z "$REMOTE_CONTAINERS" ] && [ -x "$HOME/.bin/rpbcopyd" ] && ! pgrep -fq "r
 end
 
 # for devcontainer/cli ssh-agent startup
-if [ -n "$REMOTE_CONTAINERS" ] && ! pgrep -f ssh-agent &> /dev/null
-  if [ ! -f /tmp/ssh-agent-env ]
+if [ -n "$REMOTE_CONTAINERS" ]
+  if ! pgrep -f ssh-agent &> /dev/null || [ ! -f /tmp/ssh-agent-env ]
     ssh-agent -c > /tmp/ssh-agent-env
   end
 
