@@ -11,7 +11,7 @@ return {
     'scrooloose/nerdtree',
     cmd = { 'NERDTreeFind', 'NERDTreeToggle' },
     keys = { '<F2>', '<F3>' },
-    setup = function()
+    init = function()
       vim.g.NERDTreeChDirMode = 0
       vim.g.NERDTreeShowHidden = 1
       vim.g.NERDTreeWinSize = 30
@@ -30,19 +30,13 @@ return {
         'tyru/open-browser.vim',
       },
     },
-    setup = function()
+    init = function()
       vim.g.openbrowser_github_url_exists_check = 'ignore'
     end
   },
   { 'towolf/vim-helm' },
   { 'gutenye/json5.vim' },
   { 'github/copilot.vim' },
-  {
-    'wincent/vim-clipper',
-    setup = function()
-      vim.g.ClipperAddress = 'host.docker.internal'
-    end
-  },
   {
     'rhadley-recurly/vim-terragrunt',
     ft = { 'hcl' },

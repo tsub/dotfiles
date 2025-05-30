@@ -55,7 +55,7 @@ return {
   },
   {
     'lewis6991/gitsigns.nvim',
-    tag = 'release',
+    version = 'release',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       require('gitsigns').setup {
@@ -70,7 +70,7 @@ return {
   {
     'nvim-lualine/lualine.nvim',
     dependencies = {
-      { 'kyazdani42/nvim-web-devicons', opt = true },
+      { 'kyazdani42/nvim-web-devicons', lazy = true },
       'projekt0n/github-nvim-theme',
     },
     config = function()
@@ -136,7 +136,7 @@ return {
   },
   {
     'akinsho/bufferline.nvim',
-    tag = '*',
+    version = '*',
     dependencies = {
       'kyazdani42/nvim-web-devicons',
     },
@@ -152,7 +152,7 @@ return {
   {
     'nvim-treesitter/nvim-treesitter',
     -- See: https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation#packernvim
-    run = function()
+    build = function()
       local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
       ts_update()
     end,
@@ -178,12 +178,12 @@ return {
   },
   {
     'iamcco/markdown-preview.nvim',
-    run = function() vim.fn['mkdp#util#install']() end,
+    build = function() vim.fn['mkdp#util#install']() end,
   },
   -- {
   --   'iamcco/markdown-preview.nvim',
-  --   run = 'cd app && npm install',
-  --   setup = function() vim.g.mkdp_filetypes = { 'markdown' } end,
+  --   build = 'cd app && npm install',
+  --   init = function() vim.g.mkdp_filetypes = { 'markdown' } end,
   --   ft = { 'markdown' },
   -- },
   {
