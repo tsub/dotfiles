@@ -116,3 +116,8 @@ end
 if [ -d "/opt/homebrew/opt/openjdk/bin" ]
   fish_add_path /opt/homebrew/opt/openjdk/bin
 end
+
+# for devcontainer/cli port forwarding
+if [ -d "$HOME/ghq/src/github.com/tsub/autoForward" ] && ! pgrep -fq "target/release/host"
+  cargo run --manifest-path "$HOME/ghq/src/github.com/tsub/autoForward/Cargo.toml" --release --bin host &> /tmp/autoforward.log &
+end
