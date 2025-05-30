@@ -126,3 +126,16 @@ end
 if [ -z "$REMOTE_CONTAINERS" ] && [ -x "$HOME/.bin/rpbcopyd" ] && ! pgrep -fq "rpbcopyd"
   "$HOME/.bin/rpbcopyd -d -H 127.0.0.1"
 end
+
+# for devcontainer/cli ssh-agent startup
+if [ -n "$REMOTE_CONTAINERS" ] && ! pgrep -f ssh-agent &> /dev/null
+  if [ ! -f /tmp/ssh-agent-env ]
+    ssh-agent -c > /tmp/ssh-agent-env
+  end
+
+  source /tmp/ssh-agent-env > /dev/null
+
+  if ! ssh-add -l &> /dev/null
+    ssh-add &> /dev/null
+  end
+end
