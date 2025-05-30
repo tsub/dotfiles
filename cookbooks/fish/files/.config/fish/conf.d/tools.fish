@@ -118,11 +118,11 @@ if [ -d "/opt/homebrew/opt/openjdk/bin" ]
 end
 
 # for devcontainer/cli port forwarding
-if [ -d "$HOME/ghq/src/github.com/tsub/autoForward" ] && ! pgrep -fq "target/release/host"
+if [ -d "$HOME/ghq/src/github.com/tsub/autoForward" ] && ! pgrep -fq "target/release/host" && [ -z "$REMOTE_CONTAINERS" ]
   cargo run --manifest-path "$HOME/ghq/src/github.com/tsub/autoForward/Cargo.toml" --release --bin host &> /tmp/autoforward.log &
 end
 
 # for devcontainer/cli clipboard sharing
-if [ -x "$HOME/.bin/rpbcopyd" ] && ! pgrep -fq "rpbcopyd"
+if [ -x "$HOME/.bin/rpbcopyd" ] && ! pgrep -fq "rpbcopyd" && [ -z "$REMOTE_CONTAINERS" ]
   "$HOME/.bin/rpbcopyd -d -H 127.0.0.1"
 end
