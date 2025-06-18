@@ -36,7 +36,6 @@ return {
   },
   { 'towolf/vim-helm' },
   { 'gutenye/json5.vim' },
-  { 'github/copilot.vim' },
   {
     'rhadley-recurly/vim-terragrunt',
     ft = { 'hcl' },
