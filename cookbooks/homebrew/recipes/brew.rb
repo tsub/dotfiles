@@ -2,6 +2,7 @@ brew 'awscli'
 brew 'awscli-local'
 brew 'circleci'
 brew 'clipper' { start_service true }
+brew 'colima' { start_service true }
 brew 'colordiff'
 brew 'coreutils'
 brew 'devcontainer'
