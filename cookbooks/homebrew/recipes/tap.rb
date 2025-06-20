@@ -1,3 +1,4 @@
+tap 'localstack/tap'
 tap 'masutaka/github-nippou'
 tap 'microsoft/git'
 tap 'superbrothers/opener'

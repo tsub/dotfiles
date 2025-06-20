@@ -58,7 +58,7 @@ directory "#{node[:fish][:home]}/completions" do
   user node[:user]
 end
 
-%w[hub alacritty aws].each do |completion_file|
+%w[hub alacritty aws awslocal].each do |completion_file|
   link File.expand_path("~/.config/fish/completions/#{completion_file}.fish") do
     to File.expand_path("../files/.config/fish/completions/#{completion_file}.fish", __FILE__)
     user node[:user]
