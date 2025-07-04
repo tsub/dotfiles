@@ -54,18 +54,15 @@ return {
     end
   },
   {
-    'lewis6991/gitsigns.nvim',
-    version = 'release',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    'echasnovski/mini.diff',
+    version = false,
     config = function()
-      require('gitsigns').setup {
-        signs = {
-          -- default: text = '_'
-          delete = { text = '│' },
-        },
-        current_line_blame = true,
+      require('mini.diff').setup {
+        view = {
+          signs = { add = '│', change = '│', delete = '│' },
+        }
       }
-    end
+    end,
   },
   {
     'nvim-lualine/lualine.nvim',
