@@ -28,7 +28,6 @@ arch = run_command('uname -m').stdout.strip # workaround: node['kernel'] return 
 include_recipe '../cookbooks/homebrew'
 include_recipe '../cookbooks/zsh'
 include_recipe '../cookbooks/fish'
-include_recipe '../cookbooks/asdf'
 include_recipe '../cookbooks/git'
 include_recipe '../cookbooks/neovim'
 include_recipe '../cookbooks/tmux'
