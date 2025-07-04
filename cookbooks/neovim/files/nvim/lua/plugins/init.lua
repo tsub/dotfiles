@@ -203,7 +203,7 @@ return {
         suggestion = {
           auto_trigger = true,
           keymap = {
-            accept = "<C-l>",
+            accept = "<D-l>", -- Cmd + l on Ghostty
           }
         },
       })
