@@ -1,0 +1,45 @@
+{
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(rg:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(terraform fmt:*)",
+      "Bash(terraform init:*)",
+      "Bash(terminal-notifier:*)",
+      "Bash(terragrunt run:*)",
+      "mcp__github__get_file_contents"
+    ],
+    "deny": [
+      "Bash(terragrunt run:*apply*)",
+      "Bash(terragrunt apply:*)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"タスクが完了しました\" with title \"Claude Code\" subtitle \"作業完了\"'"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"ユーザーアクションが必要です\" with title \"Claude Code\" subtitle \"通知\"'"
+          }
+        ]
+      }
+    ]
+  }
+}

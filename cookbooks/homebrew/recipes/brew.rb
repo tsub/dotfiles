@@ -38,6 +38,7 @@ brew 'minikube'
 brew 'neovim' { head true }
 brew 'node'
 brew 'opener' { start_service true }
+brew 'phantom'
 brew 'php'
 brew 'pipx'
 brew 'pstree'

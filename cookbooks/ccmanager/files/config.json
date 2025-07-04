@@ -1,0 +1,29 @@
+{
+  "shortcuts": {
+    "returnToMenu": {
+      "ctrl": true,
+      "key": "e"
+    },
+    "cancel": {
+      "key": "escape"
+    }
+  },
+  "statusHooks": {},
+  "worktree": {
+    "autoDirectory": true,
+    "autoDirectoryPattern": ".git/phantom/worktrees/{branch}"
+  },
+  "command": {
+    "command": "claude"
+  },
+  "commandPresets": {
+    "presets": [
+      {
+        "id": "1",
+        "name": "Main",
+        "command": "claude"
+      }
+    ],
+    "defaultPresetId": "1"
+  }
+}

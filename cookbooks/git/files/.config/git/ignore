@@ -199,3 +199,8 @@ tf-lsp.log
 ## VSCode
 .vscode
 .devcontainer/tsub-feature/
+
+**/.claude/settings.local.json
+
+# See: https://github.com/aku11i/phantom/blob/main/docs/configuration.md
+phantom.config.json
