@@ -17,3 +17,9 @@ keybind=global:ctrl+grave_accent=toggle_quick_terminal
 quick-terminal-position=center
 quick-terminal-animation-duration=0
 quick-terminal-autohide=false
+
+# zellij で option (alt) キーを使えるようにする
+# See: https://github.com/ghostty-org/ghostty/discussions/3483#discussioncomment-11716750
+macos-option-as-alt = left
+keybind = alt+left=unbind
+keybind = alt+right=unbind
