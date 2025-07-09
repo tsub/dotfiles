@@ -1,4 +1,4 @@
 npm '@anthropic-ai/claude-code'
 npm 'ccmanager'
 npm 'ccusage'
-npm 'reviewit'
+npm 'difit'
