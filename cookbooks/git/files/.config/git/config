@@ -40,3 +40,6 @@
 	helper = !gh auth git-credential
 [extensions]
 	worktreeConfig = true
+  relativeWorktrees = true
+[worktree]
+  useRelativePaths = true
