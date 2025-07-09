@@ -119,7 +119,7 @@ end
 
 # for devcontainer/cli clipboard sharing
 if [ -z "$REMOTE_CONTAINERS" ] && [ -x "$HOME/.bin/rpbcopyd" ] && ! pgrep -fq "rpbcopyd"
-  "$HOME/.bin/rpbcopyd -d -H 127.0.0.1"
+  "$HOME/.bin/rpbcopyd" -d -H 127.0.0.1
 end
 
 # for devcontainer/cli ssh-agent startup
