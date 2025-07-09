@@ -22,24 +22,24 @@
   autosquash = true
   autostash = true
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
 [pull]
-	rebase = false
+  rebase = false
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [stash]
   showIncludeUntracked = true
 [url "https://github.com/"]
   insteadOf = "git@github.com:"
 [credential "https://github.com"]
-	helper = !gh auth git-credential
+  helper = !gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = !gh auth git-credential
+  helper = !gh auth git-credential
 [extensions]
-	worktreeConfig = true
+  worktreeConfig = true
   relativeWorktrees = true
 [worktree]
   useRelativePaths = true
