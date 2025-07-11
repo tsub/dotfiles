@@ -12,7 +12,7 @@ cask 'ears'
 cask 'firefox'
 cask 'font-fira-code-nerd-font'
 cask 'ghostty'
-cask 'git-credential-manager-core'
+cask 'git-credential-manager-core' { tap_name 'microsoft/git' }
 cask 'google-chrome'
 cask 'google-cloud-sdk'
 cask 'gyazo'

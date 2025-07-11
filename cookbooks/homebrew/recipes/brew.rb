@@ -19,7 +19,7 @@ brew 'gh'
 brew 'ghq'
 brew 'git'
 brew 'git-secrets'
-brew 'github-nippou'
+brew 'github-nippou' { tap_name 'masutaka/github-nippou' }
 brew 'glow'
 brew 'go'
 brew 'graphviz'
@@ -31,14 +31,14 @@ brew 'jp'
 brew 'jq'
 brew 'krew'
 brew 'kubectl' { directory_name 'kubernetes-cli' }
-brew 'localstack-cli'
+brew 'localstack-cli' { tap_name 'localstack/tap' }
 brew 'lua-language-server'
 brew 'mas'
 brew 'minikube'
 brew 'neovim' { head true }
 brew 'node'
-brew 'opener' { start_service true }
-brew 'phantom'
+brew 'opener' { start_service true; tap_name 'superbrothers/opener' }
+brew 'phantom' { tap_name 'aku11i/tap' }
 brew 'php'
 brew 'pipx'
 brew 'pstree'
@@ -47,7 +47,7 @@ brew 'ripgrep'
 brew 'ruby'
 brew 'rust-analyzer'
 brew 'rustup-init'
-brew 's3-edit'
+brew 's3-edit' { tap_name 'tsub/s3-edit' }
 brew 'stern'
 brew 'terminal-notifier'
 brew 'terraform-docs'
@@ -62,6 +62,6 @@ brew 'typescript'
 brew 'uv'
 brew 'watch'
 brew 'whalebrew'
-brew 'yamlls'
+brew 'yamlls' { tap_name 'tsub/yamlls' }
 brew 'yarn'
 brew 'yq'

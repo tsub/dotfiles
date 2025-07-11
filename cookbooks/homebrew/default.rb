@@ -12,28 +12,32 @@ define :tap, uri: nil do
   end
 end
 
-define :brew, directory_name: nil, use_cellar_option: false, head: false, start_service: false do
+define :brew, directory_name: nil, use_cellar_option: false, head: false, start_service: false, tap_name: nil do
   directory_name = params[:directory_name] || params[:name]
   head_option = '--HEAD ' if params[:head]
+  package_name = params[:tap_name] ? "#{params[:tap_name]}/#{params[:name]}" : params[:name]
 
-  execute "brew install --formula #{head_option}#{params[:name]}" do
+  execute "brew install --formula #{head_option}#{package_name}" do
     if params[:use_cellar_option]
-      not_if "test -d $(brew --cellar #{params[:name]})"
+      not_if "test -d $(brew --cellar #{package_name})"
     else
       not_if "test -d #{homebrew_dir}/Cellar/#{directory_name}"
     end
   end
 
   if params[:start_service]
-    execute "brew services start #{params[:name]}" do
-      not_if "brew services info --json #{params[:name]} | grep '\"running\": true'"
+    execute "brew services start #{package_name}" do
+      not_if "brew services info --json #{package_name} | grep '\"running\": true'"
     end
   end
 end
 
-define :cask do
-  execute "brew install --cask #{params[:name]}" do
-    not_if "test -d #{homebrew_dir}/Caskroom/#{params[:name]} -o -x /opt/homebrew/bin/#{params[:name]}"
+define :cask, tap_name: nil do
+  directory_name = params[:name]
+  package_name = params[:tap_name] ? "#{params[:tap_name]}/#{params[:name]}" : params[:name]
+
+  execute "brew install --cask #{package_name}" do
+    not_if "test -d #{homebrew_dir}/Caskroom/#{directory_name} -o -x /opt/homebrew/bin/#{directory_name}"
   end
 end
 
