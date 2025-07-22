@@ -54,6 +54,7 @@ brew 'terraform' { tap_name 'hashicorp/tap' }
 brew 'terraform-docs'
 brew 'terraform-local'
 brew 'terraform-ls'
+brew 'terragrunt'
 brew 'tflint'
 brew 'tig'
 brew 'tmux'
