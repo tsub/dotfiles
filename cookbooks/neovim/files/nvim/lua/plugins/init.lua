@@ -50,6 +50,7 @@ return {
         { "<leader>m",  "<cmd>MarkdownPreviewToggle<CR>",                               desc = "markdown preview" },
         { "<leader>n",  "<cmd>BufferLineCycleNext<CR>",                                 desc = "buffer next" },
         { "<leader>p",  "<cmd>BufferLineCyclePrev<CR>",                                 desc = "buffer prev" },
+        { "<leader>cc", "<cmd>ClaudeCode<CR>",                                          desc = "claude code" },
       })
     end
   },
