@@ -1,3 +1,7 @@
+directory File.expand_path('~/.claude') do
+  user node[:user]
+end
+
 link File.expand_path('~/.claude/settings.json') do
   to File.expand_path('../files/settings.json', __FILE__)
   user node[:user]
