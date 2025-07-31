@@ -1,3 +1,4 @@
+brew 'age'
 brew 'awscli'
 brew 'awscli-local'
 brew 'circleci'
@@ -50,6 +51,7 @@ brew 'ruby'
 brew 'rust-analyzer'
 brew 'rustup-init'
 brew 's3-edit' { tap_name 'tsub/s3-edit' }
+brew 'sops'
 brew 'stern'
 brew 'terminal-notifier'
 brew 'terraform' { tap_name 'hashicorp/tap' }
