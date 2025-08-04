@@ -3,6 +3,8 @@ return {
   config = function()
     vim.lsp.enable('terraformls')
     vim.lsp.enable('tflint')
+    vim.lsp.enable('bashls')
+
     vim.lsp.config('lua_ls', {
       settings = {
         Lua = {
