@@ -13,6 +13,7 @@ brew 'docker'
 brew 'docker-buildx'
 brew 'docker-compose'
 brew 'docker-credential-helper'
+brew 'docker-credential-helper-ecr'
 brew 'ec2-instance-selector' { tap_name 'aws/tap' }
 brew 'eza'
 brew 'fd'

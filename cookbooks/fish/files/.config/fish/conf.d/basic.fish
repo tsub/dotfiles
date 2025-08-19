@@ -5,6 +5,9 @@ set -x LESS "-g -i -M -R -S -W -z-4 -x4 -X"
 if [ -d "$HOME/.bin" ]
   fish_add_path $HOME/.bin
 end
+if [ -d "$HOME/.local/bin" ]
+  fish_add_path $HOME/.local/bin
+end
 if [ -d "/usr/local/bin" ]
   fish_add_path /usr/local/bin
 end
