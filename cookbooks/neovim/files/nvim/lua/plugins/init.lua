@@ -194,21 +194,6 @@ return {
     end,
   },
   {
-    "zbirenbaum/copilot.lua",
-    -- cmd = "Copilot",
-    -- event = "InsertEnter",
-    config = function()
-      require("copilot").setup({
-        suggestion = {
-          auto_trigger = true,
-          keymap = {
-            accept = "<D-l>", -- Cmd + l on Ghostty
-          }
-        },
-      })
-    end,
-  },
-  {
     "greggh/claude-code.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim", -- Required for git operations

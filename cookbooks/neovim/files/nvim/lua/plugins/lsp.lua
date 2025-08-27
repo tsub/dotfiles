@@ -3,6 +3,7 @@ return {
   config = function()
     vim.lsp.enable('terraformls')
     vim.lsp.enable('tflint')
+    vim.lsp.enable('copilot')
 
     vim.lsp.enable('bashls', {
       settings = {
@@ -71,6 +72,18 @@ return {
     -- Diagnostics
     vim.diagnostic.config({
       virtual_lines = true,
+    })
+
+    -- Completion
+    vim.lsp.inline_completion.enable(true) -- for copilot lsp
+    vim.keymap.set("i", "<D-l>", function()
+      if not vim.lsp.inline_completion.get() then
+        return "<D-l>"
+      end
+    end, {
+      expr = true,
+      replace_keycodes = true,
+      desc = "Get the current inline completion",
     })
   end,
 }
