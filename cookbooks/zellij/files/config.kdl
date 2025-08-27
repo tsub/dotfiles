@@ -235,7 +235,7 @@ keybinds clear-defaults=true {
         // added
         bind "c" {
           NewTab {
-            cwd "$HOME"
+            cwd "/Users/tsub"
           }
           SwitchToMode "normal"
         }
