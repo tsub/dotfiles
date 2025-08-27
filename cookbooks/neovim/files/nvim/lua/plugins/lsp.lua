@@ -29,6 +29,9 @@ return {
     vim.lsp.config('yamlls', {
       settings = {
         yaml = {
+          format = {
+            enable = false
+          },
           schemas = {
             kubernetes = { '*deployment.yaml', '*daemonset.yaml', '*service.yaml', '*configmap.yaml', '*pdb.yaml',
               'secret.yaml', '*job.yaml' },
