@@ -3,7 +3,16 @@ return {
   config = function()
     vim.lsp.enable('terraformls')
     vim.lsp.enable('tflint')
-    vim.lsp.enable('bashls')
+
+    vim.lsp.enable('bashls', {
+      settings = {
+        bashIde = {
+          shfmt = {
+            path = '', -- Disable shfmt formatting
+          },
+        },
+      },
+    })
 
     vim.lsp.config('lua_ls', {
       settings = {
