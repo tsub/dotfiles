@@ -170,6 +170,10 @@ return {
       }
 
       vim.cmd('colorscheme github_dark')
+
+      -- for copilot-language-server
+      vim.api.nvim_set_hl(0, 'ComplHint', { link = 'LspInlayHint' })
+      vim.api.nvim_set_hl(0, 'ComplHintMore', { link = 'LspInlayHint' })
     end,
   },
   {
