@@ -36,6 +36,7 @@ return {
         { "<leader>G",  group = "git" },
         { "<leader>Gg", "<cmd>Telescope ghq list cwd=~ theme=get_dropdown<CR>",         desc = "List ghq repository" },
         { "<leader>Go", "<cmd>OpenGithubFile<CR>",                                      desc = "Open GitHub file" },
+        { "<leader>L",  group = "lazy.nvim" },
         { "<leader>Lu", "<cmd>Lazy update<CR>",                                         desc = "lazy.nvim update" },
         { "<leader>b",  "<cmd>Telescope buffers theme=get_dropdown<CR>",                desc = "buffers" },
         { "<leader>f",  "<cmd>Telescope find_files theme=get_dropdown follow=true<CR>", desc = "find_files" },
@@ -47,7 +48,8 @@ return {
         { "<leader>m",  "<cmd>MarkdownPreviewToggle<CR>",                               desc = "markdown preview" },
         { "<leader>n",  "<cmd>BufferLineCycleNext<CR>",                                 desc = "buffer next" },
         { "<leader>p",  "<cmd>BufferLineCyclePrev<CR>",                                 desc = "buffer prev" },
-        { "<leader>cc", "<cmd>ClaudeCode<CR>",                                          desc = "claude code" },
+        { "<leader>c",  group = "Claude Code" },
+        { "<leader>cc", "<cmd>ClaudeCode<CR>",                                          desc = "Claude Code" },
       })
     end
   },
