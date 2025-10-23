@@ -4,7 +4,8 @@ background-opacity = 0.95
 confirm-close-surface = false
 
 # フォントのリガチャによって neovim で `ます` などが文字化けするのを防ぐ
-font-feature = -dlig
+# v1.2 からデフォルトで無効になったらしい
+# font-feature = -dlig
 
 # `ctrl+[` で `91;5u` が入力されるのを防ぐ
 # See: https://github.com/ghostty-org/ghostty/discussions/5071
