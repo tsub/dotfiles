@@ -1,0 +1,36 @@
+#!/bin/bash -eu
+
+SUB_CMD="${1:-}"
+ADDITIONAL_OPTS=()
+
+if [ "$SUB_CMD" = "recreate" ]; then
+    ADDITIONAL_OPTS+=("--remove-existing-container")
+elif [ "$SUB_CMD" != "" ]; then
+    echo 'Usage: dev [recreate]'
+    exit 1
+fi
+
+GIT_ROOT_DIR=$(git rev-parse --show-toplevel)
+cd "$GIT_ROOT_DIR"
+
+ADDITIONAL_OPTS+=("--additional-features='{ \"ghcr.io/tsub/devcontainer-features/my-feature:1\": {} }'")
+DEFAULT_SHELL="fish"
+
+# Podman Desktop, colima では SSH_AUTH_SOCK をマウントできないのでコメントアウト
+# SSH_AUTH_SOCK_ENV_OPTS="--remote-env=SSH_AUTH_SOCK=/var/run/ssh-agent.socket"
+# MOUNT_SSH_AGENT_OPTS="--mount=type=bind,source=$SSH_AUTH_SOCK,target=/var/run/ssh-agent.socket"
+
+if [ -n "${ADDITIONAL_OPTS:-}" ]; then
+    # devcontainer up --workspace-folder . "$MOUNT_SSH_AGENT_OPTS" "$SSH_AUTH_SOCK_ENV_OPTS" "${ADDITIONAL_OPTS[@]}"
+    devcontainer up --workspace-folder . "${ADDITIONAL_OPTS[@]}"
+else
+    devcontainer up --workspace-folder .
+fi
+
+if [ "$SUB_CMD" = "recreate" ]; then
+    devcontainer exec --workspace-folder . fish -c 'fisher update'
+    devcontainer exec --workspace-folder . nvim --headless '+Lazy! sync' +qa
+fi
+
+# devcontainer exec --workspace-folder . "$SSH_AUTH_SOCK_ENV_OPTS" "$DEFAULT_SHELL"
+devcontainer exec --workspace-folder . "$DEFAULT_SHELL"
