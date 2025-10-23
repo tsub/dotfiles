@@ -10,6 +10,9 @@ alias zatsu="memo edit zatsu.md"
 if [ -x "$(command -v eza)" ]; alias ls="eza --icons"; end
 alias ghqg="$GOPATH/bin/get -shallow -unshallow ghq"
 alias tig="env TERM=xterm-256color tig"
+if [ -x "$(command -v auto-aws-sso-login.sh)" ]; alias terragrunt="auto-aws-sso-login.sh terragrunt"; end
+if [ -x "$(command -v auto-aws-sso-login.sh)" ]; alias aws="auto-aws-sso-login.sh aws"; end
+if [ -x "$(command -v auto-aws-sso-login.sh)" ]; alias kubectl="auto-aws-sso-login.sh kubectl"; end
 
 ## Abbreviations
 abbr -a b "bundle"

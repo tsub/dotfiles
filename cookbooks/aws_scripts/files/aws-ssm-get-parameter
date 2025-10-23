@@ -1,0 +1,20 @@
+#!/bin/sh -eu
+
+aws_sso_login() {
+    if ! aws sts get-caller-identity > /dev/null 2>&1; then
+        echo "Session expired, logging in to AWS SSO..."
+        aws sso login
+    fi
+}
+
+aws_sso_login
+
+parameter_name=$(aws ssm describe-parameters --query 'Parameters[].[Name]' --output text | fzf)
+
+if [ "$parameter_name" = "" ]; then
+    exit 0
+fi
+
+echo "parameter_name: ${parameter_name}"
+
+aws ssm get-parameter --name ${parameter_name} --with-decryption --query 'Parameter.Value' --output text

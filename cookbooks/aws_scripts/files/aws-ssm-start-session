@@ -1,0 +1,18 @@
+#!/bin/sh -eu
+
+aws_sso_login() {
+    if ! aws sts get-caller-identity > /dev/null 2>&1; then
+        echo "Session expired, logging in to AWS SSO..."
+        aws sso login
+    fi
+}
+
+aws_sso_login
+
+instance_id=$(aws ec2 describe-instances --query 'Reservations[].Instances[].[InstanceId, State.Name, InstanceType, PrivateIpAddress, Platform || `Linux`, Tags[?Key == `Name`].Value | [0]]' --output text | column -t | fzf --reverse | cut -d ' ' -f 1)
+
+if [ "$instance_id" = "" ]; then
+    exit 0
+fi
+
+aws ssm start-session --target ${instance_id}
