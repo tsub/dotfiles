@@ -76,9 +76,9 @@ return {
 
     -- Completion
     vim.lsp.inline_completion.enable(true) -- for copilot lsp
-    vim.keymap.set("i", "<D-l>", function()
+    vim.keymap.set("i", "<C-l>", function()
       if not vim.lsp.inline_completion.get() then
-        return "<D-l>"
+        return "<C-l>"
       end
     end, {
       expr = true,
