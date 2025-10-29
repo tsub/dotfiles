@@ -44,6 +44,11 @@ kubernetes:
   # Default: traefik is disabled
   k3sArgs:
     - --disable=traefik
+  
+  # Kubernetes port to listen on
+  # A common port is 6443, though left unbound to ensure no port conflicts
+  # Default: pick random unbound port
+  port: 0
 
 # Auto-activate on the Host for client access.
 # Setting to true does the following on startup
@@ -240,7 +245,7 @@ diskImage: ""
 # Size of the disk in GiB for the root filesystem of the virtual machine.
 # This value is ignored if no runtime is in use. i.e. `none` runtime.
 # Default: 20
-rootDisk: 0
+rootDisk: 20
 
 # Environment variables for the virtual machine.
 #
