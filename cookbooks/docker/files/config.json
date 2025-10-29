@@ -1,13 +1,13 @@
 {
-  "auths": {},
-  "detachKeys": "ctrl-\\",
-  "credsStore": "ecr-login",
-  "currentContext": "colima",
-  "cliPluginsExtraDirs": [
-    "/opt/homebrew/lib/docker/cli-plugins"
-  ],
-  "credHelpers": {
-    "index.docker.io": "osxkeychain",
-    "ghcr.io": "gh"
-  }
+	"auths": {},
+	"detachKeys": "ctrl-\\",
+	"credsStore": "ecr-login",
+	"credHelpers": {
+		"ghcr.io": "gh",
+		"index.docker.io": "osxkeychain"
+	},
+	"currentContext": "colima",
+	"cliPluginsExtraDirs": [
+		"/opt/homebrew/lib/docker/cli-plugins"
+	]
 }
