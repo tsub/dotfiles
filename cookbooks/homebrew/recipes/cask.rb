@@ -14,7 +14,7 @@ cask 'firefox'
 cask 'font-fira-code-nerd-font'
 cask 'gcloud-cli'
 cask 'ghostty'
-cask 'git-credential-manager-core' { tap_name 'microsoft/git' }
+cask 'git-credential-manager' { tap_name 'microsoft/git' }
 cask 'google-chrome'
 cask 'gyazo'
 cask 'licecap'

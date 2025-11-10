@@ -51,7 +51,7 @@ brew 'python' { use_cellar_option true }
 brew 'ripgrep'
 brew 'ruby'
 brew 'rust-analyzer'
-brew 'rustup-init'
+brew 'rustup'
 brew 's3-edit' { tap_name 'tsub/s3-edit' }
 brew 'sops'
 brew 'stern'
