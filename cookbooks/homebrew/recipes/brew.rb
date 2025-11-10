@@ -70,6 +70,6 @@ brew 'typescript'
 brew 'uv'
 brew 'watch'
 brew 'whalebrew'
-brew 'yamlls' { tap_name 'tsub/yamlls' }
+brew 'yaml-language-server'
 brew 'yarn'
 brew 'yq'
