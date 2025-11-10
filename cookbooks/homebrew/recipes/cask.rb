@@ -17,7 +17,6 @@ cask 'ghostty'
 cask 'git-credential-manager-core' { tap_name 'microsoft/git' }
 cask 'google-chrome'
 cask 'gyazo'
-cask 'keybase'
 cask 'licecap'
 cask 'meetingbar'
 cask 'microsoft-edge'
