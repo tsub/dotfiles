@@ -41,7 +41,7 @@ define :cask, tap_name: nil do
   end
 end
 
-execute '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"' do
+execute 'NONINTERACTIVE=true /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"' do
   not_if "test -x #{homebrew_dir}/bin/brew"
 end
 
