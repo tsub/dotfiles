@@ -40,6 +40,7 @@ brew 'localstack-cli' { tap_name 'localstack/tap' }
 brew 'lua-language-server'
 brew 'mas'
 brew 'minikube'
+brew 'mise'
 brew 'neovim' { head true }
 brew 'node'
 brew 'opener' { start_service true; tap_name 'superbrothers/opener' }
