@@ -15,6 +15,7 @@ cask 'font-fira-code-nerd-font'
 cask 'gcloud-cli'
 cask 'ghostty'
 cask 'git-credential-manager' { tap_name 'microsoft/git' }
+cask 'gitify'
 cask 'google-chrome'
 cask 'gyazo'
 cask 'licecap'
