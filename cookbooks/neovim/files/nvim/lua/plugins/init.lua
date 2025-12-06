@@ -56,8 +56,8 @@ return {
     end
   },
   {
-    'echasnovski/mini.diff',
-    version = false,
+    'nvim-mini/mini.diff',
+    version = '*',
     opts = {
       view = {
         signs = { add = '│', change = '│', delete = '│' },
