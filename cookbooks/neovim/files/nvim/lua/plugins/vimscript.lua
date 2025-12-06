@@ -8,22 +8,6 @@ return {
   { 'cespare/vim-toml' },
   { 'dag/vim-fish' },
   {
-    'scrooloose/nerdtree',
-    cmd = { 'NERDTreeFind', 'NERDTreeToggle' },
-    keys = { '<F2>', '<F3>' },
-    init = function()
-      vim.g.NERDTreeChDirMode = 0
-      vim.g.NERDTreeShowHidden = 1
-      vim.g.NERDTreeWinSize = 30
-      -- workaround (https://github.com/preservim/nerdtree/issues/1321)
-      vim.g.NERDTreeMinimalMenu = 1
-    end,
-    config = function()
-      vim.api.nvim_set_keymap('n', '<F2>', ':NERDTreeFind<CR>', { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '<F3>', ':NERDTreeToggle<CR>', { noremap = true, silent = true })
-    end
-  },
-  {
     'tyru/open-browser-github.vim',
     dependencies = {
       {
