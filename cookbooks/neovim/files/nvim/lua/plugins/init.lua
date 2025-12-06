@@ -27,10 +27,11 @@ return {
     -- TODO: Lazy loading
     -- cmd = { 'WhichKey' },
     -- keys = { '<leader>', '<Space>' },
+    opts = {
+      triggers = { '<leader>' },
+    },
     config = function()
       local wk = require('which-key')
-
-      wk.setup({ triggers = { '<leader>' } })
 
       wk.add({
         { "<leader>G",  group = "git" },
@@ -57,13 +58,11 @@ return {
   {
     'echasnovski/mini.diff',
     version = false,
-    config = function()
-      require('mini.diff').setup {
-        view = {
-          signs = { add = '│', change = '│', delete = '│' },
-        }
+    opts = {
+      view = {
+        signs = { add = '│', change = '│', delete = '│' },
       }
-    end,
+    },
   },
   {
     'nvim-lualine/lualine.nvim',
@@ -71,32 +70,26 @@ return {
       { 'kyazdani42/nvim-web-devicons', lazy = true },
       'projekt0n/github-nvim-theme',
     },
-    config = function()
-      require('lualine').setup {
-        options = {
-          theme = 'auto',
-          globalstatus = true,
-        },
-        sections = {
-          lualine_x = { 'lsp_status', 'encoding', 'fileformat', 'filetype' },
-        },
-      }
-    end
+    opts = {
+      options = {
+        theme = 'auto',
+        globalstatus = true,
+      },
+      sections = {
+        lualine_x = { 'lsp_status', 'encoding', 'fileformat', 'filetype' },
+      },
+    },
   },
   {
     'folke/trouble.nvim',
     dependencies = { 'kyazdani42/nvim-web-devicons' },
-    config = function()
-      require('trouble').setup {
-        auto_close = true,
-      }
-    end
+    opts = {
+      auto_close = true,
+    },
   },
   {
     'windwp/nvim-autopairs',
-    config = function()
-      require('nvim-autopairs').setup()
-    end,
+    opts = {},
   },
   {
     'nvim-telescope/telescope.nvim',
@@ -106,30 +99,30 @@ return {
       'nvim-lua/plenary.nvim',
       'nvim-telescope/telescope-ghq.nvim',
     },
+    opts = {
+      defaults = {
+        mappings = {
+          i = {
+            -- see https://github.com/nvim-telescope/telescope.nvim/issues/499
+            ["<C-u>"] = false,
+          },
+        },
+      },
+      pickers = {
+        find_files = {
+          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+        },
+        live_grep = {
+          additional_args = function(opts)
+            return { "--hidden", "--glob", "!**/.git/*" }
+          end
+        },
+      }
+    },
     config = function()
       local telescope = require('telescope')
 
       telescope.load_extension('ghq')
-      telescope.setup {
-        defaults = {
-          mappings = {
-            i = {
-              -- see https://github.com/nvim-telescope/telescope.nvim/issues/499
-              ["<C-u>"] = false,
-            },
-          },
-        },
-        pickers = {
-          find_files = {
-            find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
-          },
-          live_grep = {
-            additional_args = function(opts)
-              return { "--hidden", "--glob", "!**/.git/*" }
-            end
-          },
-        }
-      }
     end,
   },
   {
@@ -138,14 +131,12 @@ return {
     dependencies = {
       'kyazdani42/nvim-web-devicons',
     },
-    config = function()
-      require('bufferline').setup {
-        options = {
-          separator_style = 'thin',
-          diagnostics = "nvim_lsp",
-        },
-      }
-    end,
+    opts = {
+      options = {
+        separator_style = 'thin',
+        diagnostics = "nvim_lsp",
+      },
+    },
   },
   {
     'nvim-treesitter/nvim-treesitter',
@@ -154,24 +145,21 @@ return {
       local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
       ts_update()
     end,
-    config = function()
-      require('nvim-treesitter.configs').setup {
-        highlight = {
-          enable = true,
-        },
-      }
-    end,
+    opts = {
+      highlight = {
+        enable = true,
+      },
+    },
   },
   {
     'projekt0n/github-nvim-theme',
+    opts = {
+      options = {
+        transparent = true,
+        terminal_colors = false,
+      },
+    },
     config = function()
-      require('github-theme').setup {
-        options = {
-          transparent = true,
-          terminal_colors = false,
-        },
-      }
-
       vim.cmd('colorscheme github_dark')
 
       -- for copilot-language-server
@@ -192,22 +180,18 @@ return {
   {
     'akinsho/toggleterm.nvim',
     version = "*",
-    config = function()
-      require("toggleterm").setup {
-        open_mapping = [[<C-t>]],
-        direction = 'float',
-        shell = 'fish',
-      }
-    end,
+    opts = {
+      open_mapping = [[<C-t>]],
+      direction = 'float',
+      shell = 'fish',
+    },
   },
   {
     "greggh/claude-code.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim", -- Required for git operations
     },
-    config = function()
-      require("claude-code").setup()
-    end
+    opts = {},
   },
   {
     'stevearc/oil.nvim',
