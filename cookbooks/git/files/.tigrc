@@ -44,3 +44,6 @@ bind diff D @sh -c 'difit %(commit)'
 
 # stash
 bind stash S !git stash save --include-untracked
+
+# revert
+bind main ! ?git revert %(commit)
