@@ -1,7 +1,6 @@
 -- vimscript plugins
 return {
   { 'tpope/vim-fugitive' },
-  { 'tpope/vim-endwise' },
   { 'tpope/vim-surround' },
   { 'hashivim/vim-terraform', ft = { 'terraform', 'hcl' } },
   { 'tmux-plugins/vim-tmux',  ft = 'tmux' },
