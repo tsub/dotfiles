@@ -9,7 +9,7 @@ aws_sso_login() {
 
 aws_sso_login
 
-instance_id=$(aws ec2 describe-instances --query 'Reservations[].Instances[].[InstanceId, State.Name, InstanceType, PrivateIpAddress, Platform || `Linux`, Tags[?Key == `Name`].Value | [0]]' --output text | column -t | fzf --reverse | cut -d ' ' -f 1)
+instance_id=$(aws ec2 describe-instances --query 'Reservations[].Instances[?State.Name==`running`].[InstanceId, State.Name, InstanceType, PrivateIpAddress, Platform || `Linux`, Tags[?Key == `Name`].Value | [0]]' --output text | column -t | fzf --reverse | cut -d ' ' -f 1)
 
 if [ "$instance_id" = "" ]; then
     exit 0
