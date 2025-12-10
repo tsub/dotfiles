@@ -201,6 +201,15 @@ return {
     ---@module 'oil'
     ---@type oil.SetupOpts
     opts = {
+      -- Keymaps in oil buffer. Can be any value that `vim.keymap.set` accepts OR a table of keymap
+      -- options with a `callback` (e.g. { callback = function() ... end, desc = "", mode = "n" })
+      -- Additionally, if it is a string that matches "actions.<name>",
+      -- it will use the mapping at require("oil.actions").<name>
+      -- Set to `false` to remove a keymap
+      -- See :help oil-actions for a list of all available actions
+      keymaps = {
+        ["<C-t>"] = {}, -- toggleterm.nvim と被るため無効化
+      },
       -- Skip the confirmation popup for simple operations (:help oil.skip_confirm_for_simple_edits)
       skip_confirm_for_simple_edits = true,
       view_options = {
