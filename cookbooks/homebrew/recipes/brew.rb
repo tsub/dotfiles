@@ -38,6 +38,7 @@ brew 'krew'
 brew 'kubectl' { directory_name 'kubernetes-cli' }
 brew 'localstack-cli' { tap_name 'localstack/tap' }
 brew 'lua-language-server'
+brew 'marp-cli'
 brew 'mas'
 brew 'minikube'
 brew 'mise'

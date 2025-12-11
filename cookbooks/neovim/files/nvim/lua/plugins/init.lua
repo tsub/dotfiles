@@ -53,6 +53,7 @@ return {
         { "<leader>c",  group = "Claude Code" },
         { "<leader>cc", "<cmd>ClaudeCode<CR>",                                          desc = "Claude Code" },
         { "<leader>o",  "<cmd>Oil<CR>",                                                 desc = "Open oil file explorer" },
+        { "<leader>M",  "<cmd>MarpWatch<CR>",                                           desc = "marp preview" },
       })
     end
   },
@@ -228,4 +229,9 @@ return {
     'nvim-mini/mini.pairs',
     version = '*',
   },
+  {
+    "nwiizo/marp.nvim",
+    ft = "markdown",
+    opts = {},
+  }
 }
