@@ -27,11 +27,12 @@ return {
     -- TODO: Lazy loading
     -- cmd = { 'WhichKey' },
     -- keys = { '<leader>', '<Space>' },
-    opts = {
-      triggers = { '<leader>' },
-    },
     config = function()
       local wk = require('which-key')
+
+      wk.setup({
+        triggers = { '<leader>' },
+      })
 
       wk.add({
         { "<leader>G",  group = "git" },
