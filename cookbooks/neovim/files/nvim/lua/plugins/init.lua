@@ -222,6 +222,10 @@ return {
     ---@module 'oil'
     ---@type oil.SetupOpts
     opts = {
+      -- Window-local options to use for oil buffers
+      win_options = {
+        signcolumn = 'yes:2',
+      },
       -- Keymaps in oil buffer. Can be any value that `vim.keymap.set` accepts OR a table of keymap
       -- options with a `callback` (e.g. { callback = function() ... end, desc = "", mode = "n" })
       -- Additionally, if it is a string that matches "actions.<name>",
@@ -243,6 +247,13 @@ return {
     -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
     -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
     lazy = false,
+  },
+  {
+    "refractalize/oil-git-status.nvim",
+    dependencies = {
+      "stevearc/oil.nvim",
+    },
+    opts = {},
   },
   {
     'nvim-mini/mini.pairs',
