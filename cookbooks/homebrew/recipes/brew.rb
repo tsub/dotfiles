@@ -2,6 +2,7 @@ brew 'age'
 brew 'awscli'
 brew 'awscli-local'
 brew 'bash-language-server'
+brew 'bun' { tap_name 'oven-sh/bun' }
 brew 'circleci'
 brew 'clipper' { start_service true }
 brew 'colima' { start_service true }
