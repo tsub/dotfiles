@@ -51,7 +51,6 @@ return {
         { "<leader>n",  "<cmd>BufferLineCycleNext<CR>",                                 desc = "buffer next" },
         { "<leader>p",  "<cmd>BufferLineCyclePrev<CR>",                                 desc = "buffer prev" },
         { "<leader>c",  group = "Claude Code" },
-        { "<leader>cc", "<cmd>ClaudeCode<CR>",                                          desc = "Claude Code" },
         { "<leader>o",  "<cmd>Oil<CR>",                                                 desc = "Open oil file explorer" },
         { "<leader>M",  "<cmd>MarpWatch<CR>",                                           desc = "marp preview" },
       })
@@ -192,11 +191,31 @@ return {
     },
   },
   {
-    "greggh/claude-code.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim", -- Required for git operations
+    "coder/claudecode.nvim",
+    dependencies = { "folke/snacks.nvim" },
+    opts = {
+      terminal = {
+        split_side = "left",
+        snacks_win_opts = {
+          -- See: https://github.com/coder/claudecode.nvim/issues/153
+          position = "bottom",
+          height = 0.4,
+          width = 1.0,
+          border = "rounded",
+          title = " Claude ",
+          title_pos = "center",
+        },
+      },
     },
-    opts = {},
+    keys = {
+      { "<leader>c",  nil,                              desc = "AI/Claude Code" },
+      { "<leader>cc", "<cmd>ClaudeCode<cr>",            desc = "Toggle Claude" },
+      { "<leader>cr", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume Claude" },
+      { "<leader>cC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue Claude" },
+      { "<leader>cm", "<cmd>ClaudeCodeSelectModel<cr>", desc = "Select Claude model" },
+      { "<leader>cb", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer" },
+      { "<leader>cs", "<cmd>ClaudeCodeSend<cr>",        mode = "v",                  desc = "Send to Claude" },
+    },
   },
   {
     'stevearc/oil.nvim',
