@@ -14,7 +14,6 @@
       "mcp__github__get_file_contents"
     ],
     "deny": [
-      "Bash(terragrunt run:*apply*)",
       "Bash(terragrunt apply:*)"
     ]
   },
