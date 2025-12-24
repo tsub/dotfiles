@@ -53,6 +53,8 @@ return {
         { "<leader>c",  group = "Claude Code" },
         { "<leader>o",  "<cmd>Oil<CR>",                                                 desc = "Open oil file explorer" },
         { "<leader>M",  "<cmd>MarpWatch<CR>",                                           desc = "marp preview" },
+        { "<leader>C",  group = "Copilot" },
+        { "<leader>Cs", "<cmd>LspCopilotSignIn<CR>",                                    desc = "Sign in to Copilot" },
       })
     end
   },
