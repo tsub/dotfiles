@@ -207,6 +207,9 @@ return {
           title = " Claude ",
           title_pos = "center",
         },
+        diff_opts = {
+          keep_terminal_focus = true,
+        },
       },
     },
     keys = {
