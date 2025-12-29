@@ -1,5 +1,6 @@
 tap 'aku11i/tap'
 tap 'hashicorp/tap'
+tap 'k1LoW/tap'
 tap 'localstack/tap'
 tap 'masutaka/github-nippou'
 tap 'microsoft/git'

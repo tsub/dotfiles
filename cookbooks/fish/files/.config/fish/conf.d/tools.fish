@@ -134,3 +134,8 @@ if [ -n "$REMOTE_CONTAINERS" ]
     ssh-add &> /dev/null
   end
 end
+
+# git-wt
+if [ -x "$(command -v git-wt)" ]
+  git wt --init fish | source
+end

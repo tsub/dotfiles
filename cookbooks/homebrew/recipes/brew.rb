@@ -25,6 +25,7 @@ brew 'ghalint'
 brew 'ghq'
 brew 'git'
 brew 'git-secrets'
+brew 'git-wt' { tap_name 'k1LoW/tap' }
 brew 'github-nippou' { tap_name 'masutaka/github-nippou' }
 brew 'glow'
 brew 'go'
