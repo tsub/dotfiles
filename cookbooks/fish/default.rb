@@ -66,16 +66,6 @@ end
   end
 end
 
-if node[:platform] == 'darwin'
-  %w[docker docker-compose].each do |completion_file|
-    link File.expand_path("~/.config/fish/completions/#{completion_file}.fish") do
-      to "/Applications/Docker.app/Contents/Resources/etc/#{completion_file}.fish-completion"
-      user node[:user]
-      force true
-    end
-  end
-end
-
 ## fisher
 
 directory "#{node[:fish][:home]}/functions" do
