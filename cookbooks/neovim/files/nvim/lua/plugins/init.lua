@@ -102,28 +102,29 @@ return {
       'nvim-lua/plenary.nvim',
       'nvim-telescope/telescope-ghq.nvim',
     },
-    opts = {
-      defaults = {
-        mappings = {
-          i = {
-            -- see https://github.com/nvim-telescope/telescope.nvim/issues/499
-            ["<C-u>"] = false,
-          },
-        },
-      },
-      pickers = {
-        find_files = {
-          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
-        },
-        live_grep = {
-          additional_args = function(opts)
-            return { "--hidden", "--glob", "!**/.git/*" }
-          end
-        },
-      }
-    },
     config = function()
       local telescope = require('telescope')
+
+      telescope.setup({
+        defaults = {
+          mappings = {
+            i = {
+              -- see https://github.com/nvim-telescope/telescope.nvim/issues/499
+              ["<C-u>"] = false,
+            },
+          },
+        },
+        pickers = {
+          find_files = {
+            find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+          },
+          live_grep = {
+            additional_args = function(opts)
+              return { "--hidden", "--glob", "!**/.git/*" }
+            end
+          },
+        }
+      })
 
       telescope.load_extension('ghq')
     end,
