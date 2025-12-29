@@ -1,3 +1,4 @@
+npm '@ccusage/codex'
 npm '@github/copilot-language-server'
 npm 'ccmanager'
 npm 'ccusage'
