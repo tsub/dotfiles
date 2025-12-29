@@ -20,7 +20,6 @@ brew 'github-nippou'
 brew 'go'
 brew 'goenv'
 # brew 'heroku' # macOS only
-brew 'hub'
 brew 'ipcalc'
 brew 'jq'
 brew 'kompose'
