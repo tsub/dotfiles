@@ -9,7 +9,7 @@ fish_path = node[:platform] == 'darwin' ? homebrew_dir + '/bin/fish' : '/usr/bin
 
 if node[:platform] == 'debian'
   debian_version = '12'
-  fish_version = '4.1.2-1'
+  fish_version = '4.2.1-1'
   fish_major_version = fish_version.split('.').first
 
   execute "curl -fSL -o #{Dir.tmpdir}/fish.deb https://download.opensuse.org/repositories/shells:/fish:/release:/#{fish_major_version}/Debian_#{debian_version}/#{arch}/fish_#{fish_version}_#{arch}.deb" do
