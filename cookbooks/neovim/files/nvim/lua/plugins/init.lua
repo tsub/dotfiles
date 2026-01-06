@@ -55,6 +55,7 @@ return {
         { "<leader>M",  "<cmd>MarpWatch<CR>",                                           desc = "marp preview" },
         { "<leader>C",  group = "Copilot" },
         { "<leader>Cs", "<cmd>LspCopilotSignIn<CR>",                                    desc = "Sign in to Copilot" },
+        { "<leader>v",  "<cmd>!code-insiders -r %<cr>",                                 desc = "Open in VS Code" },
       })
     end
   },
