@@ -1,6 +1,7 @@
 cask '1password'
 cask '1password-cli'
 cask 'appcleaner'
+cask 'aqua-voice'
 cask 'aws-vault'
 cask 'chatgpt'
 cask 'claude'
