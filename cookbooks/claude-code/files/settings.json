@@ -1,6 +1,5 @@
 {
   "permissions": {
-    "defaultMode": "acceptEdits",
     "allow": [
       "Bash(ls:*)",
       "Bash(find:*)",
@@ -15,7 +14,8 @@
     ],
     "deny": [
       "Bash(terragrunt apply:*)"
-    ]
+    ],
+    "defaultMode": "acceptEdits"
   },
   "hooks": {
     "Stop": [
@@ -40,5 +40,6 @@
         ]
       }
     ]
-  }
+  },
+  "language": "Japanese"
 }
