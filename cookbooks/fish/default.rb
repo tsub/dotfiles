@@ -9,17 +9,21 @@ fish_path = node[:platform] == 'darwin' ? homebrew_dir + '/bin/fish' : '/usr/bin
 
 if node[:platform] == 'debian'
   debian_version = '12'
-  fish_version = '4.2.1-1'
-  fish_major_version = fish_version.split('.').first
+  fish_major_version = '4'
 
-  execute "curl -fSL -o #{Dir.tmpdir}/fish.deb https://download.opensuse.org/repositories/shells:/fish:/release:/#{fish_major_version}/Debian_#{debian_version}/#{arch}/fish_#{fish_version}_#{arch}.deb" do
-    not_if 'which fish'
-    user node[:user]
+  file "/etc/apt/sources.list.d/shells:fish:release:#{fish_major_version}.list" do
+    content "deb http://download.opensuse.org/repositories/shells:/fish:/release:/4/Debian_#{debian_version}/ /"
   end
 
-  execute "dpkg -i #{Dir.tmpdir}/fish.deb" do
+  execute "curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:#{fish_major_version}/Debian_#{debian_version}/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish_release_#{fish_major_version}.gpg > /dev/null" do
     not_if 'which fish'
   end
+
+  execute "apt update -o Dir::Etc::sourcelist='sources.list.d/shells:fish:release:#{fish_major_version}.list' -o Dir::Etc::sourceparts='-' -o APT::Get::List-Cleanup='0'" do
+    not_if 'which fish'
+  end
+
+  package 'fish'
 else
   package 'fish'
 end
