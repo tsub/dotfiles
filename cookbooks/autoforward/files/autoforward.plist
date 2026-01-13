@@ -6,14 +6,17 @@
         <string>autoforward</string>
         <key>ProgramArguments</key>
         <array>
-          <string>/Users/tsub/.cargo/bin/cargo</string>
+               <string>/opt/homebrew/bin/cargo</string>
                <string>run</string>
-               <string>--manifest-path</string>
-               <string>/Users/tsub/ghq/src/github.com/tsub/autoForward/Cargo.toml</string>
                <string>--release</string>
                <string>--bin</string>
                <string>host</string>
         </array>
+        <key>EnvironmentVariables</key>
+        <dict>
+               <key>RUSTC</key>
+               <string>/opt/homebrew/bin/rustc</string>
+        </dict>
         <key>KeepAlive</key>
         <true/>
         <key>RunAtLoad</key>
@@ -22,5 +25,7 @@
         <string>/tmp/autoforward.log</string>
         <key>StandardErrorPath</key>
         <string>/tmp/autoforward.log</string>
+        <key>WorkingDirectory</key>
+        <string>/Users/tsub/ghq/src/github.com/tsub/autoForward</string>
 </dict>
 </plist>
