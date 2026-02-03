@@ -44,5 +44,4 @@
 [worktree]
   useRelativePaths = true
 [wt]
-  basedir = "{gitroot}/../.git/phantom/worktrees"
   copyignored = true
