@@ -21,16 +21,16 @@ DEFAULT_SHELL="fish"
 # MOUNT_SSH_AGENT_OPTS="--mount=type=bind,source=$SSH_AUTH_SOCK,target=/var/run/ssh-agent.socket"
 
 if [ -n "${ADDITIONAL_OPTS:-}" ]; then
-    # devcontainer up --workspace-folder . "$MOUNT_SSH_AGENT_OPTS" "$SSH_AUTH_SOCK_ENV_OPTS" "${ADDITIONAL_OPTS[@]}"
-    devcontainer up --workspace-folder . "${ADDITIONAL_OPTS[@]}"
+    # devcontainer up "$MOUNT_SSH_AGENT_OPTS" "$SSH_AUTH_SOCK_ENV_OPTS" "${ADDITIONAL_OPTS[@]}"
+    devcontainer up "${ADDITIONAL_OPTS[@]}"
 else
-    devcontainer up --workspace-folder .
+    devcontainer up
 fi
 
 if [ "$SUB_CMD" = "recreate" ]; then
-    devcontainer exec --workspace-folder . fish -c 'fisher update'
-    devcontainer exec --workspace-folder . nvim --headless '+Lazy! sync' +qa
+    devcontainer exec fish -c 'fisher update'
+    devcontainer exec nvim --headless '+Lazy! sync' +qa
 fi
 
-# devcontainer exec --workspace-folder . "$SSH_AUTH_SOCK_ENV_OPTS" "$DEFAULT_SHELL"
-devcontainer exec --workspace-folder . "$DEFAULT_SHELL"
+# devcontainer exec "$SSH_AUTH_SOCK_ENV_OPTS" "$DEFAULT_SHELL"
+devcontainer exec "$DEFAULT_SHELL"
