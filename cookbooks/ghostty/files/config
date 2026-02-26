@@ -13,7 +13,7 @@ keybind=ctrl+left_bracket=text:\x1b
 
 # ctrl+` でクイックターミナルを表示する
 # See: https://github.com/ghostty-org/ghostty/discussions/3610
-keybind=global:ctrl+grave_accent=toggle_quick_terminal
+# keybind=global:ctrl+grave_accent=toggle_quick_terminal
 
 # クイックターミナル
 quick-terminal-position=center
