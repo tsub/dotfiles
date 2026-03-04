@@ -34,7 +34,7 @@ function __fish_cmux_using_subcommand
     set -l cmd $argv[1]
     set -l tokens (commandline -opc)
     for i in (seq 2 (count $tokens))
-        if test $tokens[$i] = $cmd
+        if test "$tokens[$i]" = "$cmd"
             return 0
         end
     end
