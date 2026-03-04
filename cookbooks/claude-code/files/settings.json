@@ -24,7 +24,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "terminal-notifier -message 'タスクが完了しました' -title 'Claude Code' -subtitle '処理終了' -sound name Hero"
+            "command": "~/.claude/hooks/cmux-notify.sh"
           }
         ]
       }
@@ -35,7 +35,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "terminal-notifier -message 'ユーザーアクションが必要です' -title 'Claude Code' -subtitle '通知' -sound name Hero"
+            "command": "~/.claude/hooks/cmux-notify.sh"
           }
         ]
       }
