@@ -19,9 +19,3 @@ link File.expand_path('~/.claude/commands') do
   user node[:user]
   force true
 end
-
-link File.expand_path('~/.claude/hooks') do
-  to File.expand_path('../files/hooks', __FILE__)
-  user node[:user]
-  force true
-end
