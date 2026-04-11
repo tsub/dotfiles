@@ -36,3 +36,4 @@ abbr -a docker-rmi "docker images -f dangling=true -q | xargs docker rmi -f"
 abbr -a p "phantom"
 abbr -a cc "ccmanager"
 abbr -a gwt "git wt"
+abbr -a c 'claude'
