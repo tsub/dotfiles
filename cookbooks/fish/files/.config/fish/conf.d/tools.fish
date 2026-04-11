@@ -139,3 +139,11 @@ end
 if [ -x "$(command -v git-wt)" ]
   git wt --init fish | source
 end
+
+# Use cmux wrapper (for cmux, open, claude, ghostty commands)
+if [ -n "$CMUX_SHELL_INTEGRATION" ] && [ "$CMUX_SOCKET_PATH" = '/tmp/cmux.sock' ] && [ -d '/Applications/cmux.app/Contents/Resources/bin' ]
+  set -x PATH '/Applications/cmux.app/Contents/Resources/bin' $PATH
+end
+if [ -n "$CMUX_SHELL_INTEGRATION" ] && [ "$CMUX_SOCKET_PATH" = '/tmp/cmux-nightly.sock' ] && [ -d '/Applications/cmux NIGHTLY.app/Contents/Resources/bin' ]
+  set -x PATH '/Applications/cmux NIGHTLY.app/Contents/Resources/bin' $PATH
+end
