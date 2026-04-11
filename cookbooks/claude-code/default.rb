@@ -19,3 +19,7 @@ link File.expand_path('~/.claude/commands') do
   user node[:user]
   force true
 end
+
+execute 'curl -fsSL https://claude.ai/install.sh | bash' do
+  not_if 'test -x ~/.local/bin/claude'
+end
