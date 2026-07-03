@@ -3,3 +3,4 @@ bin/mitamae*
 local.vim
 cookbooks/neovim/files/nvim/plugin/packer_compiled.lua
 cookbooks/git/files/.config/git/config-local*
+cookbooks/mise/files/conf.d/local.toml

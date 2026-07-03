@@ -1,0 +1,6 @@
+[settings]
+experimental = true
+
+[bootstrap.packages]
+"brew:herdr" = "latest"
+# "brew-cask:firefox" = "latest" # unsupported artifact type binary

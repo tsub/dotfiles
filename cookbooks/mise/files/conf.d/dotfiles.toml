@@ -1,0 +1,7 @@
+[settings]
+experimental = true
+dotfiles.root = "~/ghq/src/github.com/tsub/dotfiles"
+dotfiles.default_mode = "symlink"
+
+[dotfiles]
+"~/.tigrc" = "~/ghq/src/github.com/tsub/dotfiles/cookbooks/tig/files/.tigrc"

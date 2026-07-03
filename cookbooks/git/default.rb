@@ -18,11 +18,3 @@ template File.expand_path('~/.config/git/config-local') do
   group node[:group]
   not_if 'test -f ~/.config/git/config-local'
 end
-
-## tig
-
-link File.expand_path('~/.tigrc') do
-  to File.expand_path('../files/.tigrc', __FILE__)
-  user node[:user]
-  force true
-end
