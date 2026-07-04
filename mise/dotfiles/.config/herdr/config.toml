@@ -1,0 +1,20 @@
+[ui.toast]
+delivery = "terminal"
+
+[ui]
+prompt_new_tab_name = false
+agent_panel_sort = "priority"
+show_agent_labels_on_pane_borders = true
+
+[keys]
+prefix = "ctrl+s"
+split_horizontal = "prefix+\""
+split_vertical = "prefix+%"
+previous_workspace = "prefix+up"
+next_workspace = "prefix+down"
+
+[[keys.command]]
+key = "prefix+ctrl+p"
+type = "plugin_action"
+command = "pick"
+description = "Worktree from GitHub PR with herdr-wotkree-from-pr plugin"
