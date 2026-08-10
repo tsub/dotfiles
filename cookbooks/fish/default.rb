@@ -70,6 +70,22 @@ end
   end
 end
 
+# Cache generated completions instead of `eval`-ing them on every fish startup;
+# fish autoloads files under completions/ lazily on first use of that command.
+{
+  'codex' => 'completion fish',
+  'ghqr' => 'completion fish',
+  'pup' => 'completions fish',
+}.each do |cmd_name, subcommand|
+  completion_cache_file = File.expand_path("~/.config/fish/completions/#{cmd_name}.fish")
+
+  execute "#{cmd_name} #{subcommand} > #{completion_cache_file}" do
+    only_if "which #{cmd_name}"
+    not_if "test -f #{completion_cache_file}"
+    user node[:user]
+  end
+end
+
 ## fisher
 
 directory "#{node[:fish][:home]}/functions" do
